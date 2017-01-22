@@ -2,8 +2,16 @@
 
   
     {
+      "title"			: "GaInN/GaN Solar Cells with Ni/Au Schottky Electrodes",
+      "link"			: "http://localhost:4000//articles/GaInN-solar-cells/",
+      "excerpt"		: "GaInN/GaN Solar cells made with Ni/Au Schottky contacts"
+    }
+  
+
+  
+    ,{
       "title"			: "MathJax Example",
-      "link"			: "noaha.net/blog/mathjax-example/",
+      "link"			: "http://localhost:4000//blog/mathjax-example/",
       "excerpt"		: "MathJax is a simple way of including Tex/LaTex/MathML based mathematics in HTML webpages. To get up and running you need to include the MathJax script in the header of your github pages page, and then write some maths. For LaTex, there are two delimiters you need to know about, one for block or displayed mathematics  ... , and the other for inline mathematics  ... ."
     }
   
@@ -11,7 +19,7 @@
   
     ,{
       "title"			: "Hello World",
-      "link"			: "noaha.net/blog/hello-world/",
+      "link"			: "http://localhost:4000//blog/hello-world/",
       "excerpt"		: "You’ll find this post in your _posts directory - edit this post and re-build (or run with the -w switch) to see your changes!To add new posts, simply add a file in the _posts directory that follows the convention: YYYY-MM-DD-name-of-post.ext."
     }
   
@@ -19,7 +27,7 @@
   
     ,{
       "title"			: "Override Author Byline Test Post",
-      "link"			: "noaha.net/articles/author-override/",
+      "link"			: "http://localhost:4000//articles/author-override/",
       "excerpt"		: "An article to test overriding the default site author."
     }
   
@@ -27,7 +35,7 @@
   
     ,{
       "title"			: "Syntax Highlighting Post",
-      "link"			: "noaha.net/articles/code-highlighting-post/",
+      "link"			: "http://localhost:4000//articles/code-highlighting-post/",
       "excerpt"		: "Demo post displaying the various ways of highlighting code in Markdown."
     }
   
@@ -35,7 +43,7 @@
   
     ,{
       "title"			: "Sample Link Post",
-      "link"			: "noaha.net/articles/sample-link-post/",
+      "link"			: "http://localhost:4000//articles/sample-link-post/",
       "excerpt"		: "Example and code for using link posts."
     }
   
@@ -43,7 +51,7 @@
   
     ,{
       "title"			: "A Post with a Video",
-      "link"			: "noaha.net/articles/video-post/",
+      "link"			: "http://localhost:4000//articles/video-post/",
       "excerpt"		: "Custom written post descriptions are the way to go… if you’re not lazy."
     }
   
@@ -51,7 +59,7 @@
   
     ,{
       "title"			: "Post with Large Feature Image and Text",
-      "link"			: "noaha.net/articles/readability-feature-post/",
+      "link"			: "http://localhost:4000//articles/readability-feature-post/",
       "excerpt"		: "Custom written post descriptions are the way to go… if you’re not lazy."
     }
   
@@ -59,7 +67,7 @@
   
     ,{
       "title"			: "A Post with Images",
-      "link"			: "noaha.net/articles/sample-post-images/",
+      "link"			: "http://localhost:4000//articles/sample-post-images/",
       "excerpt"		: "Examples and code for displaying images in posts."
     }
   
@@ -67,7 +75,7 @@
   
     ,{
       "title"			: "Testing Readability with a Bunch of Text",
-      "link"			: "noaha.net/articles/readability-post/",
+      "link"			: "http://localhost:4000//articles/readability-post/",
       "excerpt"		: "A ton of text to test readability."
     }
   
@@ -75,7 +83,7 @@
   
     ,{
       "title"			: "Sample Post",
-      "link"			: "noaha.net/articles/sample-post/",
+      "link"			: "http://localhost:4000//articles/sample-post/",
       "excerpt"		: "Just about everything you’ll need to style in the theme: headings, paragraphs, blockquotes, tables, code blocks, and more."
     }
   
@@ -90,8 +98,8 @@
 
   
     ,{
-      "title"			: "About the Jekyll Theme",
-      "link"			: "noaha.net/about/",
+      "title"			: "About Noah P. Allen",
+      "link"			: "http://localhost:4000//about/",
       "excerpt"		: "So Simple is a responsive Jekyll theme for your words and images."
     }
   
@@ -103,8 +111,8 @@
   
     ,{
       "title"			: "Theme Setup",
-      "link"			: "noaha.net/theme-setup/",
-      "excerpt"		: "Instructions on how to install and customize the Jekyll theme So Simple."
+      "link"			: "http://localhost:4000//theme-setup/",
+      "excerpt"		: "Instructions (vtnoah) on how to install and customize the Jekyll theme So Simple."
     }
   
 
