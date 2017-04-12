@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://noaha.net/articles/GaN-Lift-Off/</loc>
+<lastmod>2017-02-24T00:00:00-05:00</lastmod>
+</url>
+<url>
+<loc>http://noaha.net/articles/Ni-Au-Parameter-Extraction/</loc>
+<lastmod>2017-01-01T00:00:00-05:00</lastmod>
+</url>
+<url>
 <loc>http://noaha.net/blog/PN-Diode-Fabrication/</loc>
 <lastmod>2016-11-01T12:00:00-04:00</lastmod>
 </url>
@@ -41,7 +49,7 @@
 <lastmod>2008-08-01T00:00:00-04:00</lastmod>
 </url>
 <url>
-<loc>http://noaha.net/resume/</loc>
+<loc>http://noaha.net/Resume/</loc>
 </url>
 <url>
 <loc>http://noaha.net/publications/</loc>
@@ -54,6 +62,10 @@
 </url>
 <url>
 <loc>http://noaha.net/tags/</loc>
+</url>
+<url>
+<loc>http://noaha.net/1.1643540.pdf</loc>
+<lastmod>2017-02-01T11:06:01-05:00</lastmod>
 </url>
 <url>
 <loc>http://noaha.net/Files/2008NNINreuRA.pdf</loc>
@@ -84,15 +96,15 @@
 <lastmod>2017-01-22T00:42:06-05:00</lastmod>
 </url>
 <url>
-<loc>http://noaha.net/resume/New%20Microsoft%20PowerPoint%20Presentation.pdf</loc>
+<loc>http://noaha.net/Resume/New%20Microsoft%20PowerPoint%20Presentation.pdf</loc>
 <lastmod>2017-01-23T00:21:03-05:00</lastmod>
 </url>
 <url>
-<loc>http://noaha.net/resume/Noah%20Allen%20ResumeSpring%202017%20-%20Website.pdf</loc>
+<loc>http://noaha.net/Resume/Noah%20Allen%20ResumeSpring%202017%20-%20Website.pdf</loc>
 <lastmod>2017-01-23T00:17:21-05:00</lastmod>
 </url>
 <url>
-<loc>http://noaha.net/resume/NoahAllenResume.pdf</loc>
+<loc>http://noaha.net/Resume/NoahAllenResume.pdf</loc>
 <lastmod>2017-01-23T00:27:18-05:00</lastmod>
 </url>
 </urlset>
