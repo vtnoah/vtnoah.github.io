@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="http://noaha.net/feed.xml" rel="self" type="application/atom+xml" /><link href="http://noaha.net/" rel="alternate" type="text/html" /><updated>2017-05-09T07:57:43-04:00</updated><id>http://noaha.net/</id><title type="html">Noah P. Allen</title><subtitle>A Place to Showcase Noah Allen's Work</subtitle><entry><title type="html">Thin-film GaN Schottky diodes formed by epitaxial lift-off</title><link href="http://noaha.net/articles/GaN-Lift-Off/" rel="alternate" type="text/html" title="Thin-film GaN Schottky diodes formed by epitaxial lift-off" /><published>2017-02-24T00:00:00-05:00</published><updated>2017-02-24T00:00:00-05:00</updated><id>http://noaha.net/articles/GaN-Lift-Off</id><content type="html" xml:base="http://noaha.net/articles/GaN-Lift-Off/">&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="http://noaha.net/feed.xml" rel="self" type="application/atom+xml" /><link href="http://noaha.net/" rel="alternate" type="text/html" /><updated>2017-08-25T13:17:20-04:00</updated><id>http://noaha.net/</id><title type="html">Noah P. Allen</title><subtitle>A Place to Showcase Noah Allen's Work</subtitle><entry><title type="html">Thin-film GaN Schottky diodes formed by epitaxial lift-off</title><link href="http://noaha.net/articles/GaN-Lift-Off/" rel="alternate" type="text/html" title="Thin-film GaN Schottky diodes formed by epitaxial lift-off" /><published>2017-02-24T00:00:00-05:00</published><updated>2017-02-24T00:00:00-05:00</updated><id>http://noaha.net/articles/GaN-Lift-Off</id><content type="html" xml:base="http://noaha.net/articles/GaN-Lift-Off/">&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
 
 &lt;p&gt;Summary of what I did on this work.&lt;/p&gt;
 
@@ -14,12 +14,33 @@ This browser does not support PDFs. Please download the PDF to view it: &lt;a hr
 
 &lt;p class=&quot;text-justify&quot;&gt;Deep Level Transient Spectroscopy (DLTS) is very interesting to me since it is such a simple measurement that can yeild information 
 about very complex details regarding semiconductor material.  Part of my PhD thesis will be understnading defects found in 
-gallium nitride (GaN) that can cause PN junctions to fail or minimum not produce results indicative of ideal material.  Defects 
+gallium nitride (GaN) that can cause PN junctions to fail or at a minimum not produce results indicative of ideal material.  Defects 
 like vacancies (missing atoms), antisites (atom in the wrong spot), interstitials (atom crammed into spot where there shouldn’t be one) 
 and even impurities like oxygen, carbon, or magnesium can be detected in quantities that are 1/1,000,000,000 the amount of gallium or 
 nitrogen.&lt;/p&gt;
 
-&lt;h2 id=&quot;solution&quot;&gt;Solution:&lt;/h2&gt;</content><summary type="html">Problem:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://noaha.net{&quot;feature&quot;=&gt;nil}" /></entry><entry><title type="html">MMR Probe Station Rebuild with Helium Cryopump</title><link href="http://noaha.net/blog/Probe-Station-Rebuild/" rel="alternate" type="text/html" title="MMR Probe Station Rebuild with Helium Cryopump" /><published>2016-01-20T11:00:00-05:00</published><updated>2016-01-20T11:00:00-05:00</updated><id>http://noaha.net/blog/Probe-Station-Rebuild</id><content type="html" xml:base="http://noaha.net/blog/Probe-Station-Rebuild/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
+&lt;h2 id=&quot;solution&quot;&gt;Solution:&lt;/h2&gt;
+
+&lt;p class=&quot;text-justify&quot;&gt;The measurement setup is pretty simple and is depicted below.  As mentioned previously, many types of defects can be incorporated into a grown semiconductor.
+However, its the ones that are electrically active and create a source of electron or hole trapping that can cause a problem.  When a depletion region 
+is generated either by a metal, p-type layer, or metal-oxide interface, traps that fall below the fermi level are depopulated.  They can be repopulated 
+by moving the fermi level to a point that would repopulated which can be easily done by applying a voltage.  We can see the effects of this populating and 
+depopulating manifest itself as an exponential decay in the capacitance of the device.  If we knew there was only one type of defect that acts like a 
+trap then we might be done after a single measurement, but most of the time there are many.  In order to selectively measure each trap, we can lower 
+the temperature and thereby lowering the possibility that it would react to the changing voltage. Then we take measurements as the temperature rises 
+and save the data for processing.&lt;/p&gt;
+&lt;h3 id=&quot;dlts-setup&quot;&gt;DLTS Setup&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/projects/dltssetup.jpg&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;
+
+&lt;p class=&quot;text-justify&quot;&gt;One of the problems with these measuremnts is that they take a long time (&amp;gt;9hrs).  Realizing this I created a LabVIEW program to automate the 
+collection of the data so that I can continue other work around the lab.  I’m always adding more featuers to it but right now it can do DLTS, ODLTS, CCDLTS, IVT,
+ and TSCAP measurements automatically.&lt;/p&gt;
+
+&lt;h3 id=&quot;dlts-main-program&quot;&gt;DLTS Main Program&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/projects/dltsanalysisgif.gif&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;cv-accessory-program&quot;&gt;CV Accessory Program&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/projects/cvgif.gif&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;</content><summary type="html">Problem:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://noaha.net{&quot;feature&quot;=&gt;nil}" /></entry><entry><title type="html">MMR Probe Station Rebuild with Helium Cryopump</title><link href="http://noaha.net/blog/Probe-Station-Rebuild/" rel="alternate" type="text/html" title="MMR Probe Station Rebuild with Helium Cryopump" /><published>2016-01-20T11:00:00-05:00</published><updated>2016-01-20T11:00:00-05:00</updated><id>http://noaha.net/blog/Probe-Station-Rebuild</id><content type="html" xml:base="http://noaha.net/blog/Probe-Station-Rebuild/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
 
 &lt;p class=&quot;text-justify&quot;&gt;Prior to my arrival at Virginia Tech our group acquired an MMR Technologies cryogenic probe station capable of 8 
 probes.  The sample stage is about 1cm2 and is cooled using high-pressure dry nitrogen through capillaries etched into glass or 
