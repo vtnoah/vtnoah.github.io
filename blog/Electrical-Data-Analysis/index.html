@@ -153,14 +153,63 @@
 <p class="text-justify">Current vs Voltage (IV) and Capacitance vs Voltage (CV) data can be very helpful in determining
 key properties in source charge based devices such as Schottky diodes, PN diodes, and Metal-Oxide-Semiconductor (MOS)
 capacitors.  Upon completion of a fabrication run 
-an upward of 10 patterned samples with &gt;140 diodes each could be yielded thus the task of measuring, analyizing and then visualizing 
+an upward of 10 patterned samples with &gt;140 diodes each could be yielded thus the task of measuring, analyzing and then visualizing 
 the data became increasingly arduous especially when attempting to execute complex fitting to multiple data sets.</p>
 
 <h2 id="solution">Solution:</h2>
 
 <p class="text-justify">After some deliberation it was decided that a program which could import and visualize data easily should be made 
 and that coding should be done in an environment which could easily be modified by other engineers.  I chose LabVIEW as 
-the coding enviroment due to its ease of use and ability to easily interface with testing equipment though GPIB.</p>
+the coding environment due to its ease of use and ability to easily interface with other programs.  As a frame of 
+reference, I could normally extract, analyze and plot around 20 sets of measurements in around 2hrs assuming I knew exactly how the data 
+needed to be presented.  With the program I can accomplish the same tasks on 144 sets of measurements in &lt;10min.</p>
+
+<p class="text-justify">Our group regularly fabricates schottky diodes, PN diodes, and TLM structures and characterizes them using a mixture of voltage, current, capacitance, 
+and temperature.  Since many types of devices can be characterized with so many techniques the analysis program requires careful thought so that 
+it can be as robust as possible without producing erroneous results.  Currently the analysis capabilities include:</p>
+<ul>
+  <li><strong>Current-Voltage Visualization</strong>
+    <ul>
+      <li>Multi-Diode Levenberg-Marquardt Automatic Fitting</li>
+      <li>Specific-On Resistance Calculations</li>
+      <li>Variable Temperature Reverse Bias Analysis</li>
+      <li>Variable Temperature Werner-Gutler Analysis</li>
+    </ul>
+  </li>
+  <li><strong>Capacitance-Voltage Visualization</strong>
+    <ul>
+      <li>A²/C², Doping, and Depletion Width Dependence Visualization</li>
+      <li>Linear A²/C² Automatic Fitting</li>
+    </ul>
+  </li>
+  <li><strong>TLM Current-Voltage Visualization</strong>
+    <ul>
+      <li>Linear I-V Automatic Fitting</li>
+      <li>Circular (Corrected or Uncorrected) TLM Fitting</li>
+      <li>Linear TLM Fitting</li>
+    </ul>
+  </li>
+  <li><strong>More Coming</strong></li>
+</ul>
+
+<h3 id="i-v-data-analysis">I-V Data Analysis</h3>
+<p><img src="/images/projects/AnalysisProgIV.gif" align="middle" /></p>
+
+<p class="text-center">I-V Data is imported from an Excel file, visualized and then spurious data is removed.  Next, parameters for the series resistance, saturation current, and ideality factor are chosen as 
+initial conditions for the fitting procedure.  The curve is fit and the extracted parameters are used to help automatically fit the other 100+ curves.  Finally, the extracted parameters 
+are visualized in comparison to each other and spatially.</p>
+
+<h3 id="c-v-data-analysis">C-V Data Analysis</h3>
+<p><img src="/images/projects/AnalysisProgCV.gif" align="middle" /></p>
+
+<p class="text-center">C-V Data is imported from an Excel file, spurious data is removed, and the various forms of the data is visualized (capacitance, concentration and depletion width dependences).  Next, 
+values for the built-in voltage, barrier height, and free carrier concentration are automatically extracted from 100+ curves.  Finally, the extracted values are visualized.</p>
+
+<h3 id="data-loading-into-excel">Data Loading into Excel</h3>
+<p class="text-justify">I quickly found that, although the data could be analyzed very quickly, it would be near useless unless I could present it to my advisor and colleagues in a 
+manner that could be easily interpreted and understood.  Luckily, LabVIEW has ActiveX controls to load and manipulate data into Excel.</p>
+
+<p><img src="/images/projects/AnalysisProgEXCEL.gif" align="middle" /></p>
 
         
       </div><!-- /.entry-content -->
@@ -180,7 +229,7 @@ the coding enviroment due to its ease of use and ability to easily interface wit
   <footer role="contentinfo" class="entry-wrapper">
     
 
-<span>&copy; 2017 Noah Allen. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/so-simple-jekyll-theme/" rel="nofollow">So Simple Theme</a>.</span>
+<span>&copy; 2018 Noah Allen. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/so-simple-jekyll-theme/" rel="nofollow">So Simple Theme</a>.</span>
 <div class="social-icons">
 	
 	

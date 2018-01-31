@@ -2,6 +2,14 @@
 
   
     {
+      "title"			: "Hg Probe Back Contact Piece",
+      "link"			: "http://noaha.net/blog/Hg-Probe-Adapter/",
+      "excerpt"		: "Problem:"
+    }
+  
+
+  
+    ,{
       "title"			: "Thin-film GaN Schottky diodes formed by epitaxial lift-off",
       "link"			: "http://noaha.net/articles/GaN-Lift-Off/",
       "excerpt"		: "Summary of the paper"
@@ -20,7 +28,7 @@
     ,{
       "title"			: "Cleanroom Fabricated Gallium Nitride PN Diodes",
       "link"			: "http://noaha.net/blog/PN-Diode-Fabrication/",
-      "excerpt"		: "I am in the process of writting a description for this project."
+      "excerpt"		: "I am in the process of writing a description for this project."
     }
   
 

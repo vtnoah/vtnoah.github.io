@@ -150,10 +150,10 @@
       <div class="entry-content">
         <h2 id="problem">Problem:</h2>
 
-<p class="text-justify">Deep Level Transient Spectroscopy (DLTS) is very interesting to me since it is such a simple measurement that can yeild information 
-about very complex details regarding semiconductor material.  Part of my PhD thesis will be understnading defects found in 
+<p class="text-justify">Deep Level Transient Spectroscopy (DLTS) is very interesting to me since it is such a simple measurement that can yield information 
+about very complex details regarding semiconductor material.  Part of my PhD thesis will be understanding defects found in 
 gallium nitride (GaN) that can cause PN junctions to fail or at a minimum not produce results indicative of ideal material.  Defects 
-like vacancies (missing atoms), antisites (atom in the wrong spot), interstitials (atom crammed into spot where there shouldn’t be one) 
+like vacancies (missing atoms), anti-sites (atom in the wrong spot), interstitials (atom crammed into spot where there shouldn’t be one) 
 and even impurities like oxygen, carbon, or magnesium can be detected in quantities that are 1/1,000,000,000 the amount of gallium or 
 nitrogen.</p>
 
@@ -161,24 +161,29 @@ nitrogen.</p>
 
 <p class="text-justify">The measurement setup is pretty simple and is depicted below.  As mentioned previously, many types of defects can be incorporated into a grown semiconductor.
 However, its the ones that are electrically active and create a source of electron or hole trapping that can cause a problem.  When a depletion region 
-is generated either by a metal, p-type layer, or metal-oxide interface, traps that fall below the fermi level are depopulated.  They can be repopulated 
+is generated either by a metal, p-type layer, or metal-oxide interface, traps that fall below the fermi-level are depopulated.  They can be repopulated 
 by moving the fermi level to a point that would repopulated which can be easily done by applying a voltage.  We can see the effects of this populating and 
 depopulating manifest itself as an exponential decay in the capacitance of the device.  If we knew there was only one type of defect that acts like a 
 trap then we might be done after a single measurement, but most of the time there are many.  In order to selectively measure each trap, we can lower 
 the temperature and thereby lowering the possibility that it would react to the changing voltage. Then we take measurements as the temperature rises 
 and save the data for processing.</p>
 <h3 id="dlts-setup">DLTS Setup</h3>
-<p><img src="/images/projects/dltssetup.jpg" align="middle" /></p>
+<p><img src="/images/projects/dltssetup.jpg" align="center" /></p>
 
-<p class="text-justify">One of the problems with these measuremnts is that they take a long time (&gt;9hrs).  Realizing this I created a LabVIEW program to automate the 
-collection of the data so that I can continue other work around the lab.  I’m always adding more featuers to it but right now it can do DLTS, ODLTS, CCDLTS, IVT,
- and TSCAP measurements automatically.</p>
+<p class="text-justify">One of the problems with these measurements is that they take a long time (&gt;9hrs).  Realizing this I created a LabVIEW program to automate the 
+collection of the data so that I can continue other work around the lab.  I’m always adding more features to it but right now it can do DLTS, ODLTS, CCDLTS, IVT, 
+and TSCAP measurements automatically.</p>
 
 <h3 id="dlts-main-program">DLTS Main Program</h3>
-<p><img src="/images/projects/dltsanalysisgif.gif" align="middle" /></p>
+<p><img src="/images/projects/dltsanalysisgif.gif" align="center" /></p>
+
+<p class="text-center">Pictured above is the DLTS main program first waiting for the temperature to stabilize at 308K and then measuring the capacitance transients using the parameters listed in the 
+‘DLTS Setup’ section of the program.</p>
 
 <h3 id="cv-accessory-program">CV Accessory Program</h3>
-<p><img src="/images/projects/cvgif.gif" align="middle" /></p>
+<p><img src="/images/projects/cvgif.gif" align="center" /></p>
+
+<p class="text-center">In addition to DLTS measurements, the physical setup of the sample allows for C-V-T measurements to be executed before changing sample temperature.</p>
 
         
       </div><!-- /.entry-content -->
@@ -198,7 +203,7 @@ collection of the data so that I can continue other work around the lab.  I’m 
   <footer role="contentinfo" class="entry-wrapper">
     
 
-<span>&copy; 2017 Noah Allen. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/so-simple-jekyll-theme/" rel="nofollow">So Simple Theme</a>.</span>
+<span>&copy; 2018 Noah Allen. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/so-simple-jekyll-theme/" rel="nofollow">So Simple Theme</a>.</span>
 <div class="social-icons">
 	
 	

@@ -1,4 +1,33 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="http://noaha.net/feed.xml" rel="self" type="application/atom+xml" /><link href="http://noaha.net/" rel="alternate" type="text/html" /><updated>2017-08-25T13:17:20-04:00</updated><id>http://noaha.net/</id><title type="html">Noah P. Allen</title><subtitle>A Place to Showcase Noah Allen's Work</subtitle><entry><title type="html">Thin-film GaN Schottky diodes formed by epitaxial lift-off</title><link href="http://noaha.net/articles/GaN-Lift-Off/" rel="alternate" type="text/html" title="Thin-film GaN Schottky diodes formed by epitaxial lift-off" /><published>2017-02-24T00:00:00-05:00</published><updated>2017-02-24T00:00:00-05:00</updated><id>http://noaha.net/articles/GaN-Lift-Off</id><content type="html" xml:base="http://noaha.net/articles/GaN-Lift-Off/">&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="http://noaha.net/feed.xml" rel="self" type="application/atom+xml" /><link href="http://noaha.net/" rel="alternate" type="text/html" /><updated>2018-01-31T17:02:54-05:00</updated><id>http://noaha.net/</id><title type="html">Noah P. Allen</title><subtitle>A Place to Showcase Noah Allen's Work</subtitle><entry><title type="html">Hg Probe Back Contact Piece</title><link href="http://noaha.net/blog/Hg-Probe-Adapter/" rel="alternate" type="text/html" title="Hg Probe Back Contact Piece" /><published>2017-08-01T12:00:00-04:00</published><updated>2017-08-01T12:00:00-04:00</updated><id>http://noaha.net/blog/Hg-Probe-Adapter</id><content type="html" xml:base="http://noaha.net/blog/Hg-Probe-Adapter/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
+
+&lt;p class=&quot;text-justify&quot;&gt;Being able to quickly and cheaply identify the free carrier concentration in a semiconductor layer can be helpful when slight changes to 
+material growth parameters can increase or decrease contamination concentrations such as carbon.  In GaN carbon has been shown to incorporate electrically 
+as a deep-level trap near the mid-gap and decrease the overall carrier concentration.  Thus when varying the carbon incorporation it would 
+be good to know when your dopant atoms are compensated by contamination.  A mercury probe system allows researchers to instantly make metal 
+contacts on the top surface of a sample and run tests, such as measuring the free carrier concentration.  However, the samples must be &amp;gt;1cm² 
+to adequately cover a vacuum ring which pulls the mercury up onto the sample. We had a needed to measure small (&amp;lt;0.9cm²) samples and thus had to 
+create an adapter.&lt;/p&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution:&lt;/h2&gt;
+
+&lt;p class=&quot;text-justify&quot;&gt;In order to measure these samples we only needed to keep pressure on the back while also sealing the sample so the vacuum could pull the mercury 
+up onto the sample.  This could have been done by laying a piece of flimsy rubber or tape on the back of the sample however, we also wanted to ability to make electrical 
+contact to the back of the sample.&lt;/p&gt;
+&lt;h3 id=&quot;hg-probe-with-sample&quot;&gt;Hg Probe With Sample&lt;/h3&gt;
+&lt;figure class=&quot;half&quot;&gt;
+	&lt;img src=&quot;/images/projects/samplesizegood2.JPG&quot; alt=&quot;image&quot; /&gt;
+	&lt;img src=&quot;/images/projects/samplesizebad2.JPG&quot; alt=&quot;image&quot; /&gt;
+	&lt;figcaption&gt;Sample on Hg probe stage that is (left) large enough to fit over the vacuum ring and (right) too small to fit over the vacuum ring.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p class=&quot;text-justify&quot;&gt;It was decided that because the Hg probe is made of acrylic that we could machine the adapter from the same material.  We started with a 1.25” round, planarized the end, 
+machined a recess for the sample to sit in, then dropped in two pogo pins, and finally glued the top pin to the adapter.  The final product is shown below.  The purpose of the pogo pins was to keep pressure 
+on the sample while also making electrical contact to the back of it.  Additionally, planarizing it helped seal the acrylic-acrylic interface so vacuum could be pulled in the sample recess.&lt;/p&gt;
+
+&lt;h3 id=&quot;hg-probe-with-adapter&quot;&gt;Hg Probe With Adapter&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/projects/hgtoppiece.gif&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;
+
+&lt;p class=&quot;text-center&quot;&gt;Shown above is the 3D model assembly of the Hg probe adapter where you can see the sample (blue), an o-ring (black), the two pogo-pins (gold) and the machined acrylic adapter (grey).&lt;/p&gt;</content><summary type="html">Problem:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://noaha.net{&quot;feature&quot;=&gt;nil}" /></entry><entry><title type="html">Thin-film GaN Schottky diodes formed by epitaxial lift-off</title><link href="http://noaha.net/articles/GaN-Lift-Off/" rel="alternate" type="text/html" title="Thin-film GaN Schottky diodes formed by epitaxial lift-off" /><published>2017-02-24T00:00:00-05:00</published><updated>2017-02-24T00:00:00-05:00</updated><id>http://noaha.net/articles/GaN-Lift-Off</id><content type="html" xml:base="http://noaha.net/articles/GaN-Lift-Off/">&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
 
 &lt;p&gt;Summary of what I did on this work.&lt;/p&gt;
 
@@ -10,12 +39,12 @@ This browser does not support PDFs. Please download the PDF to view it: &lt;a hr
 &lt;/iframe&gt;
 &lt;/object&gt;</content><category term="GaN" /><category term="etching" /><category term="lift-off" /><summary type="html">Summary of the paper</summary></entry><entry><title type="html">[In progress] Parameter Extraction of Oxidized Ni/Au and Ni-Only Transparent Conducting Oxides (TCOs) on n-Type GaN Schottky Barrier Diode with Bias Dependence Barrier Height and Ideality Factor at Different Temperatures</title><link href="http://noaha.net/articles/Ni-Au-Parameter-Extraction/" rel="alternate" type="text/html" title="[In progress] Parameter Extraction of Oxidized Ni/Au and Ni-Only Transparent Conducting Oxides (TCOs) on n-Type GaN Schottky Barrier Diode with Bias Dependence Barrier Height and Ideality Factor at Different Temperatures" /><published>2017-01-01T00:00:00-05:00</published><updated>2017-01-01T00:00:00-05:00</updated><id>http://noaha.net/articles/Ni-Au-Parameter-Extraction</id><content type="html" xml:base="http://noaha.net/articles/Ni-Au-Parameter-Extraction/">&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
 
-&lt;p&gt;Paper is being written and will be submitted shortly&lt;/p&gt;</content><category term="GaN" /><category term="etching" /><category term="lift-off" /><summary type="html">Summary of the paper</summary></entry><entry><title type="html">Cleanroom Fabricated Gallium Nitride PN Diodes</title><link href="http://noaha.net/blog/PN-Diode-Fabrication/" rel="alternate" type="text/html" title="Cleanroom Fabricated Gallium Nitride PN Diodes" /><published>2016-11-01T12:00:00-04:00</published><updated>2016-11-01T12:00:00-04:00</updated><id>http://noaha.net/blog/PN-Diode-Fabrication</id><content type="html" xml:base="http://noaha.net/blog/PN-Diode-Fabrication/">&lt;p&gt;I am in the process of writting a description for this project.&lt;/p&gt;</content><summary type="html">I am in the process of writting a description for this project.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://noaha.net{&quot;feature&quot;=&gt;nil}" /></entry><entry><title type="html">LabVIEW (D)DLTS and CCDLTS Measurement Program</title><link href="http://noaha.net/blog/DLTS-Data-Analysis/" rel="alternate" type="text/html" title="LabVIEW (D)DLTS and CCDLTS Measurement Program" /><published>2016-02-01T11:00:00-05:00</published><updated>2016-02-01T11:00:00-05:00</updated><id>http://noaha.net/blog/DLTS-Data-Analysis</id><content type="html" xml:base="http://noaha.net/blog/DLTS-Data-Analysis/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
+&lt;p&gt;Paper is being written and will be submitted shortly&lt;/p&gt;</content><category term="GaN" /><category term="etching" /><category term="lift-off" /><summary type="html">Summary of the paper</summary></entry><entry><title type="html">Cleanroom Fabricated Gallium Nitride PN Diodes</title><link href="http://noaha.net/blog/PN-Diode-Fabrication/" rel="alternate" type="text/html" title="Cleanroom Fabricated Gallium Nitride PN Diodes" /><published>2016-11-01T12:00:00-04:00</published><updated>2016-11-01T12:00:00-04:00</updated><id>http://noaha.net/blog/PN-Diode-Fabrication</id><content type="html" xml:base="http://noaha.net/blog/PN-Diode-Fabrication/">&lt;p&gt;I am in the process of writing a description for this project.&lt;/p&gt;</content><summary type="html">I am in the process of writing a description for this project.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://noaha.net{&quot;feature&quot;=&gt;nil}" /></entry><entry><title type="html">LabVIEW (D)DLTS and CCDLTS Measurement Program</title><link href="http://noaha.net/blog/DLTS-Data-Analysis/" rel="alternate" type="text/html" title="LabVIEW (D)DLTS and CCDLTS Measurement Program" /><published>2016-02-01T11:00:00-05:00</published><updated>2016-02-01T11:00:00-05:00</updated><id>http://noaha.net/blog/DLTS-Data-Analysis</id><content type="html" xml:base="http://noaha.net/blog/DLTS-Data-Analysis/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
 
-&lt;p class=&quot;text-justify&quot;&gt;Deep Level Transient Spectroscopy (DLTS) is very interesting to me since it is such a simple measurement that can yeild information 
-about very complex details regarding semiconductor material.  Part of my PhD thesis will be understnading defects found in 
+&lt;p class=&quot;text-justify&quot;&gt;Deep Level Transient Spectroscopy (DLTS) is very interesting to me since it is such a simple measurement that can yield information 
+about very complex details regarding semiconductor material.  Part of my PhD thesis will be understanding defects found in 
 gallium nitride (GaN) that can cause PN junctions to fail or at a minimum not produce results indicative of ideal material.  Defects 
-like vacancies (missing atoms), antisites (atom in the wrong spot), interstitials (atom crammed into spot where there shouldn’t be one) 
+like vacancies (missing atoms), anti-sites (atom in the wrong spot), interstitials (atom crammed into spot where there shouldn’t be one) 
 and even impurities like oxygen, carbon, or magnesium can be detected in quantities that are 1/1,000,000,000 the amount of gallium or 
 nitrogen.&lt;/p&gt;
 
@@ -23,28 +52,33 @@ nitrogen.&lt;/p&gt;
 
 &lt;p class=&quot;text-justify&quot;&gt;The measurement setup is pretty simple and is depicted below.  As mentioned previously, many types of defects can be incorporated into a grown semiconductor.
 However, its the ones that are electrically active and create a source of electron or hole trapping that can cause a problem.  When a depletion region 
-is generated either by a metal, p-type layer, or metal-oxide interface, traps that fall below the fermi level are depopulated.  They can be repopulated 
+is generated either by a metal, p-type layer, or metal-oxide interface, traps that fall below the fermi-level are depopulated.  They can be repopulated 
 by moving the fermi level to a point that would repopulated which can be easily done by applying a voltage.  We can see the effects of this populating and 
 depopulating manifest itself as an exponential decay in the capacitance of the device.  If we knew there was only one type of defect that acts like a 
 trap then we might be done after a single measurement, but most of the time there are many.  In order to selectively measure each trap, we can lower 
 the temperature and thereby lowering the possibility that it would react to the changing voltage. Then we take measurements as the temperature rises 
 and save the data for processing.&lt;/p&gt;
 &lt;h3 id=&quot;dlts-setup&quot;&gt;DLTS Setup&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/images/projects/dltssetup.jpg&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/projects/dltssetup.jpg&quot; align=&quot;center&quot; /&gt;&lt;/p&gt;
 
-&lt;p class=&quot;text-justify&quot;&gt;One of the problems with these measuremnts is that they take a long time (&amp;gt;9hrs).  Realizing this I created a LabVIEW program to automate the 
-collection of the data so that I can continue other work around the lab.  I’m always adding more featuers to it but right now it can do DLTS, ODLTS, CCDLTS, IVT,
- and TSCAP measurements automatically.&lt;/p&gt;
+&lt;p class=&quot;text-justify&quot;&gt;One of the problems with these measurements is that they take a long time (&amp;gt;9hrs).  Realizing this I created a LabVIEW program to automate the 
+collection of the data so that I can continue other work around the lab.  I’m always adding more features to it but right now it can do DLTS, ODLTS, CCDLTS, IVT, 
+and TSCAP measurements automatically.&lt;/p&gt;
 
 &lt;h3 id=&quot;dlts-main-program&quot;&gt;DLTS Main Program&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/images/projects/dltsanalysisgif.gif&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/projects/dltsanalysisgif.gif&quot; align=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p class=&quot;text-center&quot;&gt;Pictured above is the DLTS main program first waiting for the temperature to stabilize at 308K and then measuring the capacitance transients using the parameters listed in the 
+‘DLTS Setup’ section of the program.&lt;/p&gt;
 
 &lt;h3 id=&quot;cv-accessory-program&quot;&gt;CV Accessory Program&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/images/projects/cvgif.gif&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;</content><summary type="html">Problem:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://noaha.net{&quot;feature&quot;=&gt;nil}" /></entry><entry><title type="html">MMR Probe Station Rebuild with Helium Cryopump</title><link href="http://noaha.net/blog/Probe-Station-Rebuild/" rel="alternate" type="text/html" title="MMR Probe Station Rebuild with Helium Cryopump" /><published>2016-01-20T11:00:00-05:00</published><updated>2016-01-20T11:00:00-05:00</updated><id>http://noaha.net/blog/Probe-Station-Rebuild</id><content type="html" xml:base="http://noaha.net/blog/Probe-Station-Rebuild/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/images/projects/cvgif.gif&quot; align=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p class=&quot;text-center&quot;&gt;In addition to DLTS measurements, the physical setup of the sample allows for C-V-T measurements to be executed before changing sample temperature.&lt;/p&gt;</content><summary type="html">Problem:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://noaha.net{&quot;feature&quot;=&gt;nil}" /></entry><entry><title type="html">MMR Probe Station Rebuild with Helium Cryopump</title><link href="http://noaha.net/blog/Probe-Station-Rebuild/" rel="alternate" type="text/html" title="MMR Probe Station Rebuild with Helium Cryopump" /><published>2016-01-20T11:00:00-05:00</published><updated>2016-01-20T11:00:00-05:00</updated><id>http://noaha.net/blog/Probe-Station-Rebuild</id><content type="html" xml:base="http://noaha.net/blog/Probe-Station-Rebuild/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
 
 &lt;p class=&quot;text-justify&quot;&gt;Prior to my arrival at Virginia Tech our group acquired an MMR Technologies cryogenic probe station capable of 8 
 probes.  The sample stage is about 1cm2 and is cooled using high-pressure dry nitrogen through capillaries etched into glass or 
-sapphire.  High-pressure nigtrogen flows through the capillaries where most of the pressure is dropped under the copper 
+sapphire.  High-pressure nitrogen flows through the capillaries where most of the pressure is dropped under the copper 
 sample stage and then flows through a different path out of the vacuum chamber.  This process is known as the Joule-Thomson 
 effect and can cool the sample down to liquid nitrogen temperatures (77K) as long as everything works properly.  The glass (or sapphire) 
 stage is fragile and we were looking at ~$5K to replace one that got a short between the input and output capillaries rendering 
@@ -76,14 +110,63 @@ This browser does not support PDFs. Please download the PDF to view it: &lt;a hr
 &lt;p class=&quot;text-justify&quot;&gt;Current vs Voltage (IV) and Capacitance vs Voltage (CV) data can be very helpful in determining
 key properties in source charge based devices such as Schottky diodes, PN diodes, and Metal-Oxide-Semiconductor (MOS)
 capacitors.  Upon completion of a fabrication run 
-an upward of 10 patterned samples with &amp;gt;140 diodes each could be yielded thus the task of measuring, analyizing and then visualizing 
+an upward of 10 patterned samples with &amp;gt;140 diodes each could be yielded thus the task of measuring, analyzing and then visualizing 
 the data became increasingly arduous especially when attempting to execute complex fitting to multiple data sets.&lt;/p&gt;
 
 &lt;h2 id=&quot;solution&quot;&gt;Solution:&lt;/h2&gt;
 
 &lt;p class=&quot;text-justify&quot;&gt;After some deliberation it was decided that a program which could import and visualize data easily should be made 
 and that coding should be done in an environment which could easily be modified by other engineers.  I chose LabVIEW as 
-the coding enviroment due to its ease of use and ability to easily interface with testing equipment though GPIB.&lt;/p&gt;</content><summary type="html">Problem:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://noaha.net{&quot;feature&quot;=&gt;nil}" /></entry><entry><title type="html">Electrical Characterization of Ruthenium Dioxide Schottky Contacts on GaN</title><link href="http://noaha.net/articles/GaN-Ru-Oxide-MS-Thesis/" rel="alternate" type="text/html" title="Electrical Characterization of Ruthenium Dioxide Schottky Contacts on GaN" /><published>2014-12-09T00:00:00-05:00</published><updated>2014-12-09T00:00:00-05:00</updated><id>http://noaha.net/articles/GaN-Ru-Oxide-MS-Thesis</id><content type="html" xml:base="http://noaha.net/articles/GaN-Ru-Oxide-MS-Thesis/">&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+the coding environment due to its ease of use and ability to easily interface with other programs.  As a frame of 
+reference, I could normally extract, analyze and plot around 20 sets of measurements in around 2hrs assuming I knew exactly how the data 
+needed to be presented.  With the program I can accomplish the same tasks on 144 sets of measurements in &amp;lt;10min.&lt;/p&gt;
+
+&lt;p class=&quot;text-justify&quot;&gt;Our group regularly fabricates schottky diodes, PN diodes, and TLM structures and characterizes them using a mixture of voltage, current, capacitance, 
+and temperature.  Since many types of devices can be characterized with so many techniques the analysis program requires careful thought so that 
+it can be as robust as possible without producing erroneous results.  Currently the analysis capabilities include:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Current-Voltage Visualization&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Multi-Diode Levenberg-Marquardt Automatic Fitting&lt;/li&gt;
+      &lt;li&gt;Specific-On Resistance Calculations&lt;/li&gt;
+      &lt;li&gt;Variable Temperature Reverse Bias Analysis&lt;/li&gt;
+      &lt;li&gt;Variable Temperature Werner-Gutler Analysis&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Capacitance-Voltage Visualization&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;A²/C², Doping, and Depletion Width Dependence Visualization&lt;/li&gt;
+      &lt;li&gt;Linear A²/C² Automatic Fitting&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;TLM Current-Voltage Visualization&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Linear I-V Automatic Fitting&lt;/li&gt;
+      &lt;li&gt;Circular (Corrected or Uncorrected) TLM Fitting&lt;/li&gt;
+      &lt;li&gt;Linear TLM Fitting&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;More Coming&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;i-v-data-analysis&quot;&gt;I-V Data Analysis&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/projects/AnalysisProgIV.gif&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;
+
+&lt;p class=&quot;text-center&quot;&gt;I-V Data is imported from an Excel file, visualized and then spurious data is removed.  Next, parameters for the series resistance, saturation current, and ideality factor are chosen as 
+initial conditions for the fitting procedure.  The curve is fit and the extracted parameters are used to help automatically fit the other 100+ curves.  Finally, the extracted parameters 
+are visualized in comparison to each other and spatially.&lt;/p&gt;
+
+&lt;h3 id=&quot;c-v-data-analysis&quot;&gt;C-V Data Analysis&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/projects/AnalysisProgCV.gif&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;
+
+&lt;p class=&quot;text-center&quot;&gt;C-V Data is imported from an Excel file, spurious data is removed, and the various forms of the data is visualized (capacitance, concentration and depletion width dependences).  Next, 
+values for the built-in voltage, barrier height, and free carrier concentration are automatically extracted from 100+ curves.  Finally, the extracted values are visualized.&lt;/p&gt;
+
+&lt;h3 id=&quot;data-loading-into-excel&quot;&gt;Data Loading into Excel&lt;/h3&gt;
+&lt;p class=&quot;text-justify&quot;&gt;I quickly found that, although the data could be analyzed very quickly, it would be near useless unless I could present it to my advisor and colleagues in a 
+manner that could be easily interpreted and understood.  Luckily, LabVIEW has ActiveX controls to load and manipulate data into Excel.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/projects/AnalysisProgEXCEL.gif&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;</content><summary type="html">Problem:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://noaha.net{&quot;feature&quot;=&gt;nil}" /></entry><entry><title type="html">Electrical Characterization of Ruthenium Dioxide Schottky Contacts on GaN</title><link href="http://noaha.net/articles/GaN-Ru-Oxide-MS-Thesis/" rel="alternate" type="text/html" title="Electrical Characterization of Ruthenium Dioxide Schottky Contacts on GaN" /><published>2014-12-09T00:00:00-05:00</published><updated>2014-12-09T00:00:00-05:00</updated><id>http://noaha.net/articles/GaN-Ru-Oxide-MS-Thesis</id><content type="html" xml:base="http://noaha.net/articles/GaN-Ru-Oxide-MS-Thesis/">&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
 
 &lt;p&gt;Summary of what I did on this work.&lt;/p&gt;
 
@@ -93,14 +176,4 @@ the coding enviroment due to its ease of use and ability to easily interface wit
 &lt;iframe src=&quot;/Files/NoahA_MS_Thesis.pdf#page=1&quot; width=&quot;100%&quot; height=&quot;100%&quot; style=&quot;border: none;&quot;&gt;
 This browser does not support PDFs. Please download the PDF to view it: &lt;a href=&quot;/Files/NoahA_MS_Thesis.pdf&quot;&gt;Download PDF&lt;/a&gt;
 &lt;/iframe&gt;
-&lt;/object&gt;</content><category term="GaN" /><category term="Schottky" /><category term="Ruthenium" /><summary type="html">Summary of the thesis</summary></entry><entry><title type="html">GaInN/GaN – Ni/Au Transparent Conducting Oxide Schottky Barrier Solar Cells</title><link href="http://noaha.net/articles/GaInN-TCO/" rel="alternate" type="text/html" title="GaInN/GaN – Ni/Au Transparent Conducting Oxide Schottky Barrier Solar Cells" /><published>2014-06-08T00:00:00-04:00</published><updated>2014-06-08T00:00:00-04:00</updated><id>http://noaha.net/articles/GaInN-TCO</id><content type="html" xml:base="http://noaha.net/articles/GaInN-TCO/">&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
-
-&lt;p&gt;Summary of what I did on this work.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://noaha.net/Files/Paper2.pdf&quot;&gt;PDF File Download&lt;/a&gt;      &lt;a href=&quot;http://ieeexplore.ieee.org/document/6925117/&quot;&gt;Publication Location&lt;/a&gt;&lt;/p&gt;
-
-&lt;object data=&quot;/Files/Paper2.pdf#page=1&quot; type=&quot;application/pdf&quot; width=&quot;100%&quot; height=&quot;100%&quot;&gt;
-&lt;iframe src=&quot;/Files/Paper2.pdf#page=1&quot; width=&quot;100%&quot; height=&quot;100%&quot; style=&quot;border: none;&quot;&gt;
-This browser does not support PDFs. Please download the PDF to view it: &lt;a href=&quot;/Files/Paper2.pdf&quot;&gt;Download PDF&lt;/a&gt;
-&lt;/iframe&gt;
-&lt;/object&gt;</content><category term="solar cell" /><category term="schottky" /><category term="GaN" /><category term="TCO" /><summary type="html">Summary of the paper</summary></entry></feed>
+&lt;/object&gt;</content><category term="GaN" /><category term="Schottky" /><category term="Ruthenium" /><summary type="html">Summary of the thesis</summary></entry></feed>
