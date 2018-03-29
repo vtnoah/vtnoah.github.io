@@ -2,6 +2,22 @@
 
   
     {
+      "title"			: "Reverse Engineering the D750 Shutter for Remote Control",
+      "link"			: "http://noaha.net/blog/SSPC-Controlled-ND-Filter/",
+      "excerpt"		: "Problem:"
+    }
+  
+
+  
+    ,{
+      "title"			: "Reverse Engineering the D750 Shutter for Remote Control",
+      "link"			: "http://noaha.net/blog/SSPC-Shutter/",
+      "excerpt"		: "Problem:"
+    }
+  
+
+  
+    ,{
       "title"			: "Hg Probe Back Contact Piece",
       "link"			: "http://noaha.net/blog/Hg-Probe-Adapter/",
       "excerpt"		: "Problem:"

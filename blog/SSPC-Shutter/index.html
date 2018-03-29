@@ -1,0 +1,340 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Reverse Engineering the D750 Shutter for Remote Control &#8211; Noah P. Allen</title>
+<meta name="description" content="Problem:
+
+">
+<meta name="keywords" content="">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Reverse Engineering the D750 Shutter for Remote Control">
+<meta name="twitter:description" content="Problem:
+
+">
+
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://noaha.net/images/HeadshotSiteLogo.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Reverse Engineering the D750 Shutter for Remote Control">
+<meta property="og:description" content="Problem:
+
+">
+<meta property="og:url" content="http://noaha.net/blog/SSPC-Shutter/">
+<meta property="og:site_name" content="Noah P. Allen">
+
+
+
+
+
+<link rel="canonical" href="http://noaha.net/blog/SSPC-Shutter/">
+<link href="http://noaha.net/feed.xml" type="application/atom+xml" rel="alternate" title="Noah P. Allen Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://noaha.net/assets/css/main.css">
+<!-- Webfonts -->
+<script src="https://use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="http://noaha.net/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="http://noaha.net/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://noaha.net/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+
+<!-- MathJax -->
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://noaha.net/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://noaha.net/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://noaha.net/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://noaha.net/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://noaha.net/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://noaha.net/images/apple-touch-icon-144x144-precomposed.png">
+
+
+</head>
+
+<body id="post">
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
+      
+		    
+		    <li><a href="http://noaha.net/" >About</a></li>
+		  
+		    
+		    <li><a href="http://noaha.net/publications/" >Publications</a></li>
+		  
+		    
+		    <li><a href="http://noaha.net/projects/" >Projects</a></li>
+		  
+		    
+		    <li><a href="http://noaha.net/resume/" >Résumé/Contact</a></li>
+		  
+		    
+		    <li><a href="http://noaha.net/search/" >Search</a></li>
+		  
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+<header class="masthead">
+	<div class="wrap">
+      
+  		<a href="http://noaha.net/" class="site-logo" rel="home" title="Noah P. Allen"><img src="http://noaha.net/images/HeadshotSiteLogo.png" width="200" height="200" alt="Noah P. Allen logo" class="animated fadeInDown"></a>
+      
+      <h1 class="site-title animated fadeIn"><a href="http://noaha.net/">Noah P. Allen</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">A Place to Showcase Noah Allen's Work</h2>
+	</div>
+</header><!-- /.masthead -->
+
+<div class="js-menu-screen menu-screen"></div>
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <ul class="entry-tags">
+          
+        </ul>
+        
+          <h1 class="entry-title">Reverse Engineering the D750 Shutter for Remote Control</h1>
+        
+      </header>
+      <footer class="entry-meta">
+        
+        
+          <img src="http://noaha.net/images/HeadShot2.png" class="bio-photo" alt="Noah Allen bio photo"></a>
+        
+        <span class="author vcard">By <span class="fn">Noah Allen</span></span>
+        <span class="entry-date date published"><time datetime="2018-03-20T12:00:00-04:00"><i class="fa fa-calendar-o"></i> March 20, 2018</time></span>
+        <span class="entry-date date modified"><time datetime="2018-03-20 12:00:00 -0400"><i class="fa fa-pencil"></i> March 20, 2018</time></span>
+        
+        
+        
+      </footer>
+      <div class="entry-content">
+        <h2 id="problem">Problem:</h2>
+
+<p class="text-justify">Ideally, to complement the DLTS system that our group owns we should also be able to excite electronic defects through and optical method to help understand 
+the full extent of bandgap traps in GaN.  A simple method known as Steady-State Photocapacitance measurements uses sudden exposures of single wavelength light 
+to excite trapped charges out of deep states in a semiconductor and measures the response with a fast capacitance meter.  In other words we put a shutter 
+between a sample and the light source, let the sample sit in the dark for some time and then open the shutter and see what happens.</p>
+
+<p class="text-justify">The problem I was facing was trying to time the exposure of light accurately with a safety shutter (Oriel 71445) and a digital signal from a LabVIEW program. 
+Results can be seen below where I send the signal to open the shutter but the delay to open isn’t consistent which makes automation of detailed analysis almost 
+impossible.</p>
+
+<p><img src="/images/projects/SlowShutter.jpg" align="middle" /></p>
+
+<h2 id="solution">Solution:</h2>
+
+<p class="text-justify">The first idea was to buy something since “a simple shutter shouldn’t be expensive” but after looking I found that was not the case.  The next idea (like most 
+of mine are) was to try and make one.  Since there didn’t seem to be ‘broken’ shutters on eBay I looked to try and score repair parts for a DSLR camera and 
+reverse engineer the pins.  Below is a picture of the D750 Shutter Blade Assembly Replacement I bought.</p>
+
+<p><img src="/images/projects/D750ShutterAnnotated.jpg" align="middle" /></p>
+
+<p class="text-justify">It took a little while to figure out how the shutter worked and in turn how to control it but it goes something like this.  The light blocking method is accomplished 
+with two shades which are tensioned with a spring.  The motor will cock both of the shades until the metal core connector piece (connected to the shade) touches the electromagnet core.<br />
+If power is running through the inductor, when the metal piece touches the core it will stick, thereby keeping the shade anchored.  Once power to the inductor is stopped 
+the spring tension pulls the shade back to the original position.</p>
+
+<p><img src="/images/projects/D750ShutterAnnotated2.jpg" align="middle" /></p>
+
+<p class="text-justify">The final piece of the puzzle is the motor position.  When the motor cocks the shutter blades it needs to keep moving so that the cocking arm isn’t in the way when 
+the shades are ultimately relaxed to their original position.  This is difficult because the shutter assembly uses a DC motor and has no feedback.  This was solved by 
+putting a few notches into one of the motor gears and sensing the notches with a couple photointerrupters.  This is what is implemented on the D750 shutter assembly.</p>
+
+<p><img src="/images/projects/D750Photointerrupter.jpg" align="middle" /></p>
+
+<p class="text-justify">Now that we generally understand how the shutter works we need to setup a circuit and microcontroller to cock the shutter blades and then release them when ready.  I decided to 
+that the following circuits would be adequate to control the electromagnets and motor and then sense the position of the motor.  The red outline indicates the circuit exists on the 
+shutter assembly and the blue represents a circuit I need to implement.</p>
+
+<p><img src="/images/projects/ShutterControlCircuit.jpg" align="middle" /></p>
+
+<p class="text-justify">With some probing around to discover the polarity of some of the circuits, below is the full interface diagram I implemented to control the shutter assembly.  Notice that I’ve also added a 
+voltage buffer (op-amp) for the input.  I’m connecting a digital signal from the LabVIEW DAC over a long BNC cable and found that when connecting it directly to the gate of the MOSFET 
+the voltage sagged (probably because of the 1K pull-down resistor) so I decided to add the opamp in series to increase the input impedance.</p>
+
+<p><img src="/images/projects/FullShutterCircuit.jpg" align="middle" /></p>
+
+<p class="text-justify">The code I used is below.  Basically, the BNC input in the circuit above controls whether or not the OPEN electromagnet is holding the shutter blade and the Arduino is just checking whether or not 
+the digital signal is high or low.  After the BNC input indicates that it’s ready for the shutter to be reset the Arduino sends a full power PWM signal to the motor control MOSFET until its reset the 
+shutter blades at which point it will cut the power down to 10% (duty cycle 20 of 255).  Then it will wait  until the motor position is at the correct point to turn the motor off.  I found that if 
+the program turned the motor off from 100%, the momentum would push it past the correct reset position and the blades would get stuck.  Lowering the power while it was still moving gave it enought of a 
+push to make it around again but not enough to cause the motor to drift when it was turned off.</p>
+
+<div class="language-c highlighter-rouge"><pre class="highlight"><code><span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">time</span><span class="p">;</span>
+
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">INPUT</span><span class="p">);</span> <span class="c1">//Open Shutter Hold
+</span>  <span class="n">pinMode</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span> <span class="c1">//Close Shutter Hold
+</span>  <span class="n">pinMode</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span> <span class="c1">//Motor
+</span>  <span class="n">pinMode</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span> <span class="c1">//Debug LED
+</span>  <span class="n">pinMode</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="n">INPUT</span><span class="p">);</span> <span class="c1">//Motor PhotoInterrupter 1
+</span>  <span class="n">pinMode</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="n">INPUT</span><span class="p">);</span> <span class="c1">//Motor PhotoInterrupter 2
+</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// put your main code here, to run repeatedly:
+</span>  
+  <span class="k">while</span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="mi">2</span><span class="p">)){</span>   <span class="c1">//Wait until High-Low
+</span>    <span class="n">__asm__</span><span class="p">(</span><span class="s">"nop</span><span class="se">\n\t</span><span class="s">"</span><span class="p">);</span> 
+    <span class="p">}</span>
+    
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="nb">false</span><span class="p">);</span> <span class="c1">//Turn LED OFF 
+</span>  
+  <span class="n">delay</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>               <span class="c1">//Wait for Bounce
+</span>  
+  <span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">digitalRead</span><span class="p">(</span><span class="mi">2</span><span class="p">)){</span> <span class="c1">//Wait until Low-High
+</span>    <span class="n">__asm__</span><span class="p">(</span><span class="s">"nop</span><span class="se">\n\t</span><span class="s">"</span><span class="p">);</span> 
+    <span class="p">}</span>
+    
+  <span class="n">delay</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>               <span class="c1">//Wait for bounce
+</span>  <span class="k">if</span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="mi">2</span><span class="p">)){</span>    <span class="c1">//Check actually high
+</span>    <span class="n">digitalWrite</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="nb">false</span><span class="p">);</span> <span class="c1">//Close Shutter
+</span>    <span class="n">delay</span><span class="p">(</span><span class="mi">150</span><span class="p">);</span>             <span class="c1">//Wait for close
+</span>    <span class="n">digitalWrite</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="nb">true</span><span class="p">);</span> <span class="c1">//Turn LED ON
+</span>    <span class="n">digitalWrite</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="nb">true</span><span class="p">);</span>  <span class="c1">//Engage Close Shutter Hold
+</span>    <span class="n">ResetMotor</span><span class="p">();</span>
+    <span class="p">}</span>
+   
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="n">ResetMotor</span><span class="p">(){</span>
+
+  <span class="n">analogWrite</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">255</span><span class="p">);</span><span class="c1">//Turn motor on to reset
+</span>  
+  
+  
+  <span class="n">time</span> <span class="o">=</span> <span class="n">millis</span><span class="p">();</span> 
+  <span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span> <span class="o">==</span> <span class="n">HIGH</span>  <span class="o">&amp;&amp;</span> <span class="n">digitalRead</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="n">HIGH</span><span class="p">)){</span> <span class="c1">//Wait until motor out of correct position
+</span>    <span class="k">if</span><span class="p">((</span><span class="n">millis</span><span class="p">()</span><span class="o">-</span><span class="n">time</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">500</span><span class="p">){</span><span class="n">analogWrite</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span><span class="k">return</span><span class="p">;}</span>
+  <span class="p">}</span>
+
+  <span class="n">time</span> <span class="o">=</span> <span class="n">millis</span><span class="p">();</span>   
+  <span class="k">while</span><span class="p">((</span><span class="n">digitalRead</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span> <span class="o">==</span> <span class="n">HIGH</span>  <span class="o">&amp;&amp;</span> <span class="n">digitalRead</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="n">HIGH</span><span class="p">)){</span> <span class="c1">//Wait until motor out of correct position
+</span>    <span class="k">if</span><span class="p">((</span><span class="n">millis</span><span class="p">()</span><span class="o">-</span><span class="n">time</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">500</span><span class="p">){</span><span class="n">analogWrite</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span><span class="k">return</span><span class="p">;}</span>
+  <span class="p">}</span>
+
+  <span class="n">analogWrite</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">20</span><span class="p">);</span><span class="c1">//Turn motor on to reset
+</span>
+  <span class="n">time</span> <span class="o">=</span> <span class="n">millis</span><span class="p">();</span>
+  <span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span> <span class="o">==</span> <span class="n">HIGH</span>  <span class="o">&amp;&amp;</span> <span class="n">digitalRead</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="n">HIGH</span><span class="p">)){</span> <span class="c1">//Wait until motor out of correct position
+</span>    <span class="k">if</span><span class="p">((</span><span class="n">millis</span><span class="p">()</span><span class="o">-</span><span class="n">time</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">500</span><span class="p">){</span><span class="n">analogWrite</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span><span class="k">return</span><span class="p">;}</span>
+  <span class="p">}</span>
+
+  <span class="n">time</span> <span class="o">=</span> <span class="n">millis</span><span class="p">();</span>
+  <span class="k">while</span><span class="p">((</span><span class="n">digitalRead</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span> <span class="o">==</span> <span class="n">HIGH</span>  <span class="o">&amp;&amp;</span> <span class="n">digitalRead</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="n">HIGH</span><span class="p">)){</span> <span class="c1">//Wait until motor out of correct position
+</span>    <span class="k">if</span><span class="p">((</span><span class="n">millis</span><span class="p">()</span><span class="o">-</span><span class="n">time</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">500</span><span class="p">){</span><span class="n">analogWrite</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span><span class="k">return</span><span class="p">;}</span>
+  <span class="p">}</span>
+
+  <span class="n">time</span> <span class="o">=</span> <span class="n">millis</span><span class="p">();</span>
+  <span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span> <span class="o">==</span> <span class="n">LOW</span>  <span class="o">&amp;&amp;</span> <span class="n">digitalRead</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="n">LOW</span><span class="p">)){</span> <span class="c1">//Wait until motor in correct position
+</span>    <span class="k">if</span><span class="p">((</span><span class="n">millis</span><span class="p">()</span><span class="o">-</span><span class="n">time</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">500</span><span class="p">){</span><span class="n">analogWrite</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span><span class="k">return</span><span class="p">;}</span>
+  <span class="p">}</span>
+ 
+  <span class="n">analogWrite</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>  <span class="c1">//Turn motor off   
+</span><span class="p">}</span>
+
+</code></pre>
+</div>
+
+        
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="http://noaha.net/blog/Hg-Probe-Adapter/" class="btn" title="Hg Probe Back Contact Piece">Previous</a>
+      
+      
+        <a href="http://noaha.net/blog/SSPC-Controlled-ND-Filter/" class="btn" title="Reverse Engineering the D750 Shutter for Remote Control">Next</a>
+      
+    </nav><!-- /.pagination -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<span>&copy; 2018 Noah Allen. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/so-simple-jekyll-theme/" rel="nofollow">So Simple Theme</a>.</span>
+<div class="social-icons">
+	
+	
+	
+	
+	
+	
+	
+	
+	
+  
+	
+  <a href="http://noaha.net/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss-square fa-2x"></i></a>
+</div><!-- /.social-icons -->
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'http://noaha.net';
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://noaha.net/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://noaha.net/assets/js/scripts.min.js"></script>
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-90785511-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

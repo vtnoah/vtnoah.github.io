@@ -5,14 +5,18 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Projects &#8211; Noah P. Allen</title>
-<meta name="description" content="Project documentations">
+<title>Reverse Engineering the D750 Shutter for Remote Control &#8211; Noah P. Allen</title>
+<meta name="description" content="Problem:
 
+">
+<meta name="keywords" content="">
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="Projects">
-<meta name="twitter:description" content="Project documentations">
+<meta name="twitter:title" content="Reverse Engineering the D750 Shutter for Remote Control">
+<meta name="twitter:description" content="Problem:
+
+">
 
 
 
@@ -22,16 +26,18 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Projects">
-<meta property="og:description" content="Project documentations">
-<meta property="og:url" content="http://noaha.net/projects/">
+<meta property="og:title" content="Reverse Engineering the D750 Shutter for Remote Control">
+<meta property="og:description" content="Problem:
+
+">
+<meta property="og:url" content="http://noaha.net/blog/SSPC-Controlled-ND-Filter/">
 <meta property="og:site_name" content="Noah P. Allen">
 
 
 
 
 
-<link rel="canonical" href="http://noaha.net/projects/">
+<link rel="canonical" href="http://noaha.net/blog/SSPC-Controlled-ND-Filter/">
 <link href="http://noaha.net/feed.xml" type="application/atom+xml" rel="alternate" title="Noah P. Allen Feed">
 
 <!-- https://t.co/dKP3o1e -->
@@ -77,7 +83,7 @@
 
 </head>
 
-<body id="page">
+<body id="post">
 
 <div class="navigation-wrapper">
 	<nav role="navigation" id="site-nav" class="animated drop">
@@ -118,34 +124,52 @@
 
 
 <div id="main" role="main">
-  <article class="entry">
+  <article class="hentry">
     
     <div class="entry-wrapper">
       <header class="entry-header">
-        <h1 class="entry-title">Projects</h1>
+        <ul class="entry-tags">
+          
+        </ul>
+        
+          <h1 class="entry-title">Reverse Engineering the D750 Shutter for Remote Control</h1>
+        
       </header>
+      <footer class="entry-meta">
+        
+        
+          <img src="http://noaha.net/images/HeadShot2.png" class="bio-photo" alt="Noah Allen bio photo"></a>
+        
+        <span class="author vcard">By <span class="fn">Noah Allen</span></span>
+        <span class="entry-date date published"><time datetime="2018-03-20T12:00:00-04:00"><i class="fa fa-calendar-o"></i> March 20, 2018</time></span>
+        <span class="entry-date date modified"><time datetime="2018-03-20 12:00:00 -0400"><i class="fa fa-pencil"></i> March 20, 2018</time></span>
+        
+        
+        
+      </footer>
       <div class="entry-content">
-        <ul class="post-list">
- 
-  <li><article><a href="http://noaha.net/blog/SSPC-Controlled-ND-Filter/">Reverse Engineering the D750 Shutter for Remote Control <span class="entry-date"><time datetime="2018-03-20T12:00:00-04:00">March 20, 2018</time></span></a></article></li>
- 
-  <li><article><a href="http://noaha.net/blog/SSPC-Shutter/">Reverse Engineering the D750 Shutter for Remote Control <span class="entry-date"><time datetime="2018-03-20T12:00:00-04:00">March 20, 2018</time></span></a></article></li>
- 
-  <li><article><a href="http://noaha.net/blog/Hg-Probe-Adapter/">Hg Probe Back Contact Piece <span class="entry-date"><time datetime="2017-08-01T12:00:00-04:00">August 01, 2017</time></span></a></article></li>
- 
-  <li><article><a href="http://noaha.net/blog/PN-Diode-Fabrication/">Cleanroom Fabricated Gallium Nitride PN Diodes <span class="entry-date"><time datetime="2016-11-01T12:00:00-04:00">November 01, 2016</time></span></a></article></li>
- 
-  <li><article><a href="http://noaha.net/blog/DLTS-Data-Analysis/">LabVIEW (D)DLTS and CCDLTS Measurement Program <span class="entry-date"><time datetime="2016-02-01T11:00:00-05:00">February 01, 2016</time></span></a></article></li>
- 
-  <li><article><a href="http://noaha.net/blog/Probe-Station-Rebuild/">MMR Probe Station Rebuild with Helium Cryopump <span class="entry-date"><time datetime="2016-01-20T11:00:00-05:00">January 20, 2016</time></span></a></article></li>
- 
-  <li><article><a href="http://noaha.net/blog/Electrical-Data-Analysis/">LabVIEW I-V and C-V Data Analysis Program <span class="entry-date"><time datetime="2015-02-10T11:00:00-05:00">February 10, 2015</time></span></a></article></li>
+        <h2 id="problem">Problem:</h2>
 
-</ul>
+<p class="text-justify">So, after the excitement of fixing the shutter jitter mentioned in the ‘Reverse Engineering the D750 Shutter for Remote Control’ project, I was able to take 
+a nice looking SSPC signal from 3 samples but I noticed something interesting.  Ideally, the SSPC signal below should only show slope increases when the incident energy 
+is enough to excite trapped charge into the conduction band or out of the valence band but it seemed that the signal could be perturbed by some of the peaks in my 350W 
+mercury source.  In order to publish the data this needs to be fixed so that I’m not trying to make conclusions based on faulty data.</p>
 
+<p><img src="/images/projects/SSPCgraph.jpg" align="middle" /></p>
 
+<h2 id="solution">Solution:</h2>
+
+<p class="text-justify">Coming soon</p>
+
+        
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="http://noaha.net/blog/SSPC-Shutter/" class="btn" title="Reverse Engineering the D750 Shutter for Remote Control">Previous</a>
+      
+      
+    </nav><!-- /.pagination -->
   </article>
 </div><!-- /#main -->
 
