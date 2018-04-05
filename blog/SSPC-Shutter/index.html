@@ -200,7 +200,80 @@ shutter blades at which point it will cut the power down to 10% (duty cycle 20 o
 the program turned the motor off from 100%, the momentum would push it past the correct reset position and the blades would get stuck.  Lowering the power while it was still moving gave it enought of a 
 push to make it around again but not enough to cause the motor to drift when it was turned off.</p>
 
-<div class="language-c highlighter-rouge"><pre class="highlight"><code><span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">time</span><span class="p">;</span>
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74</pre></td><td class="code"><pre><span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">time</span><span class="p">;</span>
 
 
 <span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
@@ -273,10 +346,8 @@ push to make it around again but not enough to cause the motor to drift when it 
   <span class="p">}</span>
  
   <span class="n">analogWrite</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>  <span class="c1">//Turn motor off   
-</span><span class="p">}</span>
-
-</code></pre>
-</div>
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
         
       </div><!-- /.entry-content -->

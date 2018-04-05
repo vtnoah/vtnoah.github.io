@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="http://noaha.net/feed.xml" rel="self" type="application/atom+xml" /><link href="http://noaha.net/" rel="alternate" type="text/html" /><updated>2018-04-02T13:58:30-04:00</updated><id>http://noaha.net/</id><title type="html">Noah P. Allen</title><subtitle>A Place to Showcase Noah Allen's Work</subtitle><entry><title type="html">Ethernet Controlled Graduated ND Filter</title><link href="http://noaha.net/blog/SSPC-Controlled-ND-Filter/" rel="alternate" type="text/html" title="Ethernet Controlled Graduated ND Filter" /><published>2018-03-20T12:00:00-04:00</published><updated>2018-03-20T12:00:00-04:00</updated><id>http://noaha.net/blog/SSPC-Controlled-ND-Filter</id><content type="html" xml:base="http://noaha.net/blog/SSPC-Controlled-ND-Filter/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="http://noaha.net/feed.xml" rel="self" type="application/atom+xml" /><link href="http://noaha.net/" rel="alternate" type="text/html" /><updated>2018-04-05T12:24:20-04:00</updated><id>http://noaha.net/</id><title type="html">Noah P. Allen</title><subtitle>A Place to Showcase Noah Allen's Work</subtitle><entry><title type="html">Ethernet Controlled Graduated ND Filter</title><link href="http://noaha.net/blog/SSPC-Controlled-ND-Filter/" rel="alternate" type="text/html" title="Ethernet Controlled Graduated ND Filter" /><published>2018-03-20T12:00:00-04:00</published><updated>2018-03-20T12:00:00-04:00</updated><id>http://noaha.net/blog/SSPC-Controlled-ND-Filter</id><content type="html" xml:base="http://noaha.net/blog/SSPC-Controlled-ND-Filter/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
 
 &lt;p class=&quot;text-justify&quot;&gt;So, after the excitement of fixing the shutter jitter mentioned in the ‘Reverse Engineering the D750 Shutter for Remote Control’ project, I was able to take 
 a nice looking SSPC signal from 3 samples but I noticed something interesting.  Ideally, the SSPC signal below should only show slope increases when the incident energy 
@@ -45,8 +45,296 @@ of the Hg lamp.  As you can see below the photon flux at each wavelength is much
 
 &lt;h1 class=&quot;text-center&quot; id=&quot;arduino-code&quot;&gt;Arduino Code&lt;/h1&gt;
 
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&lt;span class=&quot;cm&quot;&gt;/* Definition of all of the Ethernet Code
+&lt;p class=&quot;text-justify&quot;&gt;The Arduino code is long but pretty simple.  I decided that the speed of moving the ND filter did not matter as much as the resolution so I chose to micro-step at 1/32.  The first 
+piece of code I wrote was to reset the stage to a known location.  To accomplish this I quickly stepped the motor until I hit the limit switch at which point I SLOWLY micro-stepped off 
+of it until it was no longer depressed and set the current location to ZERO.  Next, I manually moved the stage to a few steps prior to hitting the far side and then I would run the ResetMotor() 
+function to check how many steps it would take and found that 138,000 steps was the maximum I could go before hitting the other side.  When testing for backlash and motor slippage I found that 
+if I moved the motor &amp;lt;500 steps at full speed it would miss a few so I wrote a check in the MoveSteps() function that would move the motor a little slower for small motor movements.  As 
+for the Ethernet code, I basically used the UIPEthernet TCPserver example to setup the ENC28J60 to receive TCP packets and parse the data portion into a String.  From there I just setup 
+a few command strings to be recognized (GT, CS, RS, and EN) and then parsed accordingly (ex. GT120000(CR) would go to step 120,000).  NOTE: The only way I could get LabVIEW to connect to the 
+ENC28J60 was if I gave it an IP address VERY close to the computer.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;cm&quot;&gt;/* Definition of all of the Ethernet Code
  *  ***********************************************************************
 */&lt;/span&gt;
 &lt;span class=&quot;cp&quot;&gt;#include &amp;lt;UIPEthernet.h&amp;gt;
@@ -326,13 +614,8 @@ of the Hg lamp.  As you can see below the photon flux at each wavelength is much
   &lt;span class=&quot;n&quot;&gt;MoveSteps&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Step&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;currentStep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
   &lt;span class=&quot;n&quot;&gt;currentStep&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Step&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Step&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-
-
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><summary type="html">Problem:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://noaha.net{&quot;feature&quot;=&gt;nil}" /></entry><entry><title type="html">Reverse Engineering the D750 Shutter for Remote Control</title><link href="http://noaha.net/blog/SSPC-Shutter/" rel="alternate" type="text/html" title="Reverse Engineering the D750 Shutter for Remote Control" /><published>2018-03-20T12:00:00-04:00</published><updated>2018-03-20T12:00:00-04:00</updated><id>http://noaha.net/blog/SSPC-Shutter</id><content type="html" xml:base="http://noaha.net/blog/SSPC-Shutter/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><summary type="html">Problem:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://noaha.net{&quot;feature&quot;=&gt;nil}" /></entry><entry><title type="html">Reverse Engineering the D750 Shutter for Remote Control</title><link href="http://noaha.net/blog/SSPC-Shutter/" rel="alternate" type="text/html" title="Reverse Engineering the D750 Shutter for Remote Control" /><published>2018-03-20T12:00:00-04:00</published><updated>2018-03-20T12:00:00-04:00</updated><id>http://noaha.net/blog/SSPC-Shutter</id><content type="html" xml:base="http://noaha.net/blog/SSPC-Shutter/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
 
 &lt;p class=&quot;text-justify&quot;&gt;Ideally, to complement the DLTS system that our group owns we should also be able to excite electronic defects through and optical method to help understand 
 the full extent of bandgap traps in GaN.  A simple method known as Steady-State Photocapacitance measurements uses sudden exposures of single wavelength light 
@@ -384,7 +667,80 @@ shutter blades at which point it will cut the power down to 10% (duty cycle 20 o
 the program turned the motor off from 100%, the momentum would push it past the correct reset position and the blades would get stuck.  Lowering the power while it was still moving gave it enought of a 
 push to make it around again but not enough to cause the motor to drift when it was turned off.&lt;/p&gt;
 
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 
 &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -457,10 +813,8 @@ push to make it around again but not enough to cause the motor to drift when it 
   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
  
   &lt;span class=&quot;n&quot;&gt;analogWrite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//Turn motor off   
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><summary type="html">Problem:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://noaha.net{&quot;feature&quot;=&gt;nil}" /></entry><entry><title type="html">Hg Probe Back Contact Piece</title><link href="http://noaha.net/blog/Hg-Probe-Adapter/" rel="alternate" type="text/html" title="Hg Probe Back Contact Piece" /><published>2017-08-01T12:00:00-04:00</published><updated>2017-08-01T12:00:00-04:00</updated><id>http://noaha.net/blog/Hg-Probe-Adapter</id><content type="html" xml:base="http://noaha.net/blog/Hg-Probe-Adapter/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><summary type="html">Problem:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://noaha.net{&quot;feature&quot;=&gt;nil}" /></entry><entry><title type="html">Hg Probe Back Contact Piece</title><link href="http://noaha.net/blog/Hg-Probe-Adapter/" rel="alternate" type="text/html" title="Hg Probe Back Contact Piece" /><published>2017-08-01T12:00:00-04:00</published><updated>2017-08-01T12:00:00-04:00</updated><id>http://noaha.net/blog/Hg-Probe-Adapter</id><content type="html" xml:base="http://noaha.net/blog/Hg-Probe-Adapter/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
 
 &lt;p class=&quot;text-justify&quot;&gt;Being able to quickly and cheaply identify the free carrier concentration in a semiconductor layer can be helpful when slight changes to 
 material growth parameters can increase or decrease contamination concentrations such as carbon.  In GaN carbon has been shown to incorporate electrically 
