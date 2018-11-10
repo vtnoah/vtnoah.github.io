@@ -3,7 +3,7 @@
   
     {
       "title"			: "Ethernet Controlled Graduated ND Filter",
-      "link"			: "http://noaha.net/blog/SSPC-Controlled-ND-Filter/",
+      "link"			: "http://localhost:4000/blog/SSPC-Controlled-ND-Filter/",
       "excerpt"		: "Problem:"
     }
   
@@ -11,7 +11,7 @@
   
     ,{
       "title"			: "Reverse Engineering the D750 Shutter for Remote Control",
-      "link"			: "http://noaha.net/blog/SSPC-Shutter/",
+      "link"			: "http://localhost:4000/blog/SSPC-Shutter/",
       "excerpt"		: "Problem:"
     }
   
@@ -19,7 +19,7 @@
   
     ,{
       "title"			: "Hg Probe Back Contact Piece",
-      "link"			: "http://noaha.net/blog/Hg-Probe-Adapter/",
+      "link"			: "http://localhost:4000/blog/Hg-Probe-Adapter/",
       "excerpt"		: "Problem:"
     }
   
@@ -27,7 +27,7 @@
   
     ,{
       "title"			: "Thin-film GaN Schottky diodes formed by epitaxial lift-off",
-      "link"			: "http://noaha.net/articles/GaN-Lift-Off/",
+      "link"			: "http://localhost:4000/articles/GaN-Lift-Off/",
       "excerpt"		: "Summary of the paper"
     }
   
@@ -35,7 +35,7 @@
   
     ,{
       "title"			: "[In progress] Parameter Extraction of Oxidized Ni/Au and Ni-Only Transparent Conducting Oxides (TCOs) on n-Type GaN Schottky Barrier Diode with Bias Dependence Barrier Height and Ideality Factor at Different Temperatures",
-      "link"			: "http://noaha.net/articles/Ni-Au-Parameter-Extraction/",
+      "link"			: "http://localhost:4000/articles/Ni-Au-Parameter-Extraction/",
       "excerpt"		: "Summary of the paper"
     }
   
@@ -43,7 +43,7 @@
   
     ,{
       "title"			: "Cleanroom Fabricated Gallium Nitride PN Diodes",
-      "link"			: "http://noaha.net/blog/PN-Diode-Fabrication/",
+      "link"			: "http://localhost:4000/blog/PN-Diode-Fabrication/",
       "excerpt"		: "I am in the process of writing a description for this project."
     }
   
@@ -51,7 +51,7 @@
   
     ,{
       "title"			: "LabVIEW (D)DLTS and CCDLTS Measurement Program",
-      "link"			: "http://noaha.net/blog/DLTS-Data-Analysis/",
+      "link"			: "http://localhost:4000/blog/DLTS-Data-Analysis/",
       "excerpt"		: "Problem:"
     }
   
@@ -59,7 +59,7 @@
   
     ,{
       "title"			: "MMR Probe Station Rebuild with Helium Cryopump",
-      "link"			: "http://noaha.net/blog/Probe-Station-Rebuild/",
+      "link"			: "http://localhost:4000/blog/Probe-Station-Rebuild/",
       "excerpt"		: "Problem:"
     }
   
@@ -67,7 +67,7 @@
   
     ,{
       "title"			: "GaInN/GaN Solar Cells with Ni/Au Schottky Electrodes",
-      "link"			: "http://noaha.net/articles/GaInN-solar-cells/",
+      "link"			: "http://localhost:4000/articles/GaInN-solar-cells/",
       "excerpt"		: "Summary of the paper"
     }
   
@@ -75,7 +75,7 @@
   
     ,{
       "title"			: "Heteroepitaxial Ge MOS Devices on Si Using Composite AlAs/GaAs Buffer &#13;",
-      "link"			: "http://noaha.net/articles/GeMOS-on-AlAs-GaAs/",
+      "link"			: "http://localhost:4000/articles/GeMOS-on-AlAs-GaAs/",
       "excerpt"		: "Summary of the paper"
     }
   
@@ -83,7 +83,7 @@
   
     ,{
       "title"			: "LabVIEW I-V and C-V Data Analysis Program",
-      "link"			: "http://noaha.net/blog/Electrical-Data-Analysis/",
+      "link"			: "http://localhost:4000/blog/Electrical-Data-Analysis/",
       "excerpt"		: "Problem:"
     }
   
@@ -91,7 +91,7 @@
   
     ,{
       "title"			: "Electrical Characterization of Ruthenium Dioxide Schottky Contacts on GaN",
-      "link"			: "http://noaha.net/articles/GaN-Ru-Oxide-MS-Thesis/",
+      "link"			: "http://localhost:4000/articles/GaN-Ru-Oxide-MS-Thesis/",
       "excerpt"		: "Summary of the thesis"
     }
   
@@ -99,7 +99,7 @@
   
     ,{
       "title"			: "GaInN/GaN – Ni/Au Transparent Conducting Oxide Schottky Barrier Solar Cells",
-      "link"			: "http://noaha.net/articles/GaInN-TCO/",
+      "link"			: "http://localhost:4000/articles/GaInN-TCO/",
       "excerpt"		: "Summary of the paper"
     }
   
@@ -107,7 +107,7 @@
   
     ,{
       "title"			: "Paper-based capacitive mass sensor",
-      "link"			: "http://noaha.net/articles/Paper-Based-Mems/",
+      "link"			: "http://localhost:4000/articles/Paper-Based-Mems/",
       "excerpt"		: "Summary of the paper"
     }
   
@@ -115,7 +115,7 @@
   
     ,{
       "title"			: "Using Near-Field Holography to Investigate Super Hydrophobic Surfaces",
-      "link"			: "http://noaha.net/articles/Super-Hydrophobic-Surfaces/",
+      "link"			: "http://localhost:4000/articles/Super-Hydrophobic-Surfaces/",
       "excerpt"		: "Summary of the paper"
     }
   
@@ -133,7 +133,7 @@
   
     ,{
       "title"			: "About",
-      "link"			: "http://noaha.net/",
+      "link"			: "http://localhost:4000/",
       "excerpt"		: "Noah Allen is a PhD candidate in the Electrical Engineering department at Virginia Tech.  This website documents some of the work he has completed as a student."
     }
   
