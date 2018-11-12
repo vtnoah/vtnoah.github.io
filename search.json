@@ -2,22 +2,6 @@
 
   
     {
-      "title"			: "Ethernet Controlled Graduated ND Filter",
-      "link"			: "http://noaha.net/blog/SSPC-Controlled-ND-Filter/",
-      "excerpt"		: "Problem:"
-    }
-  
-
-  
-    ,{
-      "title"			: "Reverse Engineering the D750 Shutter for Remote Control",
-      "link"			: "http://noaha.net/blog/SSPC-Shutter/",
-      "excerpt"		: "Problem:"
-    }
-  
-
-  
-    ,{
       "title"			: "[In progress] Modeling forward and reverse IVT Schottky characteristics on GaN with a Log-Normal barrier height distribution",
       "link"			: "http://noaha.net/articles/Log-Normal-IVT/",
       "excerpt"		: "Summary of the paper"
@@ -29,6 +13,22 @@
       "title"			: "[In progress] Impact of increasing TMGa and Silane on GaN carrier concentration and deep level defects by MOCVD",
       "link"			: "http://noaha.net/articles/TMGA-Variation/",
       "excerpt"		: "Summary of the paper"
+    }
+  
+
+  
+    ,{
+      "title"			: "Ethernet Controlled Graduated ND Filter",
+      "link"			: "http://noaha.net/blog/SSPC-Controlled-ND-Filter/",
+      "excerpt"		: "Problem:"
+    }
+  
+
+  
+    ,{
+      "title"			: "Reverse Engineering the D750 Shutter for Remote Control",
+      "link"			: "http://noaha.net/blog/SSPC-Shutter/",
+      "excerpt"		: "Problem:"
     }
   
 
@@ -109,6 +109,14 @@
       "title"			: "GaInN/GaN – Ni/Au Transparent Conducting Oxide Schottky Barrier Solar Cells",
       "link"			: "http://noaha.net/articles/GaInN-TCO/",
       "excerpt"		: "Summary of the paper"
+    }
+  
+
+  
+    ,{
+      "title"			: "ECE5210 - MEMs Final Project",
+      "link"			: "http://noaha.net/blog/Cantilever-Capacitance/",
+      "excerpt"		: "Problem:"
     }
   
 

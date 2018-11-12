@@ -179,14 +179,38 @@ I had to beg for and next to it are the two seals, you can see how dirty they ar
 
 <p><img src="/images/projects/CryoPumpSeals.png" align="middle" /></p>
 
-<p>Now that I was able to get down in temperature, I needed to find a way to mount the vacuum housing to the MMR probe station.  Luckily, the designers of the MMR vacuum chamber 
+<p class="text-justify">Now that I was able to get down in temperature, I needed to find a way to mount the vacuum housing to the MMR probe station.  Luckily, the designers of the MMR vacuum chamber 
 thought to add a port on the bottom of the station (even if it was for a tubo upgrade) so I could connect straight to that.  However, I needed to measure all of the cryo chamber 
 dimensions and machine a coupling.  Because I wanted to make sure to not ruin any of the expensive parts, I designed the coupling, and later the copper stage, so that no permanent 
 holes or machining had to be done to the MMR chamber or the cryo pump components.  Thus the most over-machined vacuum coupling was born.</p>
 
-<p><img src="/images/projects/CouplingRotation.gif" align="middle" /></p>
+<tr>
+<td> <img src="/images/projects/CouplingRotation.gif" alt="Drawing" style="width: 300px;" /> </td>
+<td> <img src="/images/projects/CouplingAssembly.gif" alt="Drawing" style="width: 500px;" /> </td>
+</tr>
 
-<p>MORE TO COME SOON.</p>
+<p class="text-justify">By some miracle on the first try, I was able to pump the system down to same absolute pressure as when the chamber didn’t have a cryopump hanging off of it.  So, the next step was to 
+find some way to cool a sample down in the chamber using the 2nd stage of the cryopump.  It might not be readily apparent but the tip of the pump sits about 6 inches below the 
+point where the probes can contact a sample so I first needed to extend the length of the cold surface with a piece of oxygen-free copper.  Next I wanted the ability to heat the sample 
+stage without dropping too much of that heat into the cryo pump so I added 3 stainless steel standoffs as a thermal resistance.  Finally, I added the sample stage with a couple 
+holes designed to accept a 50W heater and a Pt thermometer.  Again to my surprise, it worked the first time and I could successfully cool a sample down to ~50K!  So I’m done right?… right?</p>
+
+<p><img src="/images/projects/OriginalStage.gif" align="middle" /></p>
+
+<p class="text-justify">No, it turns out I didn’t plan for the small, in axis, vibration from the cryo pump displacers which caused &lt;5μm sample movement.  The vibration was enough to induce small periodic noise 
+in the reverse IV characteristics of a schottky diode.  I thought about trying to fix it by synchronizing the measurement instrument with the vibration but realized I needed to ultimately 
+redesign the sample stage and anchor it to the vacuum chamber instead of the cryo pump.  So back to the drawing board.</p>
+
+<p><img src="/images/projects/VibrationProblemIV.png" align="middle" /></p>
+
+<p class="text-justify">It took me awhile of thinking how I was going to do this because I now had to worry about how I was going to physically anchor the sample stage to the vacuum chamber but thermally isolate it 
+so I wasn’t cooling down the whole apparatus.  This problem was made harder by the fact I would lose cooling power from having to use a copper braid instead of a more solid stainless steel 
+standoff like the previous sample stage.  Thus, I settled on the design below, where I would break the sample stage into two pieces which would sandwich together on a disk with wave springs thereby 
+taking care of most of the thermal isolation.  The disk would then be anchored to the vacuum side of the machined coupling I mentioned previously with stainless steel standoffs.  After some testing 
+it worked!  I was successfully able to cool the sample down to &lt;50K without any noticeable current perturbations down to 1fA and have been taking measurements on it like a mad man.  Check out the assembly of the stage below.</p>
+
+<p><img src="/images/projects/VibrationStage.gif" align="middle" /></p>
+
 
         
       </div><!-- /.entry-content -->

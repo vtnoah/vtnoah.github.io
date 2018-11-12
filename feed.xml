@@ -1,4 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="http://noaha.net/feed.xml" rel="self" type="application/atom+xml" /><link href="http://noaha.net/" rel="alternate" type="text/html" /><updated>2018-11-10T22:30:54-05:00</updated><id>http://noaha.net/</id><title type="html">Noah P. Allen</title><subtitle>A Place to Showcase Noah Allen's Work</subtitle><entry><title type="html">Ethernet Controlled Graduated ND Filter</title><link href="http://noaha.net/blog/SSPC-Controlled-ND-Filter/" rel="alternate" type="text/html" title="Ethernet Controlled Graduated ND Filter" /><published>2018-03-20T12:00:00-04:00</published><updated>2018-03-20T12:00:00-04:00</updated><id>http://noaha.net/blog/SSPC-Controlled-ND-Filter</id><content type="html" xml:base="http://noaha.net/blog/SSPC-Controlled-ND-Filter/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="http://noaha.net/feed.xml" rel="self" type="application/atom+xml" /><link href="http://noaha.net/" rel="alternate" type="text/html" /><updated>2018-11-11T19:10:30-05:00</updated><id>http://noaha.net/</id><title type="html">Noah P. Allen</title><subtitle>A Place to Showcase Noah Allen's Work</subtitle><entry><title type="html">[In progress] Modeling forward and reverse IVT Schottky characteristics on GaN with a Log-Normal barrier height distribution</title><link href="http://noaha.net/articles/Log-Normal-IVT/" rel="alternate" type="text/html" title="[In progress] Modeling forward and reverse IVT Schottky characteristics on GaN with a Log-Normal barrier height distribution" /><published>2018-10-02T00:00:00-04:00</published><updated>2018-10-02T00:00:00-04:00</updated><id>http://noaha.net/articles/Log-Normal-IVT</id><content type="html" xml:base="http://noaha.net/articles/Log-Normal-IVT/">&lt;p&gt;Paper is being written and will be submitted shortly but below is some data which is expected to accompany the publication.&lt;/p&gt;
+
+&lt;p class=&quot;text-justify&quot;&gt;Having completed my Masters of Science reviewing and understanding Schottky diode models I realized that there was a problem.  There 
+are a handful of exceptions but basically, experiments published in the literature will create a Schottky diode on some 
+material and then explain the non-ideal results by invoking ‘barrier height inhomogeneity’ and sometimes they will prove it with 
+an IVT measurement.  The problem with this is that the IVT data is basically meaningless unless you can use it to prove why something 
+is happening.  In other words, you’re fitting data just to fit it.&lt;/p&gt;
+
+&lt;p class=&quot;text-justify&quot;&gt;This paper attempts to expand the &lt;a href=&quot;https://aip.scitation.org/doi/10.1063/1.347243&quot;&gt;Werner-Güttler&lt;/a&gt; method to a more complex system so that a follow up paper based on RuOx can use the 
+‘new’ model and explain why annealing or deposition methods can help or hurt your Schottky barrier.  Below is the effective barrier 
+height over a wide temperature range where the solid line is the ‘new’ model proposed in this paper.&lt;/p&gt;
+
+&lt;h3 id=&quot;barrier-height-temperature-dependance&quot;&gt;Barrier Height Temperature Dependance&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/projects/IVTBarrInhomo.jpg&quot; width=&quot;600&quot; height=&quot;600&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;</content><category term="GaN" /><category term="IVT" /><category term="inhomogeniety" /><category term="schottky" /><summary type="html">Summary of the paper</summary></entry><entry><title type="html">[In progress] Impact of increasing TMGa and Silane on GaN carrier concentration and deep level defects by MOCVD</title><link href="http://noaha.net/articles/TMGA-Variation/" rel="alternate" type="text/html" title="[In progress] Impact of increasing TMGa and Silane on GaN carrier concentration and deep level defects by MOCVD" /><published>2018-07-01T00:00:00-04:00</published><updated>2018-07-01T00:00:00-04:00</updated><id>http://noaha.net/articles/TMGA-Variation</id><content type="html" xml:base="http://noaha.net/articles/TMGA-Variation/">&lt;p&gt;Paper is being written and will be submitted shortly but below is some data which is expected to accompany the publication.&lt;/p&gt;
+
+&lt;p class=&quot;text-justify&quot;&gt;After reviewing the literature you’ll notice that very few groups are actually able to achieve very low free carrier concentrations (&amp;lt;5·10&lt;sup&gt;15&lt;/sup&gt; cm&lt;sup&gt;-3&lt;/sup&gt;) 
+and even fewer groups are able to reproduce this reliably.  One of the problems is that while growing GaN by MOCVD (and other means) you’ll incorporate 
+defects into the bulk such as hydrogen, carbon, oxygen, V&lt;sub&gt;Ga&lt;/sub&gt;, V&lt;sub&gt;N&lt;/sub&gt;, and then complexes with each other just to name a few.  These defects 
+are considered to capture free carriers so the approximation of &lt;i&gt;n&lt;/i&gt;=N&lt;sub&gt;D&lt;/sub&gt; no longer holds and its more like &lt;i&gt;n&lt;/i&gt;=(N&lt;sub&gt;D&lt;/sub&gt;-N&lt;sub&gt;A&lt;/sub&gt;) where the 
+acceptor concentration depends on the hard to control impurity density.&lt;/p&gt;
+
+&lt;p class=&quot;text-justify&quot;&gt;This work increases the MOCVD TMGa flow during GaN growth to increase the growth rate but due to the increase in compensation, the Silane is also increased proportionally.&lt;br /&gt;
+Below you can see the effect on the free carrier concentration and SSPC signal of samples grown with 1x, 2x, and 3x TMGA and Silane flows relative to each other.&lt;/p&gt;
+
+&lt;h3 id=&quot;cv-free-carrier-conc&quot;&gt;CV Free Carrier Conc.&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/projects/TMGaVarCV.jpg&quot; width=&quot;500&quot; height=&quot;500&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;sspc-detected-trap-conc&quot;&gt;SSPC Detected Trap Conc.&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/projects/SSPCTMGaGraph.jpg&quot; width=&quot;500&quot; height=&quot;500&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;</content><category term="GaN" /><category term="traps" /><category term="DLTS" /><category term="DLOS" /><summary type="html">Summary of the paper</summary></entry><entry><title type="html">Ethernet Controlled Graduated ND Filter</title><link href="http://noaha.net/blog/SSPC-Controlled-ND-Filter/" rel="alternate" type="text/html" title="Ethernet Controlled Graduated ND Filter" /><published>2018-03-20T12:00:00-04:00</published><updated>2018-03-20T12:00:00-04:00</updated><id>http://noaha.net/blog/SSPC-Controlled-ND-Filter</id><content type="html" xml:base="http://noaha.net/blog/SSPC-Controlled-ND-Filter/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
 
 &lt;p class=&quot;text-justify&quot;&gt;So, after the excitement of fixing the shutter jitter mentioned in the ‘Reverse Engineering the D750 Shutter for Remote Control’ project, I was able to take 
 a nice looking SSPC signal from 3 samples but I noticed something interesting.  Ideally, the SSPC signal below should only show slope increases when the incident energy 
@@ -814,35 +842,7 @@ push to make it around again but not enough to cause the motor to drift when it 
  
   &lt;span class=&quot;n&quot;&gt;analogWrite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//Turn motor off   
 &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><summary type="html">Problem:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://noaha.net{&quot;feature&quot;=&gt;nil}" /></entry><entry><title type="html">[In progress] Modeling forward and reverse IVT Schottky characteristics on GaN with a Log-Normal barrier height distribution</title><link href="http://noaha.net/articles/Log-Normal-IVT/" rel="alternate" type="text/html" title="[In progress] Modeling forward and reverse IVT Schottky characteristics on GaN with a Log-Normal barrier height distribution" /><published>2018-01-02T00:00:00-05:00</published><updated>2018-01-02T00:00:00-05:00</updated><id>http://noaha.net/articles/Log-Normal-IVT</id><content type="html" xml:base="http://noaha.net/articles/Log-Normal-IVT/">&lt;p&gt;Paper is being written and will be submitted shortly but below is some data which is expected to accompany the publication.&lt;/p&gt;
-
-&lt;p class=&quot;text-justify&quot;&gt;Having completed my Masters of Science reviewing and understanding Schottky diode models I realized that there was a problem.  There 
-are a handful of exceptions but basically, experiments published in the literature will create a Schottky diode on some 
-material and then explain the non-ideal results by invoking ‘barrier height inhomogeneity’ and sometimes they will prove it with 
-an IVT measurement.  The problem with this is that the IVT data is basically meaningless unless you can use it to prove why something 
-is happening.  In other words, you’re fitting data just to fit it.&lt;/p&gt;
-
-&lt;p class=&quot;text-justify&quot;&gt;This paper attempts to expand the &lt;a href=&quot;https://aip.scitation.org/doi/10.1063/1.347243&quot;&gt;Werner-Güttler&lt;/a&gt; method to a more complex system so that a follow up paper based on RuOx can use the 
-‘new’ model and explain why annealing or deposition methods can help or hurt your Schottky barrier.  Below is the effective barrier 
-height over a wide temperature range where the solid line is the ‘new’ model proposed in this paper.&lt;/p&gt;
-
-&lt;h3 id=&quot;barrier-height-temperature-dependance&quot;&gt;Barrier Height Temperature Dependance&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/images/projects/IVTBarrInhomo.jpg&quot; width=&quot;600&quot; height=&quot;600&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;</content><category term="GaN" /><category term="IVT" /><category term="inhomogeniety" /><category term="schottky" /><summary type="html">Summary of the paper</summary></entry><entry><title type="html">[In progress] Impact of increasing TMGa and Silane on GaN carrier concentration and deep level defects by MOCVD</title><link href="http://noaha.net/articles/TMGA-Variation/" rel="alternate" type="text/html" title="[In progress] Impact of increasing TMGa and Silane on GaN carrier concentration and deep level defects by MOCVD" /><published>2018-01-01T00:00:00-05:00</published><updated>2018-01-01T00:00:00-05:00</updated><id>http://noaha.net/articles/TMGA-Variation</id><content type="html" xml:base="http://noaha.net/articles/TMGA-Variation/">&lt;p&gt;Paper is being written and will be submitted shortly but below is some data which is expected to accompany the publication.&lt;/p&gt;
-
-&lt;p class=&quot;text-justify&quot;&gt;After reviewing the literature you’ll notice that very few groups are actually able to achieve very low free carrier concentrations (&amp;lt;5·10&lt;sup&gt;15&lt;/sup&gt; cm&lt;sup&gt;-3&lt;/sup&gt;) 
-and even fewer groups are able to reproduce this reliably.  One of the problems is that while growing GaN by MOCVD (and other means) you’ll incorporate 
-defects into the bulk such as hydrogen, carbon, oxygen, V&lt;sub&gt;Ga&lt;/sub&gt;, V&lt;sub&gt;N&lt;/sub&gt;, and then complexes with each other just to name a few.  These defects 
-are considered to capture free carriers so the approximation of &lt;i&gt;n&lt;/i&gt;=N&lt;sub&gt;D&lt;/sub&gt; no longer holds and its more like &lt;i&gt;n&lt;/i&gt;=(N&lt;sub&gt;D&lt;/sub&gt;-N&lt;sub&gt;A&lt;/sub&gt;) where the 
-acceptor concentration depends on the hard to control impurity density.&lt;/p&gt;
-
-&lt;p class=&quot;text-justify&quot;&gt;This work increases the MOCVD TMGa flow during GaN growth to increase the growth rate but due to the increase in compensation, the Silane is also increased proportionally.&lt;br /&gt;
-Below you can see the effect on the free carrier concentration and SSPC signal of samples grown with 1x, 2x, and 3x TMGA and Silane flows relative to each other.&lt;/p&gt;
-
-&lt;h3 id=&quot;cv-free-carrier-conc&quot;&gt;CV Free Carrier Conc.&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/images/projects/TMGaVarCV.jpg&quot; width=&quot;500&quot; height=&quot;500&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;sspc-detected-trap-conc&quot;&gt;SSPC Detected Trap Conc.&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/images/projects/SSPCTMGaGraph.jpg&quot; width=&quot;500&quot; height=&quot;500&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;</content><category term="GaN" /><category term="traps" /><category term="DLTS" /><category term="DLOS" /><summary type="html">Summary of the paper</summary></entry><entry><title type="html">Hg Probe Back Contact Piece</title><link href="http://noaha.net/blog/Hg-Probe-Adapter/" rel="alternate" type="text/html" title="Hg Probe Back Contact Piece" /><published>2017-08-01T12:00:00-04:00</published><updated>2017-08-01T12:00:00-04:00</updated><id>http://noaha.net/blog/Hg-Probe-Adapter</id><content type="html" xml:base="http://noaha.net/blog/Hg-Probe-Adapter/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><summary type="html">Problem:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://noaha.net{&quot;feature&quot;=&gt;nil}" /></entry><entry><title type="html">Hg Probe Back Contact Piece</title><link href="http://noaha.net/blog/Hg-Probe-Adapter/" rel="alternate" type="text/html" title="Hg Probe Back Contact Piece" /><published>2017-08-01T12:00:00-04:00</published><updated>2017-08-01T12:00:00-04:00</updated><id>http://noaha.net/blog/Hg-Probe-Adapter</id><content type="html" xml:base="http://noaha.net/blog/Hg-Probe-Adapter/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
 
 &lt;p class=&quot;text-justify&quot;&gt;Being able to quickly and cheaply identify the free carrier concentration in a semiconductor layer can be helpful when slight changes to 
 material growth parameters can increase or decrease contamination concentrations such as carbon.  In GaN carbon has been shown to incorporate electrically 
@@ -959,14 +959,37 @@ I had to beg for and next to it are the two seals, you can see how dirty they ar
 
 &lt;p&gt;&lt;img src=&quot;/images/projects/CryoPumpSeals.png&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Now that I was able to get down in temperature, I needed to find a way to mount the vacuum housing to the MMR probe station.  Luckily, the designers of the MMR vacuum chamber 
+&lt;p class=&quot;text-justify&quot;&gt;Now that I was able to get down in temperature, I needed to find a way to mount the vacuum housing to the MMR probe station.  Luckily, the designers of the MMR vacuum chamber 
 thought to add a port on the bottom of the station (even if it was for a tubo upgrade) so I could connect straight to that.  However, I needed to measure all of the cryo chamber 
 dimensions and machine a coupling.  Because I wanted to make sure to not ruin any of the expensive parts, I designed the coupling, and later the copper stage, so that no permanent 
 holes or machining had to be done to the MMR chamber or the cryo pump components.  Thus the most over-machined vacuum coupling was born.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/projects/CouplingRotation.gif&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;
+&lt;tr&gt;
+&lt;td&gt; &lt;img src=&quot;/images/projects/CouplingRotation.gif&quot; alt=&quot;Drawing&quot; style=&quot;width: 300px;&quot; /&gt; &lt;/td&gt;
+&lt;td&gt; &lt;img src=&quot;/images/projects/CouplingAssembly.gif&quot; alt=&quot;Drawing&quot; style=&quot;width: 500px;&quot; /&gt; &lt;/td&gt;
+&lt;/tr&gt;
 
-&lt;p&gt;MORE TO COME SOON.&lt;/p&gt;</content><summary type="html">Problem:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://noaha.net{&quot;feature&quot;=&gt;nil}" /></entry><entry><title type="html">GaInN/GaN Solar Cells with Ni/Au Schottky Electrodes</title><link href="http://noaha.net/articles/GaInN-solar-cells/" rel="alternate" type="text/html" title="GaInN/GaN Solar Cells with Ni/Au Schottky Electrodes" /><published>2016-01-18T00:00:00-05:00</published><updated>2016-01-18T00:00:00-05:00</updated><id>http://noaha.net/articles/GaInN-solar-cells</id><content type="html" xml:base="http://noaha.net/articles/GaInN-solar-cells/">&lt;p&gt;&lt;a href=&quot;http://noaha.net/Files/Paper1.pdf&quot;&gt;PDF File Download&lt;/a&gt;      &lt;a href=&quot;http://www.sciencedirect.com/science/article/pii/S1369800116300725&quot;&gt;Publication Location&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&quot;text-justify&quot;&gt;By some miracle on the first try, I was able to pump the system down to same absolute pressure as when the chamber didn’t have a cryopump hanging off of it.  So, the next step was to 
+find some way to cool a sample down in the chamber using the 2nd stage of the cryopump.  It might not be readily apparent but the tip of the pump sits about 6 inches below the 
+point where the probes can contact a sample so I first needed to extend the length of the cold surface with a piece of oxygen-free copper.  Next I wanted the ability to heat the sample 
+stage without dropping too much of that heat into the cryo pump so I added 3 stainless steel standoffs as a thermal resistance.  Finally, I added the sample stage with a couple 
+holes designed to accept a 50W heater and a Pt thermometer.  Again to my surprise, it worked the first time and I could successfully cool a sample down to ~50K!  So I’m done right?… right?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/projects/OriginalStage.gif&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;
+
+&lt;p class=&quot;text-justify&quot;&gt;No, it turns out I didn’t plan for the small, in axis, vibration from the cryo pump displacers which caused &amp;lt;5μm sample movement.  The vibration was enough to induce small periodic noise 
+in the reverse IV characteristics of a schottky diode.  I thought about trying to fix it by synchronizing the measurement instrument with the vibration but realized I needed to ultimately 
+redesign the sample stage and anchor it to the vacuum chamber instead of the cryo pump.  So back to the drawing board.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/projects/VibrationProblemIV.png&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;
+
+&lt;p class=&quot;text-justify&quot;&gt;It took me awhile of thinking how I was going to do this because I now had to worry about how I was going to physically anchor the sample stage to the vacuum chamber but thermally isolate it 
+so I wasn’t cooling down the whole apparatus.  This problem was made harder by the fact I would lose cooling power from having to use a copper braid instead of a more solid stainless steel 
+standoff like the previous sample stage.  Thus, I settled on the design below, where I would break the sample stage into two pieces which would sandwich together on a disk with wave springs thereby 
+taking care of most of the thermal isolation.  The disk would then be anchored to the vacuum side of the machined coupling I mentioned previously with stainless steel standoffs.  After some testing 
+it worked!  I was successfully able to cool the sample down to &amp;lt;50K without any noticeable current perturbations down to 1fA and have been taking measurements on it like a mad man.  Check out the assembly of the stage below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/projects/VibrationStage.gif&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;</content><summary type="html">Problem:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://noaha.net{&quot;feature&quot;=&gt;nil}" /></entry><entry><title type="html">GaInN/GaN Solar Cells with Ni/Au Schottky Electrodes</title><link href="http://noaha.net/articles/GaInN-solar-cells/" rel="alternate" type="text/html" title="GaInN/GaN Solar Cells with Ni/Au Schottky Electrodes" /><published>2016-01-18T00:00:00-05:00</published><updated>2016-01-18T00:00:00-05:00</updated><id>http://noaha.net/articles/GaInN-solar-cells</id><content type="html" xml:base="http://noaha.net/articles/GaInN-solar-cells/">&lt;p&gt;&lt;a href=&quot;http://noaha.net/Files/Paper1.pdf&quot;&gt;PDF File Download&lt;/a&gt;      &lt;a href=&quot;http://www.sciencedirect.com/science/article/pii/S1369800116300725&quot;&gt;Publication Location&lt;/a&gt;&lt;/p&gt;
 
 &lt;object data=&quot;/Files/Paper1.pdf#page=1&quot; type=&quot;application/pdf&quot; width=&quot;100%&quot; height=&quot;100%&quot;&gt;
 &lt;iframe src=&quot;/Files/Paper1.pdf#page=1&quot; width=&quot;100%&quot; height=&quot;100%&quot; style=&quot;border: solid;&quot;&gt;
