@@ -160,7 +160,7 @@ it useless.  In the first picture below you can see the MMR Stage capable of 77K
 showing the capillaries and an arrow where the suspected ‘short’ is.  I had been looking into finding a cryogenic probe station capable of helium temperatures &lt;10K  but those were even more 
 expensive so instead I decided to integrate a CTI Cryodyne M22 cryopump into our MMR probe station.</p>
 
-<p><img src="/images/projects/MMRStageTopBot.png" align="middle" /></p>
+<center><img src="/images/projects/MMRStageTopBot.png" align="middle" /></center>
 
 <h2 id="solution">Solution:</h2>
 
@@ -169,7 +169,7 @@ one.  So after doing some digging I found a used Laser Photonics LM5731 original
 (now Cryo Torr 100).  The pictures below show the before and after disassembly showing all of the parts, most of which I was able to salvage and use like the 
 vacuum cylinder shown in the top left of the ‘after’ picture.</p>
 
-<p><img src="/images/projects/LM5731BeforeAfter.png" align="middle" /></p>
+<center><img src="/images/projects/LM5731BeforeAfter.png" align="middle" /></center>
 
 <p class="text-justify">Imagine my disappointment when I realized that the pump worked but could only cool down to 120K and because I was self funding, I couldn’t just send it in to be 
 diagnosed and repaired.  So I did what any good engineer does and research common problems and made some calls.  It turns out that these pumps are very similar to a 
@@ -185,8 +185,8 @@ dimensions and machine a coupling.  Because I wanted to make sure to not ruin an
 holes or machining had to be done to the MMR chamber or the cryo pump components.  Thus the most over-machined vacuum coupling was born.</p>
 
 <tr>
-<td> <img src="/images/projects/CouplingRotation.gif" alt="Drawing" style="width: 300px;" /> </td>
-<td> <img src="/images/projects/CouplingAssembly.gif" alt="Drawing" style="width: 500px;" /> </td>
+<td> <img src="/images/projects/CouplingRotation.gif" alt="Drawing" style="width: 240px;" /> </td>
+<td> <img src="/images/projects/CouplingAssembly.gif" alt="Drawing" style="width: 470px;" /> </td>
 </tr>
 
 <p class="text-justify">By some miracle on the first try, I was able to pump the system down to same absolute pressure as when the chamber didn’t have a cryopump hanging off of it.  So, the next step was to 
@@ -195,13 +195,13 @@ point where the probes can contact a sample so I first needed to extend the leng
 stage without dropping too much of that heat into the cryo pump so I added 3 stainless steel standoffs as a thermal resistance.  Finally, I added the sample stage with a couple 
 holes designed to accept a 50W heater and a Pt thermometer.  Again to my surprise, it worked the first time and I could successfully cool a sample down to ~50K!  So I’m done right?… right?</p>
 
-<p><img src="/images/projects/OriginalStage.gif" align="middle" /></p>
+<center><img src="/images/projects/OriginalStage.gif" align="middle" /></center>
 
 <p class="text-justify">No, it turns out I didn’t plan for the small, in axis, vibration from the cryo pump displacers which caused &lt;5μm sample movement.  The vibration was enough to induce small periodic noise 
 in the reverse IV characteristics of a schottky diode.  I thought about trying to fix it by synchronizing the measurement instrument with the vibration but realized I needed to ultimately 
 redesign the sample stage and anchor it to the vacuum chamber instead of the cryo pump.  So back to the drawing board.</p>
 
-<p><img src="/images/projects/VibrationProblemIV.png" align="middle" /></p>
+<center><img src="/images/projects/VibrationProblemIV.png" align="middle" /></center>
 
 <p class="text-justify">It took me awhile of thinking how I was going to do this because I now had to worry about how I was going to physically anchor the sample stage to the vacuum chamber but thermally isolate it 
 so I wasn’t cooling down the whole apparatus.  This problem was made harder by the fact I would lose cooling power from having to use a copper braid instead of a more solid stainless steel 
@@ -209,7 +209,7 @@ standoff like the previous sample stage.  Thus, I settled on the design below, w
 taking care of most of the thermal isolation.  The disk would then be anchored to the vacuum side of the machined coupling I mentioned previously with stainless steel standoffs.  After some testing 
 it worked!  I was successfully able to cool the sample down to &lt;50K without any noticeable current perturbations down to 1fA and have been taking measurements on it like a mad man.  Check out the assembly of the stage below.</p>
 
-<p><img src="/images/projects/VibrationStage.gif" align="middle" /></p>
+<center><img src="/images/projects/VibrationStage.gif" align="middle" /></center>
 
 
         

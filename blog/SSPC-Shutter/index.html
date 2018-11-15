@@ -159,7 +159,7 @@ between a sample and the light source, let the sample sit in the dark for some t
 Results can be seen below where I send the signal to open the shutter but the delay to open isn’t consistent which makes automation of detailed analysis almost 
 impossible.</p>
 
-<p><img src="/images/projects/SlowShutter.jpg" align="middle" /></p>
+<center><img src="/images/projects/SlowShutter.jpg" align="middle" /></center>
 
 <h2 id="solution">Solution:</h2>
 
@@ -167,32 +167,32 @@ impossible.</p>
 of mine are) was to try and make one.  Since there didn’t seem to be ‘broken’ shutters on eBay I looked to try and score repair parts for a DSLR camera and 
 reverse engineer the pins.  Below is a picture of the D750 Shutter Blade Assembly Replacement I bought.</p>
 
-<p><img src="/images/projects/D750ShutterAnnotated.jpg" align="middle" /></p>
+<center><img src="/images/projects/D750ShutterAnnotated.jpg" align="middle" /></center>
 
 <p class="text-justify">It took a little while to figure out how the shutter worked and in turn how to control it but it goes something like this.  The light blocking method is accomplished 
-with two shades which are tensioned with a spring.  The motor will cock both of the shades until the metal core connector piece (connected to the shade) touches the electromagnet core.<br />
-If power is running through the inductor, when the metal piece touches the core it will stick, thereby keeping the shade anchored.  Once power to the inductor is stopped 
+with two shades which are tensioned with a spring.  The motor will cock both of the shades until the metal core connector piece (connected to the shade) touches the electromagnet 
+core.  If power is running through the inductor, when the metal piece touches the core it will stick, thereby keeping the shade anchored.  Once power to the inductor is stopped 
 the spring tension pulls the shade back to the original position.</p>
 
-<p><img src="/images/projects/D750ShutterAnnotated2.jpg" align="middle" /></p>
+<center><img src="/images/projects/D750ShutterAnnotated2.jpg" align="middle" /></center>
 
 <p class="text-justify">The final piece of the puzzle is the motor position.  When the motor cocks the shutter blades it needs to keep moving so that the cocking arm isn’t in the way when 
 the shades are ultimately relaxed to their original position.  This is difficult because the shutter assembly uses a DC motor and has no feedback.  This was solved by 
 putting a few notches into one of the motor gears and sensing the notches with a couple photointerrupters.  This is what is implemented on the D750 shutter assembly.</p>
 
-<p><img src="/images/projects/D750Photointerrupter.jpg" align="middle" /></p>
+<center><img src="/images/projects/D750Photointerrupter.jpg" align="middle" /></center>
 
 <p class="text-justify">Now that we generally understand how the shutter works we need to setup a circuit and microcontroller to cock the shutter blades and then release them when ready.  I decided to 
 that the following circuits would be adequate to control the electromagnets and motor and then sense the position of the motor.  The red outline indicates the circuit exists on the 
 shutter assembly and the blue represents a circuit I need to implement.</p>
 
-<p><img src="/images/projects/ShutterControlCircuit.jpg" align="middle" /></p>
+<center><img src="/images/projects/ShutterControlCircuit.jpg" align="middle" /></center>
 
 <p class="text-justify">With some probing around to discover the polarity of some of the circuits, below is the full interface diagram I implemented to control the shutter assembly.  Notice that I’ve also added a 
 voltage buffer (op-amp) for the input.  I’m connecting a digital signal from the LabVIEW DAC over a long BNC cable and found that when connecting it directly to the gate of the MOSFET 
 the voltage sagged (probably because of the 1K pull-down resistor) so I decided to add the opamp in series to increase the input impedance.</p>
 
-<p><img src="/images/projects/FullShutterCircuit.jpg" align="middle" /></p>
+<center><img src="/images/projects/FullShutterCircuit.jpg" align="middle" /></center>
 
 <p class="text-justify">The code I used is below.  Basically, the BNC input in the circuit above controls whether or not the OPEN electromagnet is holding the shutter blade and the Arduino is just checking whether or not 
 the digital signal is high or low.  After the BNC input indicates that it’s ready for the shutter to be reset the Arduino sends a full power PWM signal to the motor control MOSFET until its reset the 

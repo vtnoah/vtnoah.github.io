@@ -155,7 +155,7 @@ a nice looking SSPC signal from 3 samples but I noticed something interesting.  
 is enough to excite trapped charge into the conduction band or out of the valence band but it seemed that the signal could be perturbed by some of the peaks in my 350W 
 mercury source.  In order to publish the data this needs to be fixed so that I’m not trying to make conclusions based on faulty data.</p>
 
-<p><img src="/images/projects/SSPCgraph.jpg" align="middle" /></p>
+<center><img src="/images/projects/SSPCgraph.jpg" align="middle" /></center>
 
 <h2 id="solution">Solution:</h2>
 
@@ -166,7 +166,7 @@ compared to the rectangular ones (~$114).  Since the optics had been selected I 
 about 3D printers and how open source they have become, I decided to invest in a cheap ($75) stepper controlled linear actuator which I could mount the rectangular ND filter on and 
 then slide in front of the optical path.  Below is the linear actuator with the ND filter mounted.</p>
 
-<p><img src="/images/projects/NDfilterSetup.gif" align="middle" /></p>
+<center><img src="/images/projects/NDfilterSetup.gif" align="middle" /></center>
 
 <p class="text-justify">Once I had the ND filter mounted it was time to setup the hardware so that it could easily be controlled by a LabVIEW program I had running on our main characterization 
 computer.  To control the stepper motor I first tried to use a generic L298N board I bought from eBay but quickly learned that an H-bridge wasn’t the most efficient way to 
@@ -176,19 +176,19 @@ seemed like the most sensible choice for quick prototyping but I wasn’t comfor
 ENC28J60 board for Ethernet communication.  Below is the circuit I used to interface all three boards boards along with the stepper motor.  NOTE: The ENC28J60 is 5V tolerant 
 but requires its own 3.3V power supply.  I used two Buck converters to transform the 12V/2A wall wart to 3.3V and 5V.</p>
 
-<p><img src="/images/projects/NDFilterCircuit.jpg" align="middle" /></p>
+<center><img src="/images/projects/NDFilterCircuit.jpg" align="middle" /></center>
 
 <p class="text-justify">The Arduino was programmed to act like a TCP server (using the UIPethernet library) which could be connected to by a LabVIEW running a TCP client program.  The client connects and sends a short string 
 which the Arduino server would interpret and either move or return requested data (Arduino program attached at the end).  The next step was to check the range of attenuation 
 I could achieve with my new apparatus.  I set the wavelength to 435nm (one of the larger peaks in an Hg lamp spectrum) and moved the ND filter while taking optical intensity 
 measurements.  The intensity vs. motor step is shown below.</p>
 
-<p><img src="/images/projects/NDfilterTransmission.jpg" align="middle" /></p>
+<center><img src="/images/projects/NDfilterTransmission.jpg" align="middle" /></center>
 
 <p class="text-justify">Finally, I created the algorithm to calculate the motor steps away from the limit switch which would give the correct attenuation value and once again measured the spectrum 
 of the Hg lamp.  As you can see below the photon flux at each wavelength is much more consistent but a lot of light power is lost.</p>
 
-<p><img src="/images/projects/SSPCgraphAttenuated.jpg" align="middle" /></p>
+<center><img src="/images/projects/SSPCgraphAttenuated.jpg" align="middle" /></center>
 
 <p><br />
 <br /></p>

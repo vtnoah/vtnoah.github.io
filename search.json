@@ -114,6 +114,14 @@
 
   
     ,{
+      "title"			: "ENGE 1104 Arduino Workshops",
+      "link"			: "http://noaha.net/blog/ENGE1104-Arduino/",
+      "excerpt"		: "Problem:"
+    }
+  
+
+  
+    ,{
       "title"			: "ECE5210 - MEMs Final Project",
       "link"			: "http://noaha.net/blog/Cantilever-Capacitance/",
       "excerpt"		: "Problem:"
@@ -147,11 +155,15 @@
   
 
   
+
+  
     ,{
       "title"			: "About",
       "link"			: "http://noaha.net/",
       "excerpt"		: "Noah Allen is a PhD candidate in the Electrical Engineering department at Virginia Tech.  This website documents some of the work he has completed as a student."
     }
+  
+
   
 
   

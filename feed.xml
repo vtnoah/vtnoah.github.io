@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="http://noaha.net/feed.xml" rel="self" type="application/atom+xml" /><link href="http://noaha.net/" rel="alternate" type="text/html" /><updated>2018-11-11T19:10:30-05:00</updated><id>http://noaha.net/</id><title type="html">Noah P. Allen</title><subtitle>A Place to Showcase Noah Allen's Work</subtitle><entry><title type="html">[In progress] Modeling forward and reverse IVT Schottky characteristics on GaN with a Log-Normal barrier height distribution</title><link href="http://noaha.net/articles/Log-Normal-IVT/" rel="alternate" type="text/html" title="[In progress] Modeling forward and reverse IVT Schottky characteristics on GaN with a Log-Normal barrier height distribution" /><published>2018-10-02T00:00:00-04:00</published><updated>2018-10-02T00:00:00-04:00</updated><id>http://noaha.net/articles/Log-Normal-IVT</id><content type="html" xml:base="http://noaha.net/articles/Log-Normal-IVT/">&lt;p&gt;Paper is being written and will be submitted shortly but below is some data which is expected to accompany the publication.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="http://noaha.net/feed.xml" rel="self" type="application/atom+xml" /><link href="http://noaha.net/" rel="alternate" type="text/html" /><updated>2018-11-15T06:06:22-05:00</updated><id>http://noaha.net/</id><title type="html">Noah P. Allen</title><subtitle>A Place to Showcase Noah Allen's Work</subtitle><entry><title type="html">[In progress] Modeling forward and reverse IVT Schottky characteristics on GaN with a Log-Normal barrier height distribution</title><link href="http://noaha.net/articles/Log-Normal-IVT/" rel="alternate" type="text/html" title="[In progress] Modeling forward and reverse IVT Schottky characteristics on GaN with a Log-Normal barrier height distribution" /><published>2018-10-02T00:00:00-04:00</published><updated>2018-10-02T00:00:00-04:00</updated><id>http://noaha.net/articles/Log-Normal-IVT</id><content type="html" xml:base="http://noaha.net/articles/Log-Normal-IVT/">&lt;p&gt;Paper is being written and will be submitted shortly but below is some data which is expected to accompany the publication.&lt;/p&gt;
 
 &lt;p class=&quot;text-justify&quot;&gt;Having completed my Masters of Science reviewing and understanding Schottky diode models I realized that there was a problem.  There 
 are a handful of exceptions but basically, experiments published in the literature will create a Schottky diode on some 
@@ -33,7 +33,7 @@ a nice looking SSPC signal from 3 samples but I noticed something interesting.  
 is enough to excite trapped charge into the conduction band or out of the valence band but it seemed that the signal could be perturbed by some of the peaks in my 350W 
 mercury source.  In order to publish the data this needs to be fixed so that I’m not trying to make conclusions based on faulty data.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/projects/SSPCgraph.jpg&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;&lt;img src=&quot;/images/projects/SSPCgraph.jpg&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;
 
 &lt;h2 id=&quot;solution&quot;&gt;Solution:&lt;/h2&gt;
 
@@ -44,7 +44,7 @@ compared to the rectangular ones (~$114).  Since the optics had been selected I 
 about 3D printers and how open source they have become, I decided to invest in a cheap ($75) stepper controlled linear actuator which I could mount the rectangular ND filter on and 
 then slide in front of the optical path.  Below is the linear actuator with the ND filter mounted.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/projects/NDfilterSetup.gif&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;&lt;img src=&quot;/images/projects/NDfilterSetup.gif&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;
 
 &lt;p class=&quot;text-justify&quot;&gt;Once I had the ND filter mounted it was time to setup the hardware so that it could easily be controlled by a LabVIEW program I had running on our main characterization 
 computer.  To control the stepper motor I first tried to use a generic L298N board I bought from eBay but quickly learned that an H-bridge wasn’t the most efficient way to 
@@ -54,19 +54,19 @@ seemed like the most sensible choice for quick prototyping but I wasn’t comfor
 ENC28J60 board for Ethernet communication.  Below is the circuit I used to interface all three boards boards along with the stepper motor.  NOTE: The ENC28J60 is 5V tolerant 
 but requires its own 3.3V power supply.  I used two Buck converters to transform the 12V/2A wall wart to 3.3V and 5V.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/projects/NDFilterCircuit.jpg&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;&lt;img src=&quot;/images/projects/NDFilterCircuit.jpg&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;
 
 &lt;p class=&quot;text-justify&quot;&gt;The Arduino was programmed to act like a TCP server (using the UIPethernet library) which could be connected to by a LabVIEW running a TCP client program.  The client connects and sends a short string 
 which the Arduino server would interpret and either move or return requested data (Arduino program attached at the end).  The next step was to check the range of attenuation 
 I could achieve with my new apparatus.  I set the wavelength to 435nm (one of the larger peaks in an Hg lamp spectrum) and moved the ND filter while taking optical intensity 
 measurements.  The intensity vs. motor step is shown below.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/projects/NDfilterTransmission.jpg&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;&lt;img src=&quot;/images/projects/NDfilterTransmission.jpg&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;
 
 &lt;p class=&quot;text-justify&quot;&gt;Finally, I created the algorithm to calculate the motor steps away from the limit switch which would give the correct attenuation value and once again measured the spectrum 
 of the Hg lamp.  As you can see below the photon flux at each wavelength is much more consistent but a lot of light power is lost.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/projects/SSPCgraphAttenuated.jpg&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;&lt;img src=&quot;/images/projects/SSPCgraphAttenuated.jpg&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;
 
 &lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
@@ -654,7 +654,7 @@ between a sample and the light source, let the sample sit in the dark for some t
 Results can be seen below where I send the signal to open the shutter but the delay to open isn’t consistent which makes automation of detailed analysis almost 
 impossible.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/projects/SlowShutter.jpg&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;&lt;img src=&quot;/images/projects/SlowShutter.jpg&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;
 
 &lt;h2 id=&quot;solution&quot;&gt;Solution:&lt;/h2&gt;
 
@@ -662,32 +662,32 @@ impossible.&lt;/p&gt;
 of mine are) was to try and make one.  Since there didn’t seem to be ‘broken’ shutters on eBay I looked to try and score repair parts for a DSLR camera and 
 reverse engineer the pins.  Below is a picture of the D750 Shutter Blade Assembly Replacement I bought.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/projects/D750ShutterAnnotated.jpg&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;&lt;img src=&quot;/images/projects/D750ShutterAnnotated.jpg&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;
 
 &lt;p class=&quot;text-justify&quot;&gt;It took a little while to figure out how the shutter worked and in turn how to control it but it goes something like this.  The light blocking method is accomplished 
-with two shades which are tensioned with a spring.  The motor will cock both of the shades until the metal core connector piece (connected to the shade) touches the electromagnet core.&lt;br /&gt;
-If power is running through the inductor, when the metal piece touches the core it will stick, thereby keeping the shade anchored.  Once power to the inductor is stopped 
+with two shades which are tensioned with a spring.  The motor will cock both of the shades until the metal core connector piece (connected to the shade) touches the electromagnet 
+core.  If power is running through the inductor, when the metal piece touches the core it will stick, thereby keeping the shade anchored.  Once power to the inductor is stopped 
 the spring tension pulls the shade back to the original position.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/projects/D750ShutterAnnotated2.jpg&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;&lt;img src=&quot;/images/projects/D750ShutterAnnotated2.jpg&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;
 
 &lt;p class=&quot;text-justify&quot;&gt;The final piece of the puzzle is the motor position.  When the motor cocks the shutter blades it needs to keep moving so that the cocking arm isn’t in the way when 
 the shades are ultimately relaxed to their original position.  This is difficult because the shutter assembly uses a DC motor and has no feedback.  This was solved by 
 putting a few notches into one of the motor gears and sensing the notches with a couple photointerrupters.  This is what is implemented on the D750 shutter assembly.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/projects/D750Photointerrupter.jpg&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;&lt;img src=&quot;/images/projects/D750Photointerrupter.jpg&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;
 
 &lt;p class=&quot;text-justify&quot;&gt;Now that we generally understand how the shutter works we need to setup a circuit and microcontroller to cock the shutter blades and then release them when ready.  I decided to 
 that the following circuits would be adequate to control the electromagnets and motor and then sense the position of the motor.  The red outline indicates the circuit exists on the 
 shutter assembly and the blue represents a circuit I need to implement.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/projects/ShutterControlCircuit.jpg&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;&lt;img src=&quot;/images/projects/ShutterControlCircuit.jpg&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;
 
 &lt;p class=&quot;text-justify&quot;&gt;With some probing around to discover the polarity of some of the circuits, below is the full interface diagram I implemented to control the shutter assembly.  Notice that I’ve also added a 
 voltage buffer (op-amp) for the input.  I’m connecting a digital signal from the LabVIEW DAC over a long BNC cable and found that when connecting it directly to the gate of the MOSFET 
 the voltage sagged (probably because of the 1K pull-down resistor) so I decided to add the opamp in series to increase the input impedance.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/projects/FullShutterCircuit.jpg&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;&lt;img src=&quot;/images/projects/FullShutterCircuit.jpg&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;
 
 &lt;p class=&quot;text-justify&quot;&gt;The code I used is below.  Basically, the BNC input in the circuit above controls whether or not the OPEN electromagnet is holding the shutter blade and the Arduino is just checking whether or not 
 the digital signal is high or low.  After the BNC input indicates that it’s ready for the shutter to be reset the Arduino sends a full power PWM signal to the motor control MOSFET until its reset the 
@@ -869,7 +869,7 @@ machined a recess for the sample to sit in, then dropped in two pogo pins, and f
 on the sample while also making electrical contact to the back of it.  Additionally, planarizing it helped seal the acrylic-acrylic interface so vacuum could be pulled in the sample recess.&lt;/p&gt;
 
 &lt;h3 id=&quot;hg-probe-with-adapter&quot;&gt;Hg Probe With Adapter&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/images/projects/hgtoppiece.gif&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;&lt;img src=&quot;/images/projects/hgtoppiece.gif&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;
 
 &lt;p class=&quot;text-center&quot;&gt;Shown above is the 3D model assembly of the Hg probe adapter where you can see the sample (blue), an o-ring (black), the two pogo-pins (gold) and the machined acrylic adapter (grey).&lt;/p&gt;</content><summary type="html">Problem:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://noaha.net{&quot;feature&quot;=&gt;nil}" /></entry><entry><title type="html">Thin-film GaN Schottky diodes formed by epitaxial lift-off</title><link href="http://noaha.net/articles/GaN-Lift-Off/" rel="alternate" type="text/html" title="Thin-film GaN Schottky diodes formed by epitaxial lift-off" /><published>2017-02-24T00:00:00-05:00</published><updated>2017-02-24T00:00:00-05:00</updated><id>http://noaha.net/articles/GaN-Lift-Off</id><content type="html" xml:base="http://noaha.net/articles/GaN-Lift-Off/">&lt;p&gt;&lt;a href=&quot;http://noaha.net/Files/Paper6.pdf&quot;&gt;PDF File Download&lt;/a&gt;      &lt;a href=&quot;http://aip.scitation.org/doi/abs/10.1063/1.4982250&quot;&gt;Publication Location&lt;/a&gt;&lt;/p&gt;
 
@@ -885,7 +885,7 @@ MOCVD grown GaN is done on sapphire wafers but due to lattice mismatch and elect
 part in all of this is working with the material scientists in the group to create viable PN diode structures, taking the grown layers into a cleanroom environment to fabricate 
 surface passivated and field-plated PN diodes, testing them in a probe station and finally analyzing the data.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/projects/PNDiodeAssembly.gif&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;&lt;img src=&quot;/images/projects/PNDiodeAssembly.gif&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;
 
 &lt;p class=&quot;text-justify&quot;&gt;The figure above is being used just to show the parts of the final device that would be hard to understand in a static image, it does not show the actual fabrication 
 process.  When putting the diode into forward bias you inject minority carriers into the respective regions (holes into n-type, electrons into p-type) which creates a situation where 
@@ -893,7 +893,7 @@ radiative recombination can occur.  Depending on the transition that is made, di
 transition is happening from the valence to conduction band it wouldn’t be visible (363nm - UV).  This implies that the transition may be occuring at trap levels in the forbidden gap 
 likely there due to impurities.  Additionally, if you watch long enough you’ll see little arc’s from the high electric field in reverse bias.&lt;/p&gt;
 
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube-nocookie.com/embed/zN-vi6zYlis&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><summary type="html">Work:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://noaha.net{&quot;feature&quot;=&gt;nil}" /></entry><entry><title type="html">LabVIEW (D)DLTS and CCDLTS Measurement Program</title><link href="http://noaha.net/blog/DLTS-Data-Analysis/" rel="alternate" type="text/html" title="LabVIEW (D)DLTS and CCDLTS Measurement Program" /><published>2016-02-01T11:00:00-05:00</published><updated>2016-02-01T11:00:00-05:00</updated><id>http://noaha.net/blog/DLTS-Data-Analysis</id><content type="html" xml:base="http://noaha.net/blog/DLTS-Data-Analysis/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
+&lt;center&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube-nocookie.com/embed/zN-vi6zYlis&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;</content><summary type="html">Work:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://noaha.net{&quot;feature&quot;=&gt;nil}" /></entry><entry><title type="html">LabVIEW (D)DLTS and CCDLTS Measurement Program</title><link href="http://noaha.net/blog/DLTS-Data-Analysis/" rel="alternate" type="text/html" title="LabVIEW (D)DLTS and CCDLTS Measurement Program" /><published>2016-02-01T11:00:00-05:00</published><updated>2016-02-01T11:00:00-05:00</updated><id>http://noaha.net/blog/DLTS-Data-Analysis</id><content type="html" xml:base="http://noaha.net/blog/DLTS-Data-Analysis/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
 
 &lt;p class=&quot;text-justify&quot;&gt;Deep Level Transient Spectroscopy (DLTS) is very interesting to me since it is such a simple measurement that can yield information 
 about very complex details regarding semiconductor material.  Part of my PhD thesis will be understanding defects found in 
@@ -913,20 +913,20 @@ trap then we might be done after a single measurement, but most of the time ther
 the temperature and thereby lowering the possibility that it would react to the changing voltage. Then we take measurements as the temperature rises 
 and save the data for processing.&lt;/p&gt;
 &lt;h3 id=&quot;dlts-setup&quot;&gt;DLTS Setup&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/images/projects/dltssetup.jpg&quot; align=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;&lt;img src=&quot;/images/projects/dltssetup.jpg&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;
 
 &lt;p class=&quot;text-justify&quot;&gt;One of the problems with these measurements is that they take a long time (&amp;gt;9hrs).  Realizing this I created a LabVIEW program to automate the 
 collection of the data so that I can continue other work around the lab.  I’m always adding more features to it but right now it can do DLTS, ODLTS, CCDLTS, IVT, 
 and TSCAP measurements automatically.&lt;/p&gt;
 
 &lt;h3 id=&quot;dlts-main-program&quot;&gt;DLTS Main Program&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/images/projects/dltsanalysisgif.gif&quot; align=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;&lt;img src=&quot;/images/projects/dltsanalysisgif.gif&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;
 
 &lt;p class=&quot;text-center&quot;&gt;Pictured above is the DLTS main program first waiting for the temperature to stabilize at 308K and then measuring the capacitance transients using the parameters listed in the 
 ‘DLTS Setup’ section of the program.&lt;/p&gt;
 
 &lt;h3 id=&quot;cv-accessory-program&quot;&gt;CV Accessory Program&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/images/projects/cvgif.gif&quot; align=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/projects/cvgif.gif&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;
 
 &lt;p class=&quot;text-center&quot;&gt;In addition to DLTS measurements, the physical setup of the sample allows for C-V-T measurements to be executed before changing sample temperature.&lt;/p&gt;</content><summary type="html">Problem:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://noaha.net{&quot;feature&quot;=&gt;nil}" /></entry><entry><title type="html">MMR Probe Station Rebuild with Helium Cryopump</title><link href="http://noaha.net/blog/Probe-Station-Rebuild/" rel="alternate" type="text/html" title="MMR Probe Station Rebuild with Helium Cryopump" /><published>2016-01-20T11:00:00-05:00</published><updated>2016-01-20T11:00:00-05:00</updated><id>http://noaha.net/blog/Probe-Station-Rebuild</id><content type="html" xml:base="http://noaha.net/blog/Probe-Station-Rebuild/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
 
@@ -940,7 +940,7 @@ it useless.  In the first picture below you can see the MMR Stage capable of 77K
 showing the capillaries and an arrow where the suspected ‘short’ is.  I had been looking into finding a cryogenic probe station capable of helium temperatures &amp;lt;10K  but those were even more 
 expensive so instead I decided to integrate a CTI Cryodyne M22 cryopump into our MMR probe station.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/projects/MMRStageTopBot.png&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;&lt;img src=&quot;/images/projects/MMRStageTopBot.png&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;
 
 &lt;h2 id=&quot;solution&quot;&gt;Solution:&lt;/h2&gt;
 
@@ -949,7 +949,7 @@ one.  So after doing some digging I found a used Laser Photonics LM5731 original
 (now Cryo Torr 100).  The pictures below show the before and after disassembly showing all of the parts, most of which I was able to salvage and use like the 
 vacuum cylinder shown in the top left of the ‘after’ picture.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/projects/LM5731BeforeAfter.png&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;&lt;img src=&quot;/images/projects/LM5731BeforeAfter.png&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;
 
 &lt;p class=&quot;text-justify&quot;&gt;Imagine my disappointment when I realized that the pump worked but could only cool down to 120K and because I was self funding, I couldn’t just send it in to be 
 diagnosed and repaired.  So I did what any good engineer does and research common problems and made some calls.  It turns out that these pumps are very similar to a 
@@ -965,8 +965,8 @@ dimensions and machine a coupling.  Because I wanted to make sure to not ruin an
 holes or machining had to be done to the MMR chamber or the cryo pump components.  Thus the most over-machined vacuum coupling was born.&lt;/p&gt;
 
 &lt;tr&gt;
-&lt;td&gt; &lt;img src=&quot;/images/projects/CouplingRotation.gif&quot; alt=&quot;Drawing&quot; style=&quot;width: 300px;&quot; /&gt; &lt;/td&gt;
-&lt;td&gt; &lt;img src=&quot;/images/projects/CouplingAssembly.gif&quot; alt=&quot;Drawing&quot; style=&quot;width: 500px;&quot; /&gt; &lt;/td&gt;
+&lt;td&gt; &lt;img src=&quot;/images/projects/CouplingRotation.gif&quot; alt=&quot;Drawing&quot; style=&quot;width: 240px;&quot; /&gt; &lt;/td&gt;
+&lt;td&gt; &lt;img src=&quot;/images/projects/CouplingAssembly.gif&quot; alt=&quot;Drawing&quot; style=&quot;width: 470px;&quot; /&gt; &lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;p class=&quot;text-justify&quot;&gt;By some miracle on the first try, I was able to pump the system down to same absolute pressure as when the chamber didn’t have a cryopump hanging off of it.  So, the next step was to 
@@ -975,13 +975,13 @@ point where the probes can contact a sample so I first needed to extend the leng
 stage without dropping too much of that heat into the cryo pump so I added 3 stainless steel standoffs as a thermal resistance.  Finally, I added the sample stage with a couple 
 holes designed to accept a 50W heater and a Pt thermometer.  Again to my surprise, it worked the first time and I could successfully cool a sample down to ~50K!  So I’m done right?… right?&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/projects/OriginalStage.gif&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;&lt;img src=&quot;/images/projects/OriginalStage.gif&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;
 
 &lt;p class=&quot;text-justify&quot;&gt;No, it turns out I didn’t plan for the small, in axis, vibration from the cryo pump displacers which caused &amp;lt;5μm sample movement.  The vibration was enough to induce small periodic noise 
 in the reverse IV characteristics of a schottky diode.  I thought about trying to fix it by synchronizing the measurement instrument with the vibration but realized I needed to ultimately 
 redesign the sample stage and anchor it to the vacuum chamber instead of the cryo pump.  So back to the drawing board.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/projects/VibrationProblemIV.png&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;&lt;img src=&quot;/images/projects/VibrationProblemIV.png&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;
 
 &lt;p class=&quot;text-justify&quot;&gt;It took me awhile of thinking how I was going to do this because I now had to worry about how I was going to physically anchor the sample stage to the vacuum chamber but thermally isolate it 
 so I wasn’t cooling down the whole apparatus.  This problem was made harder by the fact I would lose cooling power from having to use a copper braid instead of a more solid stainless steel 
@@ -989,7 +989,7 @@ standoff like the previous sample stage.  Thus, I settled on the design below, w
 taking care of most of the thermal isolation.  The disk would then be anchored to the vacuum side of the machined coupling I mentioned previously with stainless steel standoffs.  After some testing 
 it worked!  I was successfully able to cool the sample down to &amp;lt;50K without any noticeable current perturbations down to 1fA and have been taking measurements on it like a mad man.  Check out the assembly of the stage below.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/projects/VibrationStage.gif&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;</content><summary type="html">Problem:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://noaha.net{&quot;feature&quot;=&gt;nil}" /></entry><entry><title type="html">GaInN/GaN Solar Cells with Ni/Au Schottky Electrodes</title><link href="http://noaha.net/articles/GaInN-solar-cells/" rel="alternate" type="text/html" title="GaInN/GaN Solar Cells with Ni/Au Schottky Electrodes" /><published>2016-01-18T00:00:00-05:00</published><updated>2016-01-18T00:00:00-05:00</updated><id>http://noaha.net/articles/GaInN-solar-cells</id><content type="html" xml:base="http://noaha.net/articles/GaInN-solar-cells/">&lt;p&gt;&lt;a href=&quot;http://noaha.net/Files/Paper1.pdf&quot;&gt;PDF File Download&lt;/a&gt;      &lt;a href=&quot;http://www.sciencedirect.com/science/article/pii/S1369800116300725&quot;&gt;Publication Location&lt;/a&gt;&lt;/p&gt;
+&lt;center&gt;&lt;img src=&quot;/images/projects/VibrationStage.gif&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;</content><summary type="html">Problem:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://noaha.net{&quot;feature&quot;=&gt;nil}" /></entry><entry><title type="html">GaInN/GaN Solar Cells with Ni/Au Schottky Electrodes</title><link href="http://noaha.net/articles/GaInN-solar-cells/" rel="alternate" type="text/html" title="GaInN/GaN Solar Cells with Ni/Au Schottky Electrodes" /><published>2016-01-18T00:00:00-05:00</published><updated>2016-01-18T00:00:00-05:00</updated><id>http://noaha.net/articles/GaInN-solar-cells</id><content type="html" xml:base="http://noaha.net/articles/GaInN-solar-cells/">&lt;p&gt;&lt;a href=&quot;http://noaha.net/Files/Paper1.pdf&quot;&gt;PDF File Download&lt;/a&gt;      &lt;a href=&quot;http://www.sciencedirect.com/science/article/pii/S1369800116300725&quot;&gt;Publication Location&lt;/a&gt;&lt;/p&gt;
 
 &lt;object data=&quot;/Files/Paper1.pdf#page=1&quot; type=&quot;application/pdf&quot; width=&quot;100%&quot; height=&quot;100%&quot;&gt;
 &lt;iframe src=&quot;/Files/Paper1.pdf#page=1&quot; width=&quot;100%&quot; height=&quot;100%&quot; style=&quot;border: solid;&quot;&gt;
