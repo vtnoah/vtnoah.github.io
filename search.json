@@ -2,17 +2,25 @@
 
   
     {
-      "title"			: "[In progress] Modeling forward and reverse IVT Schottky characteristics on GaN with a Log-Normal barrier height distribution",
-      "link"			: "http://noaha.net/articles/Log-Normal-IVT/",
-      "excerpt"		: "Summary of the paper"
+      "title"			: "<i>[In progress]</i> Ru/GaN Schottky Barrier Inhomogeneity Dependence on Annealing Temperature",
+      "link"			: "http://noaha.net/articles/RuOx-Annealing/",
+      "excerpt"		: "Ru/GaN Annealing Variation"
     }
   
 
   
     ,{
-      "title"			: "[In progress] Impact of increasing TMGa and Silane on GaN carrier concentration and deep level defects by MOCVD",
+      "title"			: "<i>[In progress]</i> Modeling forward and reverse IVT Schottky characteristics on GaN with a Log-Normal barrier height distribution",
+      "link"			: "http://noaha.net/articles/Log-Normal-IVT/",
+      "excerpt"		: "Log-Normal Barrier Inhomogeneity"
+    }
+  
+
+  
+    ,{
+      "title"			: "<i>[In progress]</i> Impact of increasing TMGa and Silane on GaN carrier concentration and deep level defects by MOCVD",
       "link"			: "http://noaha.net/articles/TMGA-Variation/",
-      "excerpt"		: "Summary of the paper"
+      "excerpt"		: "TMGA/Silane Deep Level Effects"
     }
   
 
@@ -44,7 +52,7 @@
     ,{
       "title"			: "Thin-film GaN Schottky diodes formed by epitaxial lift-off",
       "link"			: "http://noaha.net/articles/GaN-Lift-Off/",
-      "excerpt"		: "Summary of the paper"
+      "excerpt"		: "GaN Lift-Off"
     }
   
 
@@ -76,7 +84,7 @@
     ,{
       "title"			: "GaInN/GaN Solar Cells with Ni/Au Schottky Electrodes",
       "link"			: "http://noaha.net/articles/GaInN-solar-cells/",
-      "excerpt"		: "Summary of the paper"
+      "excerpt"		: "GaInN/GaN Solar Cells"
     }
   
 
@@ -84,7 +92,7 @@
     ,{
       "title"			: "Heteroepitaxial Ge MOS Devices on Si Using Composite AlAs/GaAs Buffer &#13;",
       "link"			: "http://noaha.net/articles/GeMOS-on-AlAs-GaAs/",
-      "excerpt"		: "Summary of the paper"
+      "excerpt"		: "Ge MOS on Si"
     }
   
 
@@ -98,9 +106,9 @@
 
   
     ,{
-      "title"			: "[MS Thesis] Electrical Characterization of Ruthenium Dioxide Schottky Contacts on GaN",
+      "title"			: "<i>[MS Thesis]</i> Electrical Characterization of Ruthenium Dioxide Schottky Contacts on GaN",
       "link"			: "http://noaha.net/articles/GaN-Ru-Oxide-MS-Thesis/",
-      "excerpt"		: "Summary of the thesis"
+      "excerpt"		: "M.S. Thesis"
     }
   
 
@@ -108,7 +116,7 @@
     ,{
       "title"			: "GaInN/GaN – Ni/Au Transparent Conducting Oxide Schottky Barrier Solar Cells",
       "link"			: "http://noaha.net/articles/GaInN-TCO/",
-      "excerpt"		: "Summary of the paper"
+      "excerpt"		: "GaInN/GaN TCO"
     }
   
 
@@ -130,9 +138,9 @@
 
   
     ,{
-      "title"			: "Paper-based capacitive mass sensor",
+      "title"			: "Paper-Based Capacitive Mass Sensor",
       "link"			: "http://noaha.net/articles/Paper-Based-Mems/",
-      "excerpt"		: "Summary of the paper"
+      "excerpt"		: "Paper-Based Capacitive Mass Sensor"
     }
   
 
@@ -140,7 +148,7 @@
     ,{
       "title"			: "Using Near-Field Holography to Investigate Super Hydrophobic Surfaces",
       "link"			: "http://noaha.net/articles/Super-Hydrophobic-Surfaces/",
-      "excerpt"		: "Summary of the paper"
+      "excerpt"		: "Super Hydrophobic Surfaces"
     }
   
 
