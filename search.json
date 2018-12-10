@@ -66,6 +66,14 @@
 
   
     ,{
+      "title"			: "ECE:2004 (Instructor)",
+      "link"			: "http://noaha.net/teaching/ECE-2004/",
+      "excerpt"		: " "
+    }
+  
+
+  
+    ,{
       "title"			: "LabVIEW (D)DLTS and CCDLTS Measurement Program",
       "link"			: "http://noaha.net/blog/DLTS-Data-Analysis/",
       "excerpt"		: "Problem:"
@@ -85,6 +93,14 @@
       "title"			: "GaInN/GaN Solar Cells with Ni/Au Schottky Electrodes",
       "link"			: "http://noaha.net/articles/GaInN-solar-cells/",
       "excerpt"		: "GaInN/GaN Solar Cells"
+    }
+  
+
+  
+    ,{
+      "title"			: "ECE:2204 (Instructor)",
+      "link"			: "http://noaha.net/teaching/ECE-2204/",
+      "excerpt"		: "Overall Effectiveness: 5.25/6.00"
     }
   
 
@@ -114,9 +130,25 @@
 
   
     ,{
+      "title"			: "ENGE:1104 (Instructor)",
+      "link"			: "http://noaha.net/teaching/ENGE-1104-7/",
+      "excerpt"		: "Overall Effectiveness: 5.56/6.00"
+    }
+  
+
+  
+    ,{
       "title"			: "GaInN/GaN – Ni/Au Transparent Conducting Oxide Schottky Barrier Solar Cells",
       "link"			: "http://noaha.net/articles/GaInN-TCO/",
       "excerpt"		: "GaInN/GaN TCO"
+    }
+  
+
+  
+    ,{
+      "title"			: "ENGE:1104 (Instructor)",
+      "link"			: "http://noaha.net/teaching/ENGE-1104-6/",
+      "excerpt"		: "Overall Effectiveness: 5.60/6.00"
     }
   
 
@@ -130,9 +162,89 @@
 
   
     ,{
+      "title"			: "ENGE:1104 (Instructor)",
+      "link"			: "http://noaha.net/teaching/ENGE-1104-5/",
+      "excerpt"		: "Overall Effectiveness: 4.82/6.00"
+    }
+  
+
+  
+    ,{
+      "title"			: "ENGE:1104 (Instructor)",
+      "link"			: "http://noaha.net/teaching/ENGE-1104-4/",
+      "excerpt"		: "Teaching Effectiveness: 4.62/6.0"
+    }
+  
+
+  
+    ,{
+      "title"			: "ECE: Graduate Mentor",
+      "link"			: "http://noaha.net/teaching/Graduate-Mentor/",
+      "excerpt"		: " "
+    }
+  
+
+  
+    ,{
+      "title"			: "ENGE:1024 (Teaching Assistant)",
+      "link"			: "http://noaha.net/teaching/ENGE-1024/",
+      "excerpt"		: "Overall Rating: (5.37 to 5.52)/6.00 : Average TA Rating: 5.13/6.00"
+    }
+  
+
+  
+    ,{
+      "title"			: "ENGE:1104 (Instructor)",
+      "link"			: "http://noaha.net/teaching/ENGE-1104-3/",
+      "excerpt"		: "Teaching Effectiveness: 5.00/6.00"
+    }
+  
+
+  
+    ,{
+      "title"			: "ECE: 2504 and 3544 (Teaching Assistant)",
+      "link"			: "http://noaha.net/teaching/ECE-2504-3544/",
+      "excerpt"		: " "
+    }
+  
+
+  
+    ,{
+      "title"			: "ECE: Electronics/Circuits Group (Teaching Assistant)",
+      "link"			: "http://noaha.net/teaching/Electronic-Circuits-Group/",
+      "excerpt"		: " "
+    }
+  
+
+  
+    ,{
       "title"			: "ECE5210 - MEMs Final Project",
       "link"			: "http://noaha.net/blog/Cantilever-Capacitance/",
       "excerpt"		: "Problem:"
+    }
+  
+
+  
+    ,{
+      "title"			: "ENGE: Workshop Creator",
+      "link"			: "http://noaha.net/teaching/Engineering-Education-Worker/",
+      "excerpt"		: " "
+    }
+  
+
+  
+    ,{
+      "title"			: "ENGE:1104 (Instructor)",
+      "link"			: "http://noaha.net/teaching/ENGE-1104-2/",
+      "excerpt"		: "Overall Rating: 4.84"
+    }
+  
+
+  
+    ,{
+      "title"			: "ENGE:1104 (Teaching Assistant)",
+      "link"			: "http://noaha.net/teaching/ENGE-1104-1/",
+      "excerpt"		: "Overall Rating: 5.38/6.00 : Average TA Rating: 4.61/6.00"
     }
   
 
@@ -153,6 +265,8 @@
   
 
 
+
+  
 
   
 

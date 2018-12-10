@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://noaha.net/feed.xml" rel="self" type="application/atom+xml" /><link href="http://noaha.net/" rel="alternate" type="text/html" /><updated>2018-12-04T16:37:55-05:00</updated><id>http://noaha.net/feed.xml</id><title type="html">Noah P. Allen</title><subtitle>A Place to Showcase Noah Allen's Work</subtitle><entry><title type="html">[In progress] Ru/GaN Schottky Barrier Inhomogeneity Dependence on Annealing Temperature</title><link href="http://noaha.net/articles/RuOx-Annealing/" rel="alternate" type="text/html" title="&lt;i&gt;[In progress]&lt;/i&gt; Ru/GaN Schottky Barrier Inhomogeneity Dependence on Annealing Temperature" /><published>2018-10-03T00:00:00-04:00</published><updated>2018-10-03T00:00:00-04:00</updated><id>http://noaha.net/articles/RuOx-Annealing</id><content type="html" xml:base="http://noaha.net/articles/RuOx-Annealing/">&lt;p class=&quot;text-justify&quot;&gt;Paper is being written and will be submitted shortly but below is some data which is expected to accompany the publication.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://noaha.net/feed.xml" rel="self" type="application/atom+xml" /><link href="http://noaha.net/" rel="alternate" type="text/html" /><updated>2018-12-10T15:43:03-05:00</updated><id>http://noaha.net/feed.xml</id><title type="html">Noah P. Allen</title><subtitle>A Place to Showcase Noah Allen's Work</subtitle><entry><title type="html">[In progress] Ru/GaN Schottky Barrier Inhomogeneity Dependence on Annealing Temperature</title><link href="http://noaha.net/articles/RuOx-Annealing/" rel="alternate" type="text/html" title="&lt;i&gt;[In progress]&lt;/i&gt; Ru/GaN Schottky Barrier Inhomogeneity Dependence on Annealing Temperature" /><published>2018-10-03T00:00:00-04:00</published><updated>2018-10-03T00:00:00-04:00</updated><id>http://noaha.net/articles/RuOx-Annealing</id><content type="html" xml:base="http://noaha.net/articles/RuOx-Annealing/">&lt;p class=&quot;text-justify&quot;&gt;Paper is being written and will be submitted shortly but below is some data which is expected to accompany the publication.&lt;/p&gt;
 
 &lt;p class=&quot;text-justify&quot;&gt;This paper will serve as an application of the model outlined in the &lt;a href=&quot;http://noaha.net/articles/RuOx-Annealing/&quot;&gt;Log-Normal Barrier Distribution&lt;/a&gt; paper.  The dataset is made up of IV and CV 
 data taken from Ru/GaN Schottky diodes that were annealed in open air at different temperatures but on the same original GaN wafer.  Originally, the 
@@ -36,206 +36,7 @@ Below you can see the effect on the free carrier concentration and SSPC signal o
 &lt;center&gt;&lt;img src=&quot;/images/projects/TMGaVarCV.jpg&quot; width=&quot;500&quot; height=&quot;500&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;
 
 &lt;h3 id=&quot;sspc-detected-trap-conc&quot;&gt;SSPC Detected Trap Conc.&lt;/h3&gt;
-&lt;center&gt;&lt;img src=&quot;/images/projects/SSPCTMGaGraph.jpg&quot; width=&quot;500&quot; height=&quot;500&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;</content><author><name></name></author><category term="GaN" /><category term="traps" /><category term="DLTS" /><category term="DLOS" /><summary type="html">TMGA/Silane Deep Level Effects</summary></entry><entry><title type="html">Reverse Engineering the D750 Shutter for Remote Control</title><link href="http://noaha.net/blog/SSPC-Shutter/" rel="alternate" type="text/html" title="Reverse Engineering the D750 Shutter for Remote Control" /><published>2018-03-20T12:00:00-04:00</published><updated>2018-03-20T12:00:00-04:00</updated><id>http://noaha.net/blog/SSPC-Shutter</id><content type="html" xml:base="http://noaha.net/blog/SSPC-Shutter/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
-
-&lt;p class=&quot;text-justify&quot;&gt;Ideally, to complement the DLTS system that our group owns we should also be able to excite electronic defects through and optical method to help understand 
-the full extent of bandgap traps in GaN.  A simple method known as Steady-State Photocapacitance measurements uses sudden exposures of single wavelength light 
-to excite trapped charges out of deep states in a semiconductor and measures the response with a fast capacitance meter.  In other words we put a shutter 
-between a sample and the light source, let the sample sit in the dark for some time and then open the shutter and see what happens.&lt;/p&gt;
-
-&lt;p class=&quot;text-justify&quot;&gt;The problem I was facing was trying to time the exposure of light accurately with a safety shutter (Oriel 71445) and a digital signal from a LabVIEW program. 
-Results can be seen below where I send the signal to open the shutter but the delay to open isn’t consistent which makes automation of detailed analysis almost 
-impossible.&lt;/p&gt;
-
-&lt;center&gt;&lt;img src=&quot;/images/projects/SlowShutter.jpg&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;
-
-&lt;h2 id=&quot;solution&quot;&gt;Solution:&lt;/h2&gt;
-
-&lt;p class=&quot;text-justify&quot;&gt;The first idea was to buy something since “a simple shutter shouldn’t be expensive” but after looking I found that was not the case.  The next idea (like most 
-of mine are) was to try and make one.  Since there didn’t seem to be ‘broken’ shutters on eBay I looked to try and score repair parts for a DSLR camera and 
-reverse engineer the pins.  Below is a picture of the D750 Shutter Blade Assembly Replacement I bought.&lt;/p&gt;
-
-&lt;center&gt;&lt;img src=&quot;/images/projects/D750ShutterAnnotated.jpg&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;
-
-&lt;p class=&quot;text-justify&quot;&gt;It took a little while to figure out how the shutter worked and in turn how to control it but it goes something like this.  The light blocking method is accomplished 
-with two shades which are tensioned with a spring.  The motor will cock both of the shades until the metal core connector piece (connected to the shade) touches the electromagnet 
-core.  If power is running through the inductor, when the metal piece touches the core it will stick, thereby keeping the shade anchored.  Once power to the inductor is stopped 
-the spring tension pulls the shade back to the original position.&lt;/p&gt;
-
-&lt;center&gt;&lt;img src=&quot;/images/projects/D750ShutterAnnotated2.jpg&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;
-
-&lt;p class=&quot;text-justify&quot;&gt;The final piece of the puzzle is the motor position.  When the motor cocks the shutter blades it needs to keep moving so that the cocking arm isn’t in the way when 
-the shades are ultimately relaxed to their original position.  This is difficult because the shutter assembly uses a DC motor and has no feedback.  This was solved by 
-putting a few notches into one of the motor gears and sensing the notches with a couple photointerrupters.  This is what is implemented on the D750 shutter assembly.&lt;/p&gt;
-
-&lt;center&gt;&lt;img src=&quot;/images/projects/D750Photointerrupter.jpg&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;
-
-&lt;p class=&quot;text-justify&quot;&gt;Now that we generally understand how the shutter works we need to setup a circuit and microcontroller to cock the shutter blades and then release them when ready.  I decided to 
-that the following circuits would be adequate to control the electromagnets and motor and then sense the position of the motor.  The red outline indicates the circuit exists on the 
-shutter assembly and the blue represents a circuit I need to implement.&lt;/p&gt;
-
-&lt;center&gt;&lt;img src=&quot;/images/projects/ShutterControlCircuit.jpg&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;
-
-&lt;p class=&quot;text-justify&quot;&gt;With some probing around to discover the polarity of some of the circuits, below is the full interface diagram I implemented to control the shutter assembly.  Notice that I’ve also added a 
-voltage buffer (op-amp) for the input.  I’m connecting a digital signal from the LabVIEW DAC over a long BNC cable and found that when connecting it directly to the gate of the MOSFET 
-the voltage sagged (probably because of the 1K pull-down resistor) so I decided to add the opamp in series to increase the input impedance.&lt;/p&gt;
-
-&lt;center&gt;&lt;img src=&quot;/images/projects/FullShutterCircuit.jpg&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;
-
-&lt;p class=&quot;text-justify&quot;&gt;The code I used is below.  Basically, the BNC input in the circuit above controls whether or not the OPEN electromagnet is holding the shutter blade and the Arduino is just checking whether or not 
-the digital signal is high or low.  After the BNC input indicates that it’s ready for the shutter to be reset the Arduino sends a full power PWM signal to the motor control MOSFET until its reset the 
-shutter blades at which point it will cut the power down to 10% (duty cycle 20 of 255).  Then it will wait  until the motor position is at the correct point to turn the motor off.  I found that if 
-the program turned the motor off from 100%, the momentum would push it past the correct reset position and the blades would get stuck.  Lowering the power while it was still moving gave it enought of a 
-push to make it around again but not enough to cause the motor to drift when it was turned off.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
-74&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;pinMode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;INPUT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Open Shutter Hold
-&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;pinMode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;OUTPUT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Close Shutter Hold
-&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;pinMode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;OUTPUT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Motor
-&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;pinMode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;OUTPUT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Debug LED
-&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;pinMode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;INPUT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Motor PhotoInterrupter 1
-&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;pinMode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;INPUT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Motor PhotoInterrupter 2
-&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;loop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;// put your main code here, to run repeatedly:
-&lt;/span&gt;  
-  &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;digitalRead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)){&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;//Wait until High-Low
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;__asm__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;nop&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n\t&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    
-  &lt;span class=&quot;n&quot;&gt;digitalWrite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Turn LED OFF 
-&lt;/span&gt;  
-  &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;               &lt;span class=&quot;c1&quot;&gt;//Wait for Bounce
-&lt;/span&gt;  
-  &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;digitalRead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)){&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Wait until Low-High
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;__asm__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;nop&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n\t&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    
-  &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;               &lt;span class=&quot;c1&quot;&gt;//Wait for bounce
-&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;digitalRead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)){&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;//Check actually high
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;digitalWrite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Close Shutter
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;150&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;             &lt;span class=&quot;c1&quot;&gt;//Wait for close
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;digitalWrite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Turn LED ON
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;digitalWrite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//Engage Close Shutter Hold
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;ResetMotor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-   
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ResetMotor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
-
-  &lt;span class=&quot;n&quot;&gt;analogWrite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;255&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//Turn motor on to reset
-&lt;/span&gt;  
-  
-  
-  &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;millis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; 
-  &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;digitalRead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HIGH&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;digitalRead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HIGH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)){&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Wait until motor out of correct position
-&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;millis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;analogWrite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-  &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;millis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;   
-  &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;digitalRead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HIGH&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;digitalRead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HIGH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)){&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Wait until motor out of correct position
-&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;millis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;analogWrite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-  &lt;span class=&quot;n&quot;&gt;analogWrite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//Turn motor on to reset
-&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;millis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;digitalRead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HIGH&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;digitalRead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HIGH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)){&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Wait until motor out of correct position
-&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;millis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;analogWrite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-  &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;millis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;digitalRead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HIGH&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;digitalRead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HIGH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)){&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Wait until motor out of correct position
-&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;millis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;analogWrite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-  &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;millis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;digitalRead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LOW&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;digitalRead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LOW&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)){&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Wait until motor in correct position
-&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;millis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;analogWrite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
- 
-  &lt;span class=&quot;n&quot;&gt;analogWrite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//Turn motor off   
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name></name></author><summary type="html">Problem:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://noaha.net/%7B%22feature%22=%3Enil%7D" /></entry><entry><title type="html">Ethernet Controlled Graduated ND Filter</title><link href="http://noaha.net/blog/SSPC-Controlled-ND-Filter/" rel="alternate" type="text/html" title="Ethernet Controlled Graduated ND Filter" /><published>2018-03-20T12:00:00-04:00</published><updated>2018-03-20T12:00:00-04:00</updated><id>http://noaha.net/blog/SSPC-Controlled-ND-Filter</id><content type="html" xml:base="http://noaha.net/blog/SSPC-Controlled-ND-Filter/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
+&lt;center&gt;&lt;img src=&quot;/images/projects/SSPCTMGaGraph.jpg&quot; width=&quot;500&quot; height=&quot;500&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;</content><author><name></name></author><category term="GaN" /><category term="traps" /><category term="DLTS" /><category term="DLOS" /><summary type="html">TMGA/Silane Deep Level Effects</summary></entry><entry><title type="html">Ethernet Controlled Graduated ND Filter</title><link href="http://noaha.net/blog/SSPC-Controlled-ND-Filter/" rel="alternate" type="text/html" title="Ethernet Controlled Graduated ND Filter" /><published>2018-03-20T12:00:00-04:00</published><updated>2018-03-20T12:00:00-04:00</updated><id>http://noaha.net/blog/SSPC-Controlled-ND-Filter</id><content type="html" xml:base="http://noaha.net/blog/SSPC-Controlled-ND-Filter/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
 
 &lt;p class=&quot;text-justify&quot;&gt;So, after the excitement of fixing the shutter jitter mentioned in the ‘Reverse Engineering the D750 Shutter for Remote Control’ project, I was able to take 
 a nice looking SSPC signal from 3 samples but I noticed something interesting.  Ideally, the SSPC signal below should only show slope increases when the incident energy 
@@ -852,6 +653,205 @@ ENC28J60 was if I gave it an IP address VERY close to the computer.&lt;/p&gt;
   &lt;span class=&quot;n&quot;&gt;currentStep&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Step&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Step&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name></name></author><summary type="html">Problem:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://noaha.net/%7B%22feature%22=%3Enil%7D" /></entry><entry><title type="html">Reverse Engineering the D750 Shutter for Remote Control</title><link href="http://noaha.net/blog/SSPC-Shutter/" rel="alternate" type="text/html" title="Reverse Engineering the D750 Shutter for Remote Control" /><published>2018-03-20T12:00:00-04:00</published><updated>2018-03-20T12:00:00-04:00</updated><id>http://noaha.net/blog/SSPC-Shutter</id><content type="html" xml:base="http://noaha.net/blog/SSPC-Shutter/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
+
+&lt;p class=&quot;text-justify&quot;&gt;Ideally, to complement the DLTS system that our group owns we should also be able to excite electronic defects through and optical method to help understand 
+the full extent of bandgap traps in GaN.  A simple method known as Steady-State Photocapacitance measurements uses sudden exposures of single wavelength light 
+to excite trapped charges out of deep states in a semiconductor and measures the response with a fast capacitance meter.  In other words we put a shutter 
+between a sample and the light source, let the sample sit in the dark for some time and then open the shutter and see what happens.&lt;/p&gt;
+
+&lt;p class=&quot;text-justify&quot;&gt;The problem I was facing was trying to time the exposure of light accurately with a safety shutter (Oriel 71445) and a digital signal from a LabVIEW program. 
+Results can be seen below where I send the signal to open the shutter but the delay to open isn’t consistent which makes automation of detailed analysis almost 
+impossible.&lt;/p&gt;
+
+&lt;center&gt;&lt;img src=&quot;/images/projects/SlowShutter.jpg&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution:&lt;/h2&gt;
+
+&lt;p class=&quot;text-justify&quot;&gt;The first idea was to buy something since “a simple shutter shouldn’t be expensive” but after looking I found that was not the case.  The next idea (like most 
+of mine are) was to try and make one.  Since there didn’t seem to be ‘broken’ shutters on eBay I looked to try and score repair parts for a DSLR camera and 
+reverse engineer the pins.  Below is a picture of the D750 Shutter Blade Assembly Replacement I bought.&lt;/p&gt;
+
+&lt;center&gt;&lt;img src=&quot;/images/projects/D750ShutterAnnotated.jpg&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;
+
+&lt;p class=&quot;text-justify&quot;&gt;It took a little while to figure out how the shutter worked and in turn how to control it but it goes something like this.  The light blocking method is accomplished 
+with two shades which are tensioned with a spring.  The motor will cock both of the shades until the metal core connector piece (connected to the shade) touches the electromagnet 
+core.  If power is running through the inductor, when the metal piece touches the core it will stick, thereby keeping the shade anchored.  Once power to the inductor is stopped 
+the spring tension pulls the shade back to the original position.&lt;/p&gt;
+
+&lt;center&gt;&lt;img src=&quot;/images/projects/D750ShutterAnnotated2.jpg&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;
+
+&lt;p class=&quot;text-justify&quot;&gt;The final piece of the puzzle is the motor position.  When the motor cocks the shutter blades it needs to keep moving so that the cocking arm isn’t in the way when 
+the shades are ultimately relaxed to their original position.  This is difficult because the shutter assembly uses a DC motor and has no feedback.  This was solved by 
+putting a few notches into one of the motor gears and sensing the notches with a couple photointerrupters.  This is what is implemented on the D750 shutter assembly.&lt;/p&gt;
+
+&lt;center&gt;&lt;img src=&quot;/images/projects/D750Photointerrupter.jpg&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;
+
+&lt;p class=&quot;text-justify&quot;&gt;Now that we generally understand how the shutter works we need to setup a circuit and microcontroller to cock the shutter blades and then release them when ready.  I decided to 
+that the following circuits would be adequate to control the electromagnets and motor and then sense the position of the motor.  The red outline indicates the circuit exists on the 
+shutter assembly and the blue represents a circuit I need to implement.&lt;/p&gt;
+
+&lt;center&gt;&lt;img src=&quot;/images/projects/ShutterControlCircuit.jpg&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;
+
+&lt;p class=&quot;text-justify&quot;&gt;With some probing around to discover the polarity of some of the circuits, below is the full interface diagram I implemented to control the shutter assembly.  Notice that I’ve also added a 
+voltage buffer (op-amp) for the input.  I’m connecting a digital signal from the LabVIEW DAC over a long BNC cable and found that when connecting it directly to the gate of the MOSFET 
+the voltage sagged (probably because of the 1K pull-down resistor) so I decided to add the opamp in series to increase the input impedance.&lt;/p&gt;
+
+&lt;center&gt;&lt;img src=&quot;/images/projects/FullShutterCircuit.jpg&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;
+
+&lt;p class=&quot;text-justify&quot;&gt;The code I used is below.  Basically, the BNC input in the circuit above controls whether or not the OPEN electromagnet is holding the shutter blade and the Arduino is just checking whether or not 
+the digital signal is high or low.  After the BNC input indicates that it’s ready for the shutter to be reset the Arduino sends a full power PWM signal to the motor control MOSFET until its reset the 
+shutter blades at which point it will cut the power down to 10% (duty cycle 20 of 255).  Then it will wait  until the motor position is at the correct point to turn the motor off.  I found that if 
+the program turned the motor off from 100%, the momentum would push it past the correct reset position and the blades would get stuck.  Lowering the power while it was still moving gave it enought of a 
+push to make it around again but not enough to cause the motor to drift when it was turned off.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;pinMode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;INPUT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Open Shutter Hold
+&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;pinMode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;OUTPUT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Close Shutter Hold
+&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;pinMode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;OUTPUT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Motor
+&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;pinMode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;OUTPUT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Debug LED
+&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;pinMode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;INPUT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Motor PhotoInterrupter 1
+&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;pinMode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;INPUT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Motor PhotoInterrupter 2
+&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;loop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// put your main code here, to run repeatedly:
+&lt;/span&gt;  
+  &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;digitalRead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)){&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;//Wait until High-Low
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;__asm__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;nop&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n\t&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    
+  &lt;span class=&quot;n&quot;&gt;digitalWrite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Turn LED OFF 
+&lt;/span&gt;  
+  &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;               &lt;span class=&quot;c1&quot;&gt;//Wait for Bounce
+&lt;/span&gt;  
+  &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;digitalRead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)){&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Wait until Low-High
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;__asm__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;nop&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n\t&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    
+  &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;               &lt;span class=&quot;c1&quot;&gt;//Wait for bounce
+&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;digitalRead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)){&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;//Check actually high
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;digitalWrite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Close Shutter
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;150&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;             &lt;span class=&quot;c1&quot;&gt;//Wait for close
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;digitalWrite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Turn LED ON
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;digitalWrite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//Engage Close Shutter Hold
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;ResetMotor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+   
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ResetMotor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;analogWrite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;255&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//Turn motor on to reset
+&lt;/span&gt;  
+  
+  
+  &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;millis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; 
+  &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;digitalRead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HIGH&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;digitalRead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HIGH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)){&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Wait until motor out of correct position
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;millis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;analogWrite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;millis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;   
+  &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;digitalRead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HIGH&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;digitalRead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HIGH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)){&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Wait until motor out of correct position
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;millis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;analogWrite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;analogWrite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//Turn motor on to reset
+&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;millis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;digitalRead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HIGH&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;digitalRead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HIGH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)){&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Wait until motor out of correct position
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;millis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;analogWrite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;millis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;digitalRead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HIGH&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;digitalRead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HIGH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)){&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Wait until motor out of correct position
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;millis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;analogWrite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;millis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;digitalRead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LOW&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;digitalRead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LOW&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)){&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Wait until motor in correct position
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;millis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;analogWrite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+ 
+  &lt;span class=&quot;n&quot;&gt;analogWrite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//Turn motor off   
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name></name></author><summary type="html">Problem:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://noaha.net/%7B%22feature%22=%3Enil%7D" /></entry><entry><title type="html">Hg Probe Back Contact Piece</title><link href="http://noaha.net/blog/Hg-Probe-Adapter/" rel="alternate" type="text/html" title="Hg Probe Back Contact Piece" /><published>2017-08-01T12:00:00-04:00</published><updated>2017-08-01T12:00:00-04:00</updated><id>http://noaha.net/blog/Hg-Probe-Adapter</id><content type="html" xml:base="http://noaha.net/blog/Hg-Probe-Adapter/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
 
 &lt;p class=&quot;text-justify&quot;&gt;Being able to quickly and cheaply identify the free carrier concentration in a semiconductor layer can be helpful when slight changes to 
@@ -903,7 +903,7 @@ radiative recombination can occur.  Depending on the transition that is made, di
 transition is happening from the valence to conduction band it wouldn’t be visible (363nm - UV).  This implies that the transition may be occuring at trap levels in the forbidden gap 
 likely there due to impurities.  Additionally, if you watch long enough you’ll see little arc’s from the high electric field in reverse bias.&lt;/p&gt;
 
-&lt;center&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube-nocookie.com/embed/zN-vi6zYlis&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;</content><author><name></name></author><summary type="html">Work:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://noaha.net/%7B%22feature%22=%3Enil%7D" /></entry><entry><title type="html">LabVIEW (D)DLTS and CCDLTS Measurement Program</title><link href="http://noaha.net/blog/DLTS-Data-Analysis/" rel="alternate" type="text/html" title="LabVIEW (D)DLTS and CCDLTS Measurement Program" /><published>2016-02-01T11:00:00-05:00</published><updated>2016-02-01T11:00:00-05:00</updated><id>http://noaha.net/blog/DLTS-Data-Analysis</id><content type="html" xml:base="http://noaha.net/blog/DLTS-Data-Analysis/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
+&lt;center&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube-nocookie.com/embed/zN-vi6zYlis&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;</content><author><name></name></author><summary type="html">Work:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://noaha.net/%7B%22feature%22=%3Enil%7D" /></entry><entry><title type="html">ECE:2004 (Instructor)</title><link href="http://noaha.net/teaching/ECE-2004/" rel="alternate" type="text/html" title="ECE:2004 (Instructor)" /><published>2016-05-01T00:00:00-04:00</published><updated>2016-05-01T00:00:00-04:00</updated><id>http://noaha.net/teaching/ECE-2004</id><content type="html" xml:base="http://noaha.net/teaching/ECE-2004/"></content><author><name></name></author><summary type="html">&amp;nbsp;</summary></entry><entry><title type="html">LabVIEW (D)DLTS and CCDLTS Measurement Program</title><link href="http://noaha.net/blog/DLTS-Data-Analysis/" rel="alternate" type="text/html" title="LabVIEW (D)DLTS and CCDLTS Measurement Program" /><published>2016-02-01T11:00:00-05:00</published><updated>2016-02-01T11:00:00-05:00</updated><id>http://noaha.net/blog/DLTS-Data-Analysis</id><content type="html" xml:base="http://noaha.net/blog/DLTS-Data-Analysis/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
 
 &lt;p class=&quot;text-justify&quot;&gt;Deep Level Transient Spectroscopy (DLTS) is very interesting to me since it is such a simple measurement that can yield information 
 about very complex details regarding semiconductor material.  Part of my PhD thesis will be understanding defects found in 
@@ -938,65 +938,4 @@ and TSCAP measurements automatically.&lt;/p&gt;
 &lt;h3 id=&quot;cv-accessory-program&quot;&gt;CV Accessory Program&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&quot;/images/projects/cvgif.gif&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;
 
-&lt;p class=&quot;text-center&quot;&gt;In addition to DLTS measurements, the physical setup of the sample allows for C-V-T measurements to be executed before changing sample temperature.&lt;/p&gt;</content><author><name></name></author><summary type="html">Problem:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://noaha.net/%7B%22feature%22=%3Enil%7D" /></entry><entry><title type="html">MMR Probe Station Rebuild with Helium Cryopump</title><link href="http://noaha.net/blog/Probe-Station-Rebuild/" rel="alternate" type="text/html" title="MMR Probe Station Rebuild with Helium Cryopump" /><published>2016-01-20T11:00:00-05:00</published><updated>2016-01-20T11:00:00-05:00</updated><id>http://noaha.net/blog/Probe-Station-Rebuild</id><content type="html" xml:base="http://noaha.net/blog/Probe-Station-Rebuild/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
-
-&lt;p class=&quot;text-justify&quot;&gt;Prior to my arrival at Virginia Tech our group acquired an MMR Technologies cryogenic probe station capable of 8 
-probes.  The sample stage is about 1cm&lt;sup&gt;2&lt;/sup&gt; and is cooled using high-pressure dry nitrogen through capillaries etched into glass or 
-sapphire.  High-pressure nitrogen flows through the capillaries where most of the pressure is dropped under the copper 
-sample stage and then flows through a different path out of the vacuum chamber.  This process is known as the Joule-Thomson 
-effect and can cool the sample down to liquid nitrogen temperatures (77K) as long as everything works properly.  The glass (or sapphire) 
-stage is fragile and we were looking at ~$5K to replace one that got a short between the input and output capillaries rendering 
-it useless.  In the first picture below you can see the MMR Stage capable of 77K temperature and below it is a picture of the backside 
-showing the capillaries and an arrow where the suspected ‘short’ is.  I had been looking into finding a cryogenic probe station capable of helium temperatures &amp;lt;10K  but those were even more 
-expensive so instead I decided to integrate a CTI Cryodyne M22 cryopump into our MMR probe station.&lt;/p&gt;
-
-&lt;center&gt;&lt;img src=&quot;/images/projects/MMRStageTopBot.png&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;
-
-&lt;h2 id=&quot;solution&quot;&gt;Solution:&lt;/h2&gt;
-
-&lt;p class=&quot;text-justify&quot;&gt;The cheapest option to cool something down in a vacuum seemed to be getting a hold of an eBay cryo pump but even those seemed to go for &amp;gt;$1000 for a working 
-one.  So after doing some digging I found a used Laser Photonics LM5731 originally used to test solid state IR lasers at cryogenic temperatures using an old CTI M22 pump 
-(now Cryo Torr 100).  The pictures below show the before and after disassembly showing all of the parts, most of which I was able to salvage and use like the 
-vacuum cylinder shown in the top left of the ‘after’ picture.&lt;/p&gt;
-
-&lt;center&gt;&lt;img src=&quot;/images/projects/LM5731BeforeAfter.png&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;
-
-&lt;p class=&quot;text-justify&quot;&gt;Imagine my disappointment when I realized that the pump worked but could only cool down to 120K and because I was self funding, I couldn’t just send it in to be 
-diagnosed and repaired.  So I did what any good engineer does and research common problems and made some calls.  It turns out that these pumps are very similar to a 
-Stirling engine and to work properly the working gas needs to be confined to the correct chamber using special seals namely the ‘expander ring’ and the ‘displacer seal’.  Luckily 
-I was able to find a company willing to sell me these parts for around $200 and the pump was able to get down to &amp;lt;30K!  Below is the exploded view of the pump 
-I had to beg for and next to it are the two seals, you can see how dirty they are and the fact that the Teflon on the top one is worn down in the middle.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/projects/CryoPumpSeals.png&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;
-
-&lt;p class=&quot;text-justify&quot;&gt;Now that I was able to get down in temperature, I needed to find a way to mount the vacuum housing to the MMR probe station.  Luckily, the designers of the MMR vacuum chamber 
-thought to add a port on the bottom of the station (even if it was for a tubo upgrade) so I could connect straight to that.  However, I needed to measure all of the cryo chamber 
-dimensions and machine a coupling.  Because I wanted to make sure to not ruin any of the expensive parts, I designed the coupling, and later the copper stage, so that no permanent 
-holes or machining had to be done to the MMR chamber or the cryo pump components.  Thus the most over-machined vacuum coupling was born.&lt;/p&gt;
-
-&lt;tr&gt;
-&lt;td&gt; &lt;img src=&quot;/images/projects/CouplingRotation.gif&quot; alt=&quot;Drawing&quot; style=&quot;width: 240px;&quot; /&gt; &lt;/td&gt;
-&lt;td&gt; &lt;img src=&quot;/images/projects/CouplingAssembly.gif&quot; alt=&quot;Drawing&quot; style=&quot;width: 470px;&quot; /&gt; &lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;p class=&quot;text-justify&quot;&gt;By some miracle on the first try, I was able to pump the system down to same absolute pressure as when the chamber didn’t have a cryopump hanging off of it.  So, the next step was to 
-find some way to cool a sample down in the chamber using the 2nd stage of the cryopump.  It might not be readily apparent but the tip of the pump sits about 6 inches below the 
-point where the probes can contact a sample so I first needed to extend the length of the cold surface with a piece of oxygen-free copper.  Next I wanted the ability to heat the sample 
-stage without dropping too much of that heat into the cryo pump so I added 3 stainless steel standoffs as a thermal resistance.  Finally, I added the sample stage with a couple 
-holes designed to accept a 50W heater and a Pt thermometer.  Again to my surprise, it worked the first time and I could successfully cool a sample down to ~50K!  So I’m done right?… right?&lt;/p&gt;
-
-&lt;center&gt;&lt;img src=&quot;/images/projects/OriginalStage.gif&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;
-
-&lt;p class=&quot;text-justify&quot;&gt;No, it turns out I didn’t plan for the small, in axis, vibration from the cryo pump displacers which caused &amp;lt;5μm sample movement.  The vibration was enough to induce small periodic noise 
-in the reverse IV characteristics of a schottky diode.  I thought about trying to fix it by synchronizing the measurement instrument with the vibration but realized I needed to ultimately 
-redesign the sample stage and anchor it to the vacuum chamber instead of the cryo pump.  So back to the drawing board.&lt;/p&gt;
-
-&lt;center&gt;&lt;img src=&quot;/images/projects/VibrationProblemIV.png&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;
-
-&lt;p class=&quot;text-justify&quot;&gt;It took me awhile of thinking how I was going to do this because I now had to worry about how I was going to physically anchor the sample stage to the vacuum chamber but thermally isolate it 
-so I wasn’t cooling down the whole apparatus.  This problem was made harder by the fact I would lose cooling power from having to use a copper braid instead of a more solid stainless steel 
-standoff like the previous sample stage.  Thus, I settled on the design below, where I would break the sample stage into two pieces which would sandwich together on a disk with wave springs thereby 
-taking care of most of the thermal isolation.  The disk would then be anchored to the vacuum side of the machined coupling I mentioned previously with stainless steel standoffs.  After some testing 
-it worked!  I was successfully able to cool the sample down to &amp;lt;50K without any noticeable current perturbations down to 1fA and have been taking measurements on it like a mad man.  Check out the assembly of the stage below.&lt;/p&gt;
-
-&lt;center&gt;&lt;img src=&quot;/images/projects/VibrationStage.gif&quot; align=&quot;middle&quot; /&gt;&lt;/center&gt;</content><author><name></name></author><summary type="html">Problem:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://noaha.net/%7B%22feature%22=%3Enil%7D" /></entry></feed>
+&lt;p class=&quot;text-center&quot;&gt;In addition to DLTS measurements, the physical setup of the sample allows for C-V-T measurements to be executed before changing sample temperature.&lt;/p&gt;</content><author><name></name></author><summary type="html">Problem:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://noaha.net/%7B%22feature%22=%3Enil%7D" /></entry></feed>
