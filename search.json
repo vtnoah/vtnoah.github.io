@@ -18,6 +18,14 @@
 
   
     ,{
+      "title"			: "LabVIEW Remote Compressor Control",
+      "link"			: "http://noaha.net/blog/Arduino-Compressor/",
+      "excerpt"		: "Problem:"
+    }
+  
+
+  
+    ,{
       "title"			: "<i>[In progress]</i> Impact of increasing TMGa and Silane on GaN carrier concentration and deep level defects by MOCVD",
       "link"			: "http://noaha.net/articles/TMGA-Variation/",
       "excerpt"		: "TMGA/Silane Deep Level Effects"

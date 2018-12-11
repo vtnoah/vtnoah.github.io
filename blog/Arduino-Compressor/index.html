@@ -1,0 +1,756 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>LabVIEW Remote Compressor Control &#8211; Noah P. Allen</title>
+<meta name="description" content="Problem:
+
+">
+<meta name="keywords" content="">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="LabVIEW Remote Compressor Control">
+<meta name="twitter:description" content="Problem:
+
+">
+
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://noaha.net/images/HeadshotSiteLogo.jpg">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LabVIEW Remote Compressor Control">
+<meta property="og:description" content="Problem:
+
+">
+<meta property="og:url" content="http://noaha.net/blog/Arduino-Compressor/">
+<meta property="og:site_name" content="Noah P. Allen">
+
+
+
+
+
+<link rel="canonical" href="http://noaha.net/blog/Arduino-Compressor/">
+<link href="http://noaha.net/feed.xml" type="application/atom+xml" rel="alternate" title="Noah P. Allen Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://noaha.net/assets/css/main.css">
+<!-- Webfonts -->
+<script src="https://use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="http://noaha.net/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="http://noaha.net/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://noaha.net/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+
+<!-- MathJax -->
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://noaha.net/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://noaha.net/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://noaha.net/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://noaha.net/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://noaha.net/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://noaha.net/images/apple-touch-icon-144x144-precomposed.png">
+
+
+</head>
+
+<body id="post">
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
+      
+		    
+		    <li><a href="http://noaha.net/" >About</a></li>
+		  
+		    
+		    <li><a href="http://noaha.net/publications/" >Publications</a></li>
+		  
+		    
+		    <li><a href="http://noaha.net/projects/" >Projects</a></li>
+		  
+		    
+		    <li><a href="http://noaha.net/teaching/" >Teaching</a></li>
+		  
+		    
+		    <li><a href="http://noaha.net/CV/" >CV / Contact</a></li>
+		  
+		    
+		    <li><a href="http://noaha.net/search/" >Search</a></li>
+		  
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+<header class="masthead">
+	<div class="wrap">
+      
+  		<a href="http://noaha.net/" class="site-logo" rel="home" title="Noah P. Allen"><img src="http://noaha.net/images/HeadshotSiteLogo.jpg" width="200" height="200" alt="Noah P. Allen logo" class="animated fadeInDown"></a>
+      
+      <h1 class="site-title animated fadeIn"><a href="http://noaha.net/">Noah P. Allen</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">A Place to Showcase Noah Allen's Work</h2>
+	</div>
+</header><!-- /.masthead -->
+
+<div class="js-menu-screen menu-screen"></div>
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <ul class="entry-tags">
+          
+        </ul>
+        
+          <h1 class="entry-title">LabVIEW Remote Compressor Control</h1>
+        
+      </header>
+      <footer class="entry-meta">
+        
+        
+          <img src="http://noaha.net/images/VTlogo.png" class="bio-photo" alt="Noah Allen bio photo"></a>
+        
+        <span class="author vcard">By <span class="fn">Noah Allen</span></span>
+        <span class="entry-date date published"><time datetime="2018-10-01T12:00:00-04:00"><i class="fa fa-calendar-o"></i> October 01, 2018</time></span>
+        <span class="entry-date date modified"><time datetime="2018-10-01 12:00:00 -0400"><i class="fa fa-pencil"></i> October 01, 2018</time></span>
+        
+        
+        
+      </footer>
+      <div class="entry-content">
+        <h2 id="problem">Problem:</h2>
+
+<p class="text-justify">Although I’ve accomplished the ability to run long DLTS, IVT, and CVT measurements autonomously, I was worried about running the compressor 
+when I wasn’t there.  The compressor is water cooled and if I were to forget to turn the supply on or if the building services were to turn it off 
+without me knowing then it would thermal cycle over and over.  This means the He compressor would heat up to its trip temperature, cool down, and then 
+do it again until I was able to cut power.</p>
+
+<h2 id="solution">Solution:</h2>
+<p class="text-justify">This solution was actually pretty simple but turned out there were some weird hiccups along the way.  The hardware solution should look very familiar since 
+I used a lot of the same hardware and software as the <a href="http://noaha.net/blog/SSPC-Controlled-ND-Filter/">Ethernet Controlled ND Filter</a> including the ENC28J60.  I chose 
+ethernet because I have a distrust of wireless connections and serial connections along and the fact that ethernet has an almost bullet-proof physical 
+connection.  I decided that simply having a dumb switch wouldn’t work so I added a microphone used as feedback to check whether or not the compressor was actually 
+on.  The hardware schematic is shown below.</p>
+
+<center><img src="/images/projects/LabVIEWCompressor.png" align="middle" /></center>
+
+<p class="text-justify">To ensure that the relay could handle the voltage that the physical switch on the compressor could, I traced the wires and found that the 250V<sub>AC</sub> input voltage 
+was transformed down to ~20V<sub>AC</sub> so that it could power the compressor contactor and the timing circuit used to turn the compressor back on during a thermal 
+fault.  This was perfect since I originally thought about trying to switch the 250V<sub>AC</sub> at 10A which would require a beefier relay and additionally circuitry to controll it.</p>
+
+<center><img src="/images/projects/CTI8001.png" align="middle" /></center>
+
+<p class="text-justify">Once I hooked it up, it worked like a charm and I only needed to write some Arduino code and LabVIEW code to complete the work.  The Arduino runs a TCP server on it where 
+it receives plain text strings that tell it to do something at which point it complies and then responds with some data, like the current volume or the compressor relay state.  The 
+LabVIEW program simply runs a TCP client and sends and receives these text strings which is updated on the front panel shown below.</p>
+
+<center><img src="/images/projects/LabVIEWCompressorProgram.png" align="middle" /></center>
+
+<p class="text-justify">I decided, as a fail-safe, to make sure that if the Arduino ever lost power, it would go back to the same state as it was in prior to turning it off thus the need for EEPROM.  Every time 
+the relay changed its state I could simply save the new state into a reserved spot in the non-volatile memory of the Arduino so that when powered on it would look at the same spot and 
+restore its state.  Next, knowing that electronics can behave very strangely in noisy environments, I needed to make sure it didn’t hang.  A watchdog time would be perfect for this and 
+since I programmed the current state into the flash memory, restarting the Arduino programmatically wouldn’t be a problem.  HOWEVER, as it turns out, my cheapness bit me and WDT doesn’t 
+work on these eBay Arduino Nano’s due to an error in the bootloader.  Whenever the WDT would fire it would put the Arduino into a boot-loop and it would never come back.</p>
+
+<p class="text-justify">Luckily, this program is well documented and I simply just needed to flash the Nano with a new bootloader following the directions 
+<a href="https://bigdanzblog.wordpress.com/2014/10/23/installing-the-optiboot-loader-on-an-arudino-nano-to-fix-the-watch-dog-timer-wdt-issue/">here</a>.  After frying a few other Arduinos trying to get it 
+to work (hooked up ground and 5V backward), it flashed and my work was complete.  I could now successfully remote desktop into the computer running my LabVIEW program and turn the compressor 
+on and off from the confort of my own bed.  And better yet, I programmed the functionality into the DLTS, IVT, and CVT programs so it could be turned off automatically.  Check out the Arduino code below.</p>
+
+<h1 class="text-justify" id="arduino-code">Arduino Code</h1>
+
+<p class="text-justify">Again, the code is long but pretty simple.  I use the UIPEthernet library as my ENC28J60 controller and then the built-in libraries for EEPROM, and WDT.  The microphone 
+is connected to A7 and the relay is connected to D4 while the EEPROM locations for the On and Off voltage thresholds and the relay position are at 0x00, 0x02, and 0x04 
+respectively.  Once the ethernet TCP server is established, the WDT is set, and the relay position is restored it just waits.  Whenever it receives one of the two character ‘codes’,
+it will execute a set of functions.  For example if the TCP server receives the “R0” command it will set the digital pin High (relay off), set the RelayPosition variable to 0, reset the thermal trip variable, 
+save the current state of the relay position, check the volume, and then respond to the TCP client with a string of data.  Check out the code for other commands and send me an email if you have questions.</p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247</pre></td><td class="code"><pre><span class="cp">#include &lt;UIPEthernet.h&gt;
+#include &lt;EEPROM.h&gt;
+#include &lt;MemoryFree.h&gt;
+#include &lt;avr/wdt.h&gt;
+</span>
+<span class="n">EthernetServer</span> <span class="n">server</span> <span class="o">=</span> <span class="n">EthernetServer</span><span class="p">(</span><span class="mi">1010</span><span class="p">);</span>
+
+<span class="k">const</span> <span class="kt">int</span> <span class="n">RELAY</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">MicroPhone</span> <span class="o">=</span> <span class="n">A7</span><span class="p">;</span>
+<span class="kt">float</span> <span class="n">Volume</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">Timer</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">Timer2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">RelayPosition</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">onThreshold</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">offThreshold</span> <span class="o">=</span> <span class="mi">25</span><span class="p">;</span>
+<span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">TimeLimit</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">thermalTrip</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="kt">uint8_t</span> <span class="n">mac</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mh">0xAE</span><span class="p">,</span> <span class="mh">0xBE</span><span class="p">,</span> <span class="mh">0xCE</span><span class="p">,</span> <span class="mh">0xDE</span><span class="p">,</span> <span class="mh">0xEE</span><span class="p">,</span> <span class="mh">0x06</span><span class="p">};</span>
+<span class="n">IPAddress</span> <span class="n">myIP</span><span class="p">(</span><span class="mi">169</span><span class="p">,</span> <span class="mi">254</span><span class="p">,</span> <span class="mi">195</span><span class="p">,</span> <span class="mi">139</span><span class="p">);</span>
+
+<span class="kt">size_t</span> <span class="n">size</span><span class="p">;</span>
+<span class="n">EthernetClient</span> <span class="n">client</span><span class="p">;</span>
+
+<span class="n">String</span> <span class="n">MessageStr</span> <span class="o">=</span> <span class="s">""</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">wdt_disable</span><span class="p">();</span>
+  <span class="n">wdt_enable</span><span class="p">(</span><span class="n">WDTO_4S</span><span class="p">);</span>
+  
+
+  <span class="n">pinMode</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
+
+  
+  <span class="n">wdt_reset</span><span class="p">();</span>
+  <span class="n">Ethernet</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="n">mac</span><span class="p">,</span> <span class="n">myIP</span><span class="p">);</span>
+
+  <span class="n">server</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+
+  <span class="n">wdt_reset</span><span class="p">();</span>
+
+  <span class="n">onThreshold</span> <span class="o">=</span> <span class="n">EEPROM</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+  <span class="n">offThreshold</span> <span class="o">=</span> <span class="n">EEPROM</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+  <span class="n">RelayPosition</span> <span class="o">=</span> <span class="n">EEPROM</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+
+  <span class="k">if</span><span class="p">(</span><span class="n">RelayPosition</span><span class="p">){</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">RELAY</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span>
+    <span class="n">pinMode</span><span class="p">(</span><span class="n">RELAY</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">RELAY</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span>
+    <span class="n">thermalTrip</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">RelayPosition</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">EEPROM</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="mi">4</span><span class="p">,(</span><span class="kt">int</span><span class="p">)</span><span class="n">RelayPosition</span><span class="p">);</span>
+  <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">RELAY</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
+    <span class="n">pinMode</span><span class="p">(</span><span class="n">RELAY</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">RELAY</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
+    <span class="n">thermalTrip</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">RelayPosition</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">EEPROM</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="mi">4</span><span class="p">,(</span><span class="kt">int</span><span class="p">)</span><span class="n">RelayPosition</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="n">Timer2</span> <span class="o">=</span> <span class="n">millis</span><span class="p">();</span>
+
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">wdt_reset</span><span class="p">();</span>
+  <span class="n">Ethernet</span><span class="p">.</span><span class="n">maintain</span><span class="p">();</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="n">client</span> <span class="o">=</span> <span class="n">server</span><span class="p">.</span><span class="n">available</span><span class="p">())</span>
+  <span class="p">{</span>
+    <span class="k">while</span> <span class="p">((</span><span class="n">size</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="n">available</span><span class="p">())</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="p">{</span>
+      <span class="kt">char</span><span class="o">*</span> <span class="n">msg</span> <span class="o">=</span> <span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="n">size</span><span class="p">);</span>
+      <span class="n">size</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">size</span><span class="p">);</span>
+      <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">size</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span><span class="n">MessageStr</span> <span class="o">=</span> <span class="n">String</span><span class="p">(</span><span class="n">MessageStr</span> <span class="o">+</span> <span class="n">String</span><span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="n">msg</span><span class="o">+</span><span class="n">i</span><span class="p">)));}</span>
+      <span class="n">free</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">Ethernet</span><span class="p">.</span><span class="n">maintain</span><span class="p">();</span>
+
+    <span class="n">ParseString</span><span class="p">();</span>
+    <span class="n">client</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">MessageStr</span><span class="p">);</span>
+
+    <span class="n">client</span><span class="p">.</span><span class="n">stop</span><span class="p">();</span>
+    <span class="n">MessageStr</span> <span class="o">=</span> <span class="s">""</span><span class="p">;</span>
+  <span class="p">}</span>
+
+<span class="n">Ethernet</span><span class="p">.</span><span class="n">maintain</span><span class="p">();</span>
+<span class="n">CheckThermalFault</span><span class="p">();</span>
+
+<span class="k">if</span><span class="p">(</span><span class="n">abs</span><span class="p">(</span><span class="n">millis</span><span class="p">()</span><span class="o">-</span><span class="n">Timer2</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">15000</span><span class="p">){</span>
+  
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+  
+  <span class="n">Ethernet</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="n">mac</span><span class="p">,</span> <span class="n">myIP</span><span class="p">);</span>
+  <span class="n">server</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+  <span class="n">Timer2</span> <span class="o">=</span> <span class="n">millis</span><span class="p">();</span>
+
+<span class="p">}</span>
+
+
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="n">ParseString</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
+  <span class="n">String</span> <span class="n">Message</span> <span class="o">=</span> <span class="n">MessageStr</span><span class="p">;</span>
+
+  <span class="kt">int</span> <span class="n">StrLen</span> <span class="o">=</span> <span class="n">Message</span><span class="p">.</span><span class="n">length</span><span class="p">();</span>
+  <span class="n">String</span> <span class="n">strType</span> <span class="o">=</span> <span class="n">Message</span><span class="p">.</span><span class="n">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+  <span class="n">String</span> <span class="n">strInfo</span><span class="p">;</span>
+  <span class="k">if</span><span class="p">(</span><span class="n">StrLen</span><span class="o">&gt;</span><span class="mi">3</span><span class="p">){</span><span class="n">strInfo</span><span class="o">=</span><span class="n">Message</span><span class="p">.</span><span class="n">substring</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">StrLen</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);}</span><span class="k">else</span><span class="p">{</span><span class="n">strInfo</span><span class="o">=</span><span class="n">String</span><span class="p">(</span><span class="s">"Null"</span><span class="p">);}</span>
+
+
+  <span class="k">if</span> <span class="p">(</span><span class="n">strType</span> <span class="o">==</span> <span class="s">"R0"</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//R0 Stands for turning the relay off
+</span>    <span class="n">SetRelay</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="n">Volume</span> <span class="o">=</span> <span class="n">CheckVolume</span><span class="p">(</span><span class="mi">250</span><span class="p">);</span>
+	<span class="n">MessageStr</span> <span class="o">=</span> <span class="n">String</span><span class="p">(</span><span class="s">"R0"</span> <span class="o">+</span> <span class="n">String</span><span class="p">(</span><span class="n">Volume</span><span class="p">));</span>
+    <span class="k">return</span><span class="p">;</span>
+	
+  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">strType</span> <span class="o">==</span> <span class="s">"R1"</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//R1 stands for turning the relay on
+</span>    <span class="n">SetRelay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="n">Volume</span> <span class="o">=</span> <span class="n">CheckVolume</span><span class="p">(</span><span class="mi">250</span><span class="p">);</span>
+    <span class="n">MessageStr</span> <span class="o">=</span> <span class="n">String</span><span class="p">(</span><span class="s">"R1"</span> <span class="o">+</span> <span class="n">String</span><span class="p">(</span><span class="n">Volume</span><span class="p">));</span>
+    <span class="k">return</span><span class="p">;</span>
+	
+  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">strType</span> <span class="o">==</span> <span class="s">"VO"</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//VO stands for the current volume
+</span>    <span class="n">Volume</span> <span class="o">=</span> <span class="n">CheckVolume</span><span class="p">(</span><span class="mi">250</span><span class="p">);</span>
+    <span class="n">MessageStr</span> <span class="o">=</span> <span class="n">String</span><span class="p">(</span><span class="s">"VO"</span> <span class="o">+</span> <span class="n">String</span><span class="p">(</span><span class="n">Volume</span><span class="p">));</span>
+    <span class="k">return</span><span class="p">;</span>
+	
+  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">strType</span> <span class="o">==</span> <span class="s">"R?"</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//R? stands for checking the relay
+</span>    <span class="k">if</span><span class="p">(</span><span class="n">RelayPosition</span><span class="p">){</span>
+      <span class="n">MessageStr</span> <span class="o">=</span> <span class="n">String</span><span class="p">(</span><span class="s">"R1"</span><span class="p">);</span>
+      <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+        <span class="n">MessageStr</span> <span class="o">=</span> <span class="n">String</span><span class="p">(</span><span class="s">"R0"</span><span class="p">);</span>        
+      <span class="p">}</span>
+    <span class="k">return</span><span class="p">;</span>
+	
+  <span class="p">}</span><span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">strType</span> <span class="o">==</span> <span class="s">"CT"</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//CT stands for calibrating the Thresholds
+</span>    <span class="n">CalibrateThresholds</span><span class="p">();</span>
+    <span class="n">MessageStr</span> <span class="o">=</span> <span class="n">String</span><span class="p">(</span><span class="s">"CT"</span><span class="o">+</span><span class="n">String</span><span class="p">(</span><span class="n">onThreshold</span><span class="p">)</span><span class="o">+</span><span class="s">"-"</span><span class="o">+</span><span class="n">String</span><span class="p">(</span><span class="n">offThreshold</span><span class="p">));</span>
+    <span class="k">return</span><span class="p">;</span>
+	
+  <span class="p">}</span><span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">strType</span> <span class="o">==</span> <span class="s">"TT"</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//TT Thermal Trip checking
+</span>    <span class="n">MessageStr</span> <span class="o">=</span> <span class="n">String</span><span class="p">(</span><span class="s">"TT"</span><span class="o">+</span><span class="n">String</span><span class="p">(</span><span class="n">thermalTrip</span><span class="p">));</span>
+    <span class="k">return</span><span class="p">;</span>
+	
+  <span class="p">}</span><span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">strType</span> <span class="o">==</span> <span class="s">"ST"</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//TT Thermal Trip checking
+</span>    <span class="n">Volume</span> <span class="o">=</span> <span class="n">CheckVolume</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+    <span class="n">MessageStr</span> <span class="o">=</span> <span class="n">String</span><span class="p">(</span><span class="s">"R"</span><span class="o">+</span><span class="n">String</span><span class="p">(</span><span class="n">RelayPosition</span><span class="p">)</span><span class="o">+</span><span class="s">"</span><span class="se">\n</span><span class="s">VO"</span><span class="o">+</span><span class="n">String</span><span class="p">(</span><span class="n">Volume</span><span class="p">)</span><span class="o">+</span><span class="s">"</span><span class="se">\n</span><span class="s">TT"</span><span class="o">+</span><span class="n">String</span><span class="p">(</span><span class="n">thermalTrip</span><span class="p">)</span><span class="o">+</span><span class="s">"</span><span class="se">\n</span><span class="s">CT"</span><span class="o">+</span><span class="n">String</span><span class="p">(</span><span class="n">onThreshold</span><span class="p">)</span><span class="o">+</span><span class="s">"-"</span><span class="o">+</span><span class="n">String</span><span class="p">(</span><span class="n">offThreshold</span><span class="p">));</span>
+    <span class="k">return</span><span class="p">;</span>
+	
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="n">SetRelay</span><span class="p">(</span><span class="kt">int</span> <span class="n">MODE</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span><span class="p">(</span><span class="n">MODE</span><span class="p">){</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">RELAY</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span>
+    <span class="n">thermalTrip</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">RelayPosition</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">EEPROM</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="mi">4</span><span class="p">,(</span><span class="kt">int</span><span class="p">)</span><span class="n">RelayPosition</span><span class="p">);</span>
+  <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">RELAY</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
+    <span class="n">RelayPosition</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">EEPROM</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="mi">4</span><span class="p">,(</span><span class="kt">int</span><span class="p">)</span><span class="n">RelayPosition</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">250</span><span class="p">);</span>
+  <span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="kt">int</span> <span class="n">CheckVolume</span><span class="p">(</span><span class="kt">float</span> <span class="n">HowLong</span><span class="p">){</span>
+  <span class="kt">float</span> <span class="n">Value</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">HowLong</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="n">Value</span> <span class="o">=</span> <span class="n">Value</span> <span class="o">+</span> <span class="n">abs</span><span class="p">(</span><span class="n">analogRead</span><span class="p">(</span><span class="n">MicroPhone</span><span class="p">)</span><span class="o">/</span><span class="mf">1024.0</span><span class="p">);</span>
+    <span class="n">delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="n">Value</span> <span class="o">=</span> <span class="n">Value</span><span class="o">/</span><span class="n">HowLong</span><span class="o">*</span><span class="mf">100.0</span><span class="p">;</span>
+  <span class="k">return</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="n">Value</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="n">CheckThermalFault</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
+  <span class="n">Volume</span> <span class="o">=</span> <span class="n">CheckVolume</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+  <span class="n">Ethernet</span><span class="p">.</span><span class="n">maintain</span><span class="p">();</span>
+  <span class="k">if</span><span class="p">((</span><span class="n">RelayPosition</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="n">Volume</span> <span class="o">&lt;</span> <span class="n">onThreshold</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="n">Timer</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)){</span>
+    <span class="n">thermalTrip</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">Timer</span> <span class="o">=</span> <span class="n">millis</span><span class="p">();</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span><span class="p">((</span><span class="n">RelayPosition</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="n">Volume</span> <span class="o">&lt;</span> <span class="n">onThreshold</span><span class="p">)){</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">abs</span><span class="p">(</span><span class="n">millis</span><span class="p">()</span><span class="o">-</span><span class="n">Timer</span><span class="p">)</span><span class="o">&gt;</span><span class="n">TimeLimit</span><span class="p">){</span>
+      <span class="n">SetRelay</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+      <span class="n">thermalTrip</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+      <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+    <span class="n">Timer</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>  
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="n">CalibrateThresholds</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
+  <span class="kt">float</span> <span class="n">Helper</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+  <span class="kt">float</span> <span class="n">Helper2</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+  <span class="k">if</span><span class="p">(</span><span class="n">RelayPosition</span><span class="p">){</span>
+
+    <span class="n">SetRelay</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="n">Helper</span> <span class="o">=</span> <span class="n">CheckVolume</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+
+    <span class="n">SetRelay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="n">Helper2</span> <span class="o">=</span> <span class="n">CheckVolume</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+
+    <span class="n">Helper</span> <span class="o">=</span> <span class="n">abs</span><span class="p">((</span><span class="n">Helper2</span><span class="o">+</span><span class="n">Helper</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">);</span>
+    <span class="n">EEPROM</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="mi">0</span><span class="p">,(</span><span class="kt">int</span><span class="p">)</span><span class="n">Helper</span><span class="p">);</span>
+    <span class="n">EEPROM</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="mi">2</span><span class="p">,(</span><span class="kt">int</span><span class="p">)</span><span class="n">Helper</span><span class="p">);</span>
+  <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+
+    <span class="n">SetRelay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="n">Helper</span> <span class="o">=</span> <span class="n">CheckVolume</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+	
+    <span class="n">SetRelay</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="n">Helper2</span> <span class="o">=</span> <span class="n">CheckVolume</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+
+    <span class="n">Helper</span> <span class="o">=</span> <span class="n">abs</span><span class="p">((</span><span class="n">Helper2</span><span class="o">+</span><span class="n">Helper</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">);</span>
+    <span class="n">EEPROM</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="mi">0</span><span class="p">,(</span><span class="kt">int</span><span class="p">)</span><span class="n">Helper</span><span class="p">);</span>
+    <span class="n">EEPROM</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="mi">2</span><span class="p">,(</span><span class="kt">int</span><span class="p">)</span><span class="n">Helper</span><span class="p">);</span>
+  <span class="p">}</span>
+  
+  <span class="n">onThreshold</span> <span class="o">=</span> <span class="n">EEPROM</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+  <span class="n">offThreshold</span> <span class="o">=</span> <span class="n">EEPROM</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+
+  <span class="k">return</span><span class="p">;</span>
+<span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+
+        
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="http://noaha.net/articles/TMGA-Variation/" class="btn" title="<i>[In progress]</i> Impact of increasing TMGa and Silane on GaN carrier concentration and deep level defects by MOCVD">Previous</a>
+      
+      
+        <a href="http://noaha.net/articles/Log-Normal-IVT/" class="btn" title="<i>[In progress]</i> Modeling forward and reverse IVT Schottky characteristics on GaN with a Log-Normal barrier height distribution">Next</a>
+      
+    </nav><!-- /.pagination -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<span>&copy; 2018 Noah Allen. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/so-simple-jekyll-theme/" rel="nofollow">So Simple Theme</a>.</span>
+<div class="social-icons">
+	
+	
+	
+	
+	
+	
+	
+	
+	
+  
+	
+  <a href="http://noaha.net/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss-square fa-2x"></i></a>
+</div><!-- /.social-icons -->
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'http://noaha.net';
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://noaha.net/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://noaha.net/assets/js/scripts.min.js"></script>
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-90785511-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>
