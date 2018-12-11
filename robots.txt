@@ -1,1 +1,1 @@
-Sitemap: http://noaha.net/sitemap.xml
+Sitemap: https://noaha.net/sitemap.xml

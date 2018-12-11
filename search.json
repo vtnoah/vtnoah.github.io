@@ -3,7 +3,7 @@
   
     {
       "title"			: "<i>[In progress]</i> Ru/GaN Schottky Barrier Inhomogeneity Dependence on Annealing Temperature",
-      "link"			: "http://noaha.net/articles/RuOx-Annealing/",
+      "link"			: "https://noaha.net/articles/RuOx-Annealing/",
       "excerpt"		: "Ru/GaN Annealing Variation"
     }
   
@@ -11,7 +11,7 @@
   
     ,{
       "title"			: "<i>[In progress]</i> Modeling forward and reverse IVT Schottky characteristics on GaN with a Log-Normal barrier height distribution",
-      "link"			: "http://noaha.net/articles/Log-Normal-IVT/",
+      "link"			: "https://noaha.net/articles/Log-Normal-IVT/",
       "excerpt"		: "Log-Normal Barrier Inhomogeneity"
     }
   
@@ -19,7 +19,7 @@
   
     ,{
       "title"			: "LabVIEW Remote Compressor Control",
-      "link"			: "http://noaha.net/blog/Arduino-Compressor/",
+      "link"			: "https://noaha.net/blog/Arduino-Compressor/",
       "excerpt"		: "Problem:"
     }
   
@@ -27,7 +27,7 @@
   
     ,{
       "title"			: "<i>[In progress]</i> Impact of increasing TMGa and Silane on GaN carrier concentration and deep level defects by MOCVD",
-      "link"			: "http://noaha.net/articles/TMGA-Variation/",
+      "link"			: "https://noaha.net/articles/TMGA-Variation/",
       "excerpt"		: "TMGA/Silane Deep Level Effects"
     }
   
@@ -35,7 +35,7 @@
   
     ,{
       "title"			: "Ethernet Controlled Graduated ND Filter",
-      "link"			: "http://noaha.net/blog/SSPC-Controlled-ND-Filter/",
+      "link"			: "https://noaha.net/blog/SSPC-Controlled-ND-Filter/",
       "excerpt"		: "Problem:"
     }
   
@@ -43,7 +43,7 @@
   
     ,{
       "title"			: "Reverse Engineering the D750 Shutter for Remote Control",
-      "link"			: "http://noaha.net/blog/SSPC-Shutter/",
+      "link"			: "https://noaha.net/blog/SSPC-Shutter/",
       "excerpt"		: "Problem:"
     }
   
@@ -51,7 +51,7 @@
   
     ,{
       "title"			: "Hg Probe Back Contact Piece",
-      "link"			: "http://noaha.net/blog/Hg-Probe-Adapter/",
+      "link"			: "https://noaha.net/blog/Hg-Probe-Adapter/",
       "excerpt"		: "Problem:"
     }
   
@@ -59,7 +59,7 @@
   
     ,{
       "title"			: "Thin-film GaN Schottky diodes formed by epitaxial lift-off",
-      "link"			: "http://noaha.net/articles/GaN-Lift-Off/",
+      "link"			: "https://noaha.net/articles/GaN-Lift-Off/",
       "excerpt"		: "GaN Lift-Off"
     }
   
@@ -67,7 +67,7 @@
   
     ,{
       "title"			: "Cleanroom Fabricated Gallium Nitride PN Diodes",
-      "link"			: "http://noaha.net/blog/PN-Diode-Fabrication/",
+      "link"			: "https://noaha.net/blog/PN-Diode-Fabrication/",
       "excerpt"		: "Work:"
     }
   
@@ -75,7 +75,7 @@
   
     ,{
       "title"			: "ECE:2004 (Instructor)",
-      "link"			: "http://noaha.net/teaching/ECE-2004/",
+      "link"			: "https://noaha.net/teaching/ECE-2004/",
       "excerpt"		: " "
     }
   
@@ -83,7 +83,7 @@
   
     ,{
       "title"			: "LabVIEW (D)DLTS and CCDLTS Measurement Program",
-      "link"			: "http://noaha.net/blog/DLTS-Data-Analysis/",
+      "link"			: "https://noaha.net/blog/DLTS-Data-Analysis/",
       "excerpt"		: "Problem:"
     }
   
@@ -91,7 +91,7 @@
   
     ,{
       "title"			: "MMR Probe Station Rebuild with Helium Cryopump",
-      "link"			: "http://noaha.net/blog/Probe-Station-Rebuild/",
+      "link"			: "https://noaha.net/blog/Probe-Station-Rebuild/",
       "excerpt"		: "Problem:"
     }
   
@@ -99,7 +99,7 @@
   
     ,{
       "title"			: "GaInN/GaN Solar Cells with Ni/Au Schottky Electrodes",
-      "link"			: "http://noaha.net/articles/GaInN-solar-cells/",
+      "link"			: "https://noaha.net/articles/GaInN-solar-cells/",
       "excerpt"		: "GaInN/GaN Solar Cells"
     }
   
@@ -107,7 +107,7 @@
   
     ,{
       "title"			: "ECE:2204 (Instructor)",
-      "link"			: "http://noaha.net/teaching/ECE-2204/",
+      "link"			: "https://noaha.net/teaching/ECE-2204/",
       "excerpt"		: "Overall Effectiveness: 5.25/6.00"
     }
   
@@ -115,7 +115,7 @@
   
     ,{
       "title"			: "Heteroepitaxial Ge MOS Devices on Si Using Composite AlAs/GaAs Buffer &#13;",
-      "link"			: "http://noaha.net/articles/GeMOS-on-AlAs-GaAs/",
+      "link"			: "https://noaha.net/articles/GeMOS-on-AlAs-GaAs/",
       "excerpt"		: "Ge MOS on Si"
     }
   
@@ -123,7 +123,7 @@
   
     ,{
       "title"			: "LabVIEW I-V and C-V Data Analysis Program",
-      "link"			: "http://noaha.net/blog/Electrical-Data-Analysis/",
+      "link"			: "https://noaha.net/blog/Electrical-Data-Analysis/",
       "excerpt"		: "Problem:"
     }
   
@@ -131,7 +131,7 @@
   
     ,{
       "title"			: "<i>[MS Thesis]</i> Electrical Characterization of Ruthenium Dioxide Schottky Contacts on GaN",
-      "link"			: "http://noaha.net/articles/GaN-Ru-Oxide-MS-Thesis/",
+      "link"			: "https://noaha.net/articles/GaN-Ru-Oxide-MS-Thesis/",
       "excerpt"		: "M.S. Thesis"
     }
   
@@ -139,7 +139,7 @@
   
     ,{
       "title"			: "ENGE:1104 (Instructor)",
-      "link"			: "http://noaha.net/teaching/ENGE-1104-7/",
+      "link"			: "https://noaha.net/teaching/ENGE-1104-7/",
       "excerpt"		: "Overall Effectiveness: 5.56/6.00"
     }
   
@@ -147,7 +147,7 @@
   
     ,{
       "title"			: "GaInN/GaN – Ni/Au Transparent Conducting Oxide Schottky Barrier Solar Cells",
-      "link"			: "http://noaha.net/articles/GaInN-TCO/",
+      "link"			: "https://noaha.net/articles/GaInN-TCO/",
       "excerpt"		: "GaInN/GaN TCO"
     }
   
@@ -155,7 +155,7 @@
   
     ,{
       "title"			: "ENGE:1104 (Instructor)",
-      "link"			: "http://noaha.net/teaching/ENGE-1104-6/",
+      "link"			: "https://noaha.net/teaching/ENGE-1104-6/",
       "excerpt"		: "Overall Effectiveness: 5.60/6.00"
     }
   
@@ -163,7 +163,7 @@
   
     ,{
       "title"			: "ENGE 1104 Arduino Workshops",
-      "link"			: "http://noaha.net/blog/ENGE1104-Arduino/",
+      "link"			: "https://noaha.net/blog/ENGE1104-Arduino/",
       "excerpt"		: "Problem:"
     }
   
@@ -171,7 +171,7 @@
   
     ,{
       "title"			: "ENGE:1104 (Instructor)",
-      "link"			: "http://noaha.net/teaching/ENGE-1104-5/",
+      "link"			: "https://noaha.net/teaching/ENGE-1104-5/",
       "excerpt"		: "Overall Effectiveness: 4.82/6.00"
     }
   
@@ -179,7 +179,7 @@
   
     ,{
       "title"			: "ENGE:1104 (Instructor)",
-      "link"			: "http://noaha.net/teaching/ENGE-1104-4/",
+      "link"			: "https://noaha.net/teaching/ENGE-1104-4/",
       "excerpt"		: "Teaching Effectiveness: 4.62/6.0"
     }
   
@@ -187,7 +187,7 @@
   
     ,{
       "title"			: "ECE: Graduate Mentor",
-      "link"			: "http://noaha.net/teaching/Graduate-Mentor/",
+      "link"			: "https://noaha.net/teaching/Graduate-Mentor/",
       "excerpt"		: " "
     }
   
@@ -195,7 +195,7 @@
   
     ,{
       "title"			: "ENGE:1024 (Teaching Assistant)",
-      "link"			: "http://noaha.net/teaching/ENGE-1024/",
+      "link"			: "https://noaha.net/teaching/ENGE-1024/",
       "excerpt"		: "Overall Rating: (5.37 to 5.52)/6.00 : Average TA Rating: 5.13/6.00"
     }
   
@@ -203,7 +203,7 @@
   
     ,{
       "title"			: "ENGE:1104 (Instructor)",
-      "link"			: "http://noaha.net/teaching/ENGE-1104-3/",
+      "link"			: "https://noaha.net/teaching/ENGE-1104-3/",
       "excerpt"		: "Teaching Effectiveness: 5.00/6.00"
     }
   
@@ -211,7 +211,7 @@
   
     ,{
       "title"			: "ECE: 2504 and 3544 (Teaching Assistant)",
-      "link"			: "http://noaha.net/teaching/ECE-2504-3544/",
+      "link"			: "https://noaha.net/teaching/ECE-2504-3544/",
       "excerpt"		: " "
     }
   
@@ -219,7 +219,7 @@
   
     ,{
       "title"			: "ECE: Electronics/Circuits Group (Teaching Assistant)",
-      "link"			: "http://noaha.net/teaching/Electronic-Circuits-Group/",
+      "link"			: "https://noaha.net/teaching/Electronic-Circuits-Group/",
       "excerpt"		: " "
     }
   
@@ -227,7 +227,7 @@
   
     ,{
       "title"			: "ECE5210 - MEMs Final Project",
-      "link"			: "http://noaha.net/blog/Cantilever-Capacitance/",
+      "link"			: "https://noaha.net/blog/Cantilever-Capacitance/",
       "excerpt"		: "Problem:"
     }
   
@@ -235,7 +235,7 @@
   
     ,{
       "title"			: "ENGE: Workshop Creator",
-      "link"			: "http://noaha.net/teaching/Engineering-Education-Worker/",
+      "link"			: "https://noaha.net/teaching/Engineering-Education-Worker/",
       "excerpt"		: " "
     }
   
@@ -243,7 +243,7 @@
   
     ,{
       "title"			: "ENGE:1104 (Instructor)",
-      "link"			: "http://noaha.net/teaching/ENGE-1104-2/",
+      "link"			: "https://noaha.net/teaching/ENGE-1104-2/",
       "excerpt"		: "Overall Rating: 4.84"
     }
   
@@ -251,7 +251,7 @@
   
     ,{
       "title"			: "ENGE:1104 (Teaching Assistant)",
-      "link"			: "http://noaha.net/teaching/ENGE-1104-1/",
+      "link"			: "https://noaha.net/teaching/ENGE-1104-1/",
       "excerpt"		: "Overall Rating: 5.38/6.00 : Average TA Rating: 4.61/6.00"
     }
   
@@ -259,7 +259,7 @@
   
     ,{
       "title"			: "Paper-Based Capacitive Mass Sensor",
-      "link"			: "http://noaha.net/articles/Paper-Based-Mems/",
+      "link"			: "https://noaha.net/articles/Paper-Based-Mems/",
       "excerpt"		: "Paper-Based Capacitive Mass Sensor"
     }
   
@@ -267,7 +267,7 @@
   
     ,{
       "title"			: "Using Near-Field Holography to Investigate Super Hydrophobic Surfaces",
-      "link"			: "http://noaha.net/articles/Super-Hydrophobic-Surfaces/",
+      "link"			: "https://noaha.net/articles/Super-Hydrophobic-Surfaces/",
       "excerpt"		: "Super Hydrophobic Surfaces"
     }
   
@@ -295,7 +295,7 @@
   
     ,{
       "title"			: "About",
-      "link"			: "http://noaha.net/",
+      "link"			: "https://noaha.net/",
       "excerpt"		: "Noah Allen is a PhD candidate in the Electrical Engineering department at Virginia Tech.  This website documents some of the work he has completed as a student."
     }
   
