@@ -210,8 +210,16 @@
 
   
     ,{
-      "title"			: "ECE: 2504 and 3544 (Teaching Assistant)",
-      "link"			: "https://noaha.net/teaching/ECE-2504-3544/",
+      "title"			: "ECE: 3544 (Teaching Assistant)",
+      "link"			: "https://noaha.net/teaching/ECE-3544/",
+      "excerpt"		: " "
+    }
+  
+
+  
+    ,{
+      "title"			: "ECE: 2504 (Teaching Assistant)",
+      "link"			: "https://noaha.net/teaching/ECE-2504/",
       "excerpt"		: " "
     }
   
