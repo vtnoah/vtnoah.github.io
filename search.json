@@ -10,7 +10,15 @@
 
   
     ,{
-      "title"			: "<i>[In progress]</i> Modeling forward and reverse IVT Schottky characteristics on GaN with a Log-Normal barrier height distribution",
+      "title"			: "<i>[In progress]</i> Impact of increasing Ammonia on deep level defects in GaN grown by MOCVD",
+      "link"			: "https://noaha.net/articles/Ammonia-Variation/",
+      "excerpt"		: "Ammonia Deep Level Effects"
+    }
+  
+
+  
+    ,{
+      "title"			: "<i>[SUBMITTED]</i> Characterization of Inhomogeneous Ni/GaN Schottky Diode with a Modified Log-Normal Distribution of Barrier Heights",
       "link"			: "https://noaha.net/articles/Log-Normal-IVT/",
       "excerpt"		: "Log-Normal Barrier Inhomogeneity"
     }
@@ -21,14 +29,6 @@
       "title"			: "LabVIEW Remote Compressor Control",
       "link"			: "https://noaha.net/blog/Arduino-Compressor/",
       "excerpt"		: "Problem:"
-    }
-  
-
-  
-    ,{
-      "title"			: "<i>[In progress]</i> Impact of increasing TMGa and Silane on GaN carrier concentration and deep level defects by MOCVD",
-      "link"			: "https://noaha.net/articles/TMGA-Variation/",
-      "excerpt"		: "TMGA/Silane Deep Level Effects"
     }
   
 
